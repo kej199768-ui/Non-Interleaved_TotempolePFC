@@ -1,0 +1,3338 @@
+******************************************************************************
+             TMS320C2000 Linker PC v20.8.0                     
+******************************************************************************
+>> Linked Tue Dec  9 22:28:26 2025
+
+OUTPUT FILE NAME:   <250304_TTP.out>
+ENTRY POINT SYMBOL: "code_start"  address: 00080000
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  BOOT_RSVD             00000002   000001ae  00000000  000001ae  RWIX
+  RAMM0                 000001b0   00000250  00000000  00000250  RWIX
+  RAMM1                 00000400   00000400  00000100  00000300  RWIX
+  ADCARESULT            00000b00   00000018  00000000  00000018  RWIX
+  ADCBRESULT            00000b20   00000018  00000018  00000000  RWIX
+  ADCCRESULT            00000b40   00000018  00000000  00000018  RWIX
+  ADCDRESULT            00000b60   00000018  00000000  00000018  RWIX
+  CPUTIMER0             00000c00   00000008  00000008  00000000  RWIX
+  CPUTIMER1             00000c08   00000008  00000008  00000000  RWIX
+  CPUTIMER2             00000c10   00000008  00000008  00000000  RWIX
+  PIECTRL               00000ce0   0000001a  0000001a  00000000  RWIX
+  PIEVECTTABLE          00000d00   00000200  000001c0  00000040  RWIX
+  DMA                   00001000   00000200  00000000  00000200  RWIX
+  CLA1                  00001400   00000080  00000000  00000080  RWIX
+  CLB1LOGICCFG          00003000   00000052  00000000  00000052  RWIX
+  CLB1LOGICCTRL         00003100   00000040  00000000  00000040  RWIX
+  CLB1DATAEXCH          00003180   00000080  00000000  00000080  RWIX
+  CLB2LOGICCFG          00003200   00000052  00000000  00000052  RWIX
+  CLB2LOGICCTRL         00003300   00000040  00000000  00000040  RWIX
+  CLB2DATAEXCH          00003380   00000080  00000000  00000080  RWIX
+  CLB3LOGICCFG          00003400   00000052  00000000  00000052  RWIX
+  CLB3LOGICCTRL         00003500   00000040  00000000  00000040  RWIX
+  CLB3DATAEXCH          00003580   00000080  00000000  00000080  RWIX
+  CLB4LOGICCFG          00003600   00000052  00000000  00000052  RWIX
+  CLB4LOGICCTRL         00003700   00000040  00000000  00000040  RWIX
+  CLB4DATAEXCH          00003780   00000080  00000000  00000080  RWIX
+  CLB5LOGICCFG          00003800   00000052  00000000  00000052  RWIX
+  CLB5LOGICCTRL         00003900   00000040  00000000  00000040  RWIX
+  CLB5DATAEXCH          00003980   00000080  00000000  00000080  RWIX
+  CLB6LOGICCFG          00003a00   00000052  00000000  00000052  RWIX
+  CLB6LOGICCTRL         00003b00   00000040  00000000  00000040  RWIX
+  CLB6DATAEXCH          00003b80   00000080  00000000  00000080  RWIX
+  CLB7LOGICCFG          00003c00   00000052  00000000  00000052  RWIX
+  CLB7LOGICCTRL         00003d00   00000040  00000000  00000040  RWIX
+  CLB7DATAEXCH          00003d80   00000080  00000000  00000080  RWIX
+  CLB8LOGICCFG          00003e00   00000052  00000000  00000052  RWIX
+  CLB8LOGICCTRL         00003f00   00000040  00000000  00000040  RWIX
+  CLB8DATAEXCH          00003f80   00000080  00000000  00000080  RWIX
+  EPWM1                 00004000   00000100  00000100  00000000  RWIX
+  EPWM2                 00004100   00000100  00000100  00000000  RWIX
+  EPWM3                 00004200   00000100  00000100  00000000  RWIX
+  EPWM4                 00004300   00000100  00000100  00000000  RWIX
+  EPWM5                 00004400   00000100  00000100  00000000  RWIX
+  EPWM6                 00004500   00000100  00000100  00000000  RWIX
+  EPWM7                 00004600   00000100  00000100  00000000  RWIX
+  EPWM8                 00004700   00000100  00000100  00000000  RWIX
+  EPWM9                 00004800   00000100  00000100  00000000  RWIX
+  EPWM10                00004900   00000100  00000100  00000000  RWIX
+  EPWM11                00004a00   00000100  00000100  00000000  RWIX
+  EPWM12                00004b00   00000100  00000100  00000000  RWIX
+  EPWM13                00004c00   00000100  00000000  00000100  RWIX
+  EPWM14                00004d00   00000100  00000000  00000100  RWIX
+  EPWM15                00004e00   00000100  00000000  00000100  RWIX
+  EPWM16                00004f00   00000100  00000000  00000100  RWIX
+  EQEP1                 00005100   00000040  00000000  00000040  RWIX
+  EQEP2                 00005140   00000040  00000000  00000040  RWIX
+  EQEP3                 00005180   00000040  00000000  00000040  RWIX
+  ECAP1                 00005200   00000020  00000000  00000020  RWIX
+  ECAP2                 00005240   00000020  00000000  00000020  RWIX
+  ECAP3                 00005280   00000020  00000000  00000020  RWIX
+  ECAP4                 000052c0   00000020  00000000  00000020  RWIX
+  ECAP5                 00005300   00000020  00000000  00000020  RWIX
+  ECAP6                 00005340   00000020  00000000  00000020  RWIX
+  HRCAP6                00005360   00000020  00000000  00000020  RWIX
+  ECAP7                 00005380   00000020  00000000  00000020  RWIX
+  HRCAP7                000053a0   00000020  00000000  00000020  RWIX
+  DACA                  00005c00   00000008  00000000  00000008  RWIX
+  DACB                  00005c10   00000008  00000000  00000008  RWIX
+  DACC                  00005c20   00000008  00000000  00000008  RWIX
+  CMPSS1                00005c80   00000020  00000000  00000020  RWIX
+  CMPSS2                00005ca0   00000020  00000000  00000020  RWIX
+  CMPSS3                00005cc0   00000020  00000000  00000020  RWIX
+  CMPSS4                00005ce0   00000020  00000000  00000020  RWIX
+  CMPSS5                00005d00   00000020  00000000  00000020  RWIX
+  CMPSS6                00005d20   00000020  00000000  00000020  RWIX
+  CMPSS7                00005d40   00000020  00000000  00000020  RWIX
+  CMPSS8                00005d60   00000020  00000000  00000020  RWIX
+  SDFM1                 00005e00   00000080  00000000  00000080  RWIX
+  SDFM2                 00005e80   00000080  00000000  00000080  RWIX
+  MCBSPA                00006000   00000024  00000000  00000024  RWIX
+  MCBSPB                00006040   00000024  00000000  00000024  RWIX
+  SPIA                  00006100   00000010  00000000  00000010  RWIX
+  SPIB                  00006110   00000010  00000000  00000010  RWIX
+  SPIC                  00006120   00000010  00000000  00000010  RWIX
+  SPID                  00006130   00000010  00000000  00000010  RWIX
+  BGCRCCPU              00006340   00000040  00000000  00000040  RWIX
+  BGCRCCLA1             00006380   00000040  00000000  00000040  RWIX
+  PMBUSA                00006400   00000020  00000000  00000020  RWIX
+  FSITXA                00006600   00000050  00000000  00000050  RWIX
+  FSIRXA                00006680   00000050  00000000  00000050  RWIX
+  FSITXB                00006700   00000050  00000000  00000050  RWIX
+  FSIRXB                00006780   00000050  00000000  00000050  RWIX
+  FSIRXC                00006880   00000050  00000000  00000050  RWIX
+  FSIRXD                00006980   00000050  00000000  00000050  RWIX
+  FSIRXE                00006a80   00000050  00000000  00000050  RWIX
+  FSIRXF                00006b80   00000050  00000000  00000050  RWIX
+  FSIRXG                00006c80   00000050  00000000  00000050  RWIX
+  FSIRXH                00006d80   00000050  00000000  00000050  RWIX
+  WD                    00007000   0000002b  0000002b  00000000  RWIX
+  NMIINTRUPT            00007060   00000010  00000000  00000010  RWIX
+  XINT                  00007070   0000000b  00000000  0000000b  RWIX
+  SCIA                  00007200   00000010  00000000  00000010  RWIX
+  SCIB                  00007210   00000010  00000000  00000010  RWIX
+  SCIC                  00007220   00000010  00000000  00000010  RWIX
+  SCID                  00007230   00000010  00000000  00000010  RWIX
+  I2CA                  00007300   00000022  00000000  00000022  RWIX
+  I2CB                  00007340   00000022  00000000  00000022  RWIX
+  ADCA                  00007400   00000080  0000007c  00000004  RWIX
+  ADCB                  00007480   00000080  0000007c  00000004  RWIX
+  ADCC                  00007500   00000080  0000007c  00000004  RWIX
+  ADCD                  00007580   00000080  0000007c  00000004  RWIX
+  INPUTXBAR             00007900   00000020  00000000  00000020  RWIX
+  XBAR                  00007920   00000020  00000000  00000020  RWIX
+  SYNCSOC               00007940   00000006  00000000  00000006  RWIX
+  CLBINPUTXBAR          00007960   00000020  00000000  00000020  RWIX
+  DMACLASRCSEL          00007980   0000001a  00000000  0000001a  RWIX
+  EPWMXBAR              00007a00   00000040  00000000  00000040  RWIX
+  CLBXBAR               00007a40   00000040  00000000  00000040  RWIX
+  OUTPUTXBAR            00007a80   00000040  00000000  00000040  RWIX
+  CLBOUTPUTXBAR         00007bc0   00000040  00000000  00000040  RWIX
+  GPIOCTRL              00007c00   00000200  00000180  00000080  RWIX
+  GPIODATA              00007f00   00000040  00000030  00000010  RWIX
+  GPIODATAREAD          00007f80   00000010  00000000  00000010  RWIX
+  RAMLS0                00008000   00000800  00000030  000007d0  RWIX
+  RAMLS1                00008800   00000800  00000000  00000800  RWIX
+  RAMLS2                00009000   00000800  00000000  00000800  RWIX
+  RAMLS3                00009800   00000800  00000000  00000800  RWIX
+  RAMLS4                0000a000   00000800  00000000  00000800  RWIX
+  RAMLS5                0000a800   00000800  000003e6  0000041a  RWIX
+  RAMLS6                0000b000   00000800  00000000  00000800  RWIX
+  RAMLS7                0000b800   00000800  00000000  00000800  RWIX
+  RAMD0                 0000c000   00000800  00000000  00000800  RWIX
+  RAMD1                 0000c800   00000800  00000000  00000800  RWIX
+  RAMGS0                0000d000   00001000  00000000  00001000  RWIX
+  RAMGS1                0000e000   00001000  00000000  00001000  RWIX
+  RAMGS2                0000f000   00001000  00000000  00001000  RWIX
+  RAMGS3                00010000   00001000  00000000  00001000  RWIX
+  RAMGS4                00011000   00001000  00000000  00001000  RWIX
+  RAMGS5                00012000   00001000  00000000  00001000  RWIX
+  RAMGS6                00013000   00001000  00000000  00001000  RWIX
+  RAMGS7                00014000   00001000  00000000  00001000  RWIX
+  RAMGS8                00015000   00001000  00000000  00001000  RWIX
+  RAMGS9                00016000   00001000  00000000  00001000  RWIX
+  RAMGS10               00017000   00001000  00000000  00001000  RWIX
+  RAMGS11               00018000   00001000  00000000  00001000  RWIX
+  RAMGS12               00019000   00001000  00000000  00001000  RWIX
+  RAMGS13               0001a000   00001000  00000000  00001000  RWIX
+  RAMGS14               0001b000   00001000  00000000  00001000  RWIX
+  RAMGS15               0001c000   00001000  00000000  00001000  RWIX
+  CMTOCPURAM            00038000   00000800  00000088  00000778  RWIX
+  CPUTOCMRAM            00039000   00000800  00000088  00000778  RWIX
+  CPU1TOCPU2RAM         0003a000   00000800  00000088  00000778  RWIX
+  CPU2TOCPU1RAM         0003b000   00000800  00000088  00000778  RWIX
+  EMIF1                 00047000   00000070  00000000  00000070  RWIX
+  EMIF2                 00047800   00000070  00000000  00000070  RWIX
+  CANA                  00048000   00000200  00000000  00000200  RWIX
+  CANA_MSG_RAM          00049000   00000800  00000000  00000800  RWIX
+  CANB                  0004a000   00000200  00000000  00000200  RWIX
+  CANB_MSG_RAM          0004b000   00000800  00000000  00000800  RWIX
+  ESCSS                 00057e00   00000024  00000000  00000024  RWIX
+  ESCSSCONFIG           00057f00   00000016  00000000  00000016  RWIX
+  CPU1TOCPU2IPC         0005ce00   00000026  00000000  00000026  RWIX
+  CPU1TOCMIPC           0005ce40   00000026  00000000  00000026  RWIX
+  DEVCFG                0005d000   000001a0  000001a0  00000000  RWIX
+  CLKCFG                0005d200   00000100  0000003a  000000c6  RWIX
+  CPUSYS                0005d300   000000a0  0000009c  00000004  RWIX
+  SYSSTATUS             0005d400   00000100  00000000  00000100  RWIX
+  SYSPERIPHAC           0005d500   00000200  00000000  00000200  RWIX
+  ANALOGSUBSYS          0005d700   00000100  0000003e  000000c2  RWIX
+  CMCONF                0005dc00   00000400  00000000  00000400  RWIX
+  DCC0                  0005e700   00000038  0000002c  0000000c  RWIX
+  DCC1                  0005e740   00000038  0000002c  0000000c  RWIX
+  DCC2                  0005e780   00000038  0000002c  0000000c  RWIX
+  ERADGLOBAL            0005e800   00000013  00000000  00000013  RWIX
+  ERADHWBP1             0005e900   00000008  00000000  00000008  RWIX
+  ERADHWBP2             0005e908   00000008  00000000  00000008  RWIX
+  ERADHWBP3             0005e910   00000008  00000000  00000008  RWIX
+  ERADHWBP4             0005e918   00000008  00000000  00000008  RWIX
+  ERADHWBP5             0005e920   00000008  00000000  00000008  RWIX
+  ERADHWBP6             0005e928   00000008  00000000  00000008  RWIX
+  ERADHWBP7             0005e930   00000008  00000000  00000008  RWIX
+  ERADHWBP8             0005e938   00000008  00000000  00000008  RWIX
+  ERADCOUNTER1          0005e980   00000010  00000000  00000010  RWIX
+  ERADCOUNTER2          0005e990   00000010  00000000  00000010  RWIX
+  ERADCOUNTER3          0005e9a0   00000010  00000000  00000010  RWIX
+  ERADCOUNTER4          0005e9b0   00000010  00000000  00000010  RWIX
+  ERADCRCGLOBAL         0005ea00   00000010  00000000  00000010  RWIX
+  ERADCRC1              0005ea10   00000010  00000000  00000010  RWIX
+  ERADCRC2              0005ea20   00000010  00000000  00000010  RWIX
+  ERADCRC3              0005ea30   00000010  00000000  00000010  RWIX
+  ERADCRC4              0005ea40   00000010  00000000  00000010  RWIX
+  ERADCRC5              0005ea50   00000010  00000000  00000010  RWIX
+  ERADCRC6              0005ea60   00000010  00000000  00000010  RWIX
+  ERADCRC7              0005ea70   00000010  00000000  00000010  RWIX
+  ERADCRC8              0005ea80   00000010  00000000  00000010  RWIX
+  DCSMZ1                0005f000   0000003e  00000000  0000003e  RWIX
+  DCSMZ2                0005f080   0000003e  00000000  0000003e  RWIX
+  DCSMCOMMON            0005f0c0   00000020  00000000  00000020  RWIX
+  MEMCFG                0005f400   000000c0  00000000  000000c0  RWIX
+  EMIF1CONFIG           0005f4c0   00000020  00000000  00000020  RWIX
+  EMIF2CONFIG           0005f4e0   00000020  00000000  00000020  RWIX
+  ACCESSPROTECTION      0005f500   00000040  00000000  00000040  RWIX
+  MEMORYERROR           0005f540   00000040  00000000  00000040  RWIX
+  ROMWAITSTATE          0005f580   00000008  00000000  00000008  RWIX
+  ROMPREFETCH           0005f588   00000008  00000000  00000008  RWIX
+  TESTERROR             0005f590   00000010  00000000  00000010  RWIX
+  FLASH0CTRL            0005f800   00000182  00000182  00000000  RWIX
+  FLASH0ECC             0005fb00   00000028  00000028  00000000  RWIX
+  DCSMZ1OTP             00078000   00000020  00000000  00000020  RWIX
+  DCSMZ2OTP             00078200   00000020  00000000  00000020  RWIX
+  BEGIN                 00080000   00000002  00000002  00000000  RWIX
+  FLASH0                00080002   00001ffe  00000000  00001ffe  RWIX
+  FLASH1                00082000   00002000  00002000  00000000  RWIX
+  FLASH2                00084000   00002000  00000b4d  000014b3  RWIX
+  FLASH3                00086000   00002000  00000030  00001fd0  RWIX
+  FLASH4                00088000   00008000  000000dc  00007f24  RWIX
+  FLASH5                00090000   00008000  00000290  00007d70  RWIX
+  FLASH6                00098000   00008000  00000000  00008000  RWIX
+  FLASH7                000a0000   00008000  00000000  00008000  RWIX
+  FLASH8                000a8000   00008000  00000000  00008000  RWIX
+  FLASH9                000b0000   00008000  00000000  00008000  RWIX
+  FLASH10               000b8000   00002000  00000000  00002000  RWIX
+  FLASH11               000ba000   00002000  00000000  00002000  RWIX
+  FLASH12               000bc000   00002000  00000000  00002000  RWIX
+  FLASH13               000be000   00002000  00000000  00002000  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+codestart 
+*          0    00080000    00000002     
+                  00080000    00000002     f2838x_codestartbranch.obj (codestart)
+
+.cinit     0    00088000    000000dc     
+                  00088000    000000c2     (.cinit..data.load) [load image, compression = lzss]
+                  000880c2    00000006     (__TI_handler_table)
+                  000880c8    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  000880cc    00000004     (.cinit.PieVectTableFile.load) [load image, compression = zero_init]
+                  000880d0    0000000c     (__TI_cinit_table)
+
+.reset     0    003fffc0    00000000     DSECT
+
+.stack     0    00000400    00000100     UNINITIALIZED
+                  00000400    00000100     --HOLE--
+
+.init_array 
+*          0    00082000    00000000     UNINITIALIZED
+
+.bss       0    0000abc4    00000022     UNINITIALIZED
+                  0000abc4    00000018     f2838x_cputimers.obj (.bss)
+                  0000abdc    00000008     BswTask.obj (.bss)
+                  0000abe4    00000002     BswAdc.obj (.bss)
+
+PieVectTableFile 
+*          0    00000d00    000001c0     UNINITIALIZED
+                  00000d00    000001c0     f2838x_globalvariabledefs.obj (PieVectTableFile)
+
+EmuKeyVar 
+*          0    00000d00    00000000     UNINITIALIZED
+
+EmuBModeVar 
+*          0    00000d00    00000000     UNINITIALIZED
+
+EmuBootPinsVar 
+*          0    00000d00    00000000     UNINITIALIZED
+
+FlashCallbackVar 
+*          0    00000d00    00000000     UNINITIALIZED
+
+FlashScalingVar 
+*          0    00000d00    00000000     UNINITIALIZED
+
+.data      0    0000a800    000003c4     UNINITIALIZED
+                  0000a800    00000164     CtrPfc.obj (.data)
+                  0000a964    0000001a     BswPwm.obj (.data:ePWM_Regs)
+                  0000a97e    00000002     rts2800_fpu64_eabi.lib : _lock.c.obj (.data:_lock)
+                  0000a980    0000006e     FdiagCal.obj (.data)
+                  0000a9ee    00000010     MonAdc.obj (.data:gf1IiccuSwLpf)
+                  0000a9fe    00000002     rts2800_fpu64_eabi.lib : _lock.c.obj (.data:_unlock)
+                  0000aa00    00000058     MonAdc.obj (.data)
+                  0000aa58    00000021     FdiagChkS.obj (.data)
+                  0000aa79    00000007     FdiagChkFS.obj (.data)
+                  0000aa80    0000002a     CtrCal.obj (.data)
+                  0000aaaa    0000001e     CtrPfc.obj (.data:gPiIPfcL)
+                  0000aac8    00000018     BswAdc.obj (.data:gf1AdcResulLpf)
+                  0000aae0    00000018     MonAdc.obj (.data:gf1ViccuSwLpf)
+                  0000aaf8    00000006     BswIsr.obj (.data)
+                  0000aafe    00000002     BswAdc.obj (.data:gfCurrCal)
+                  0000ab00    00000014     BswCal.obj (.data)
+                  0000ab14    00000014     FdiagChkCtr.obj (.data)
+                  0000ab28    0000000b     FdiagChkM.obj (.data)
+                  0000ab33    00000001     ItrComBswtoAsw.obj (.data)
+                  0000ab34    00000006     BswAdc.obj (.data:gfAdcResult)
+                  0000ab3a    00000006     BswAdc.obj (.data:gfAdcResultLpf)
+                  0000ab40    00000006     BswAdc.obj (.data:gfAdcResultOffset)
+                  0000ab46    00000006     MonAdc.obj (.data:gfVIccu)
+                  0000ab4c    00000006     MonAdc.obj (.data:gfVIccuAdcResult)
+                  0000ab52    00000006     MonAdc.obj (.data:gfVIccuSwLpf)
+                  0000ab58    00000006     FdiagCal.obj (.data:gfVolt_VoltHiFlt_Cal)
+                  0000ab5e    00000006     rts2800_fpu64_eabi.lib : exit.c.obj (.data)
+                  0000ab64    00000004     FdiagChkIO.obj (.data)
+                  0000ab68    00000004     MonPwr.obj (.data)
+                  0000ab6c    00000004     SeqMain.obj (.data)
+                  0000ab70    00000004     MonAdc.obj (.data:gfIIccu)
+                  0000ab74    00000004     MonAdc.obj (.data:gfIIccuAdcResult)
+                  0000ab78    00000004     MonAdc.obj (.data:gfIIccuSwLpf)
+                  0000ab7c    00000004     FdiagCal.obj (.data:gfIccuCurr_CurrHiFlt_Cal)
+                  0000ab80    00000004     BswAdc.obj (.data:gfVoltCal)
+                  0000ab84    00000004     BswAdc.obj (.data:gfVoltRaw)
+                  0000ab88    00000003     FdiagChkS.obj (.data:giTempSnsrState)
+                  0000ab8b    00000003     FdiagChkS.obj (.data:giTempState)
+                  0000ab8e    00000003     FdiagChkIO.obj (.data:giVoltSnsrState)
+                  0000ab91    00000003     FdiagChkIO.obj (.data:giVoltSnsr_RationalFlt_Timer)
+                  0000ab94    00000003     FdiagChkIO.obj (.data:giVoltSnsr_VoltHiFlt_Timer)
+                  0000ab97    00000003     FdiagChkIO.obj (.data:giVoltSnsr_VoltLoFlt_Timer)
+                  0000ab9a    00000003     FdiagChkIO.obj (.data:giVoltState)
+                  0000ab9d    00000003     FdiagChkIO.obj (.data:giVolt_Ov_HealCycle)
+                  0000aba0    00000003     FdiagChkIO.obj (.data:giVolt_Ov_HealState)
+                  0000aba3    00000003     FdiagChkIO.obj (.data:giVolt_Ov_Timer)
+                  0000aba6    00000003     FdiagChkIO.obj (.data:giVolt_Ov_count)
+                  0000aba9    00000001     rts2800_fpu64_eabi.lib : errno.c.obj (.data)
+                  0000abaa    00000002     BswAdc.obj (.data:gfCurrRaw)
+                  0000abac    00000002     FdiagChkIO.obj (.data:giCurrSnsrState)
+                  0000abae    00000002     FdiagChkIO.obj (.data:giCurrSnsr_RationalFlt_Timer)
+                  0000abb0    00000002     FdiagChkIO.obj (.data:giCurrSnsr_VoltHiFlt_Timer)
+                  0000abb2    00000002     FdiagChkIO.obj (.data:giCurrSnsr_VoltLoFlt_Timer)
+                  0000abb4    00000002     FdiagChkIO.obj (.data:giCurrState)
+                  0000abb6    00000002     FdiagChkIO.obj (.data:giCurr_Oc_Do_TripReset)
+                  0000abb8    00000002     FdiagChkIO.obj (.data:giCurr_Oc_HealCycle)
+                  0000abba    00000002     FdiagChkIO.obj (.data:giCurr_Oc_HealState)
+                  0000abbc    00000002     FdiagChkIO.obj (.data:giCurr_Oc_Resume_Timer)
+                  0000abbe    00000002     FdiagChkIO.obj (.data:giCurr_Oc_count)
+                  0000abc0    00000002     FdiagChkS.obj (.data:giGatePwmEnFlag)
+                  0000abc2    00000002     FdiagChkS.obj (.data:giGateState)
+
+MSGRAM_CM_TO_CPU 
+*          0    00038000    00000088     UNINITIALIZED
+                  00038000    00000088     ipc.obj (MSGRAM_CM_TO_CPU)
+
+MSGRAM_CPU_TO_CM 
+*          0    00039000    00000088     UNINITIALIZED
+                  00039000    00000088     ipc.obj (MSGRAM_CPU_TO_CM)
+
+.const     0    00090000    00000290     
+                  00090000    000001c0     f2838x_pievect.obj (.const)
+                  000901c0    00000088     ipc.obj (.const:IPC_Instance)
+                  00090248    00000020     interrupt.obj (.const:.string)
+                  00090268    0000001a     ipc.obj (.const:.string)
+                  00090282    00000004     rts2800_fpu64_eabi.lib : e_powf.c.obj (.const:bp)
+                  00090286    00000004                            : e_powf.c.obj (.const:dp_h)
+                  0009028a    00000004                            : e_powf.c.obj (.const:dp_l)
+                  0009028e    00000002     CtrPfc.obj (.const:$P$T0$1)
+
+MSGRAM_CPU1_TO_CPU2 
+*          0    0003a000    00000088     UNINITIALIZED
+                  0003a000    00000088     ipc.obj (MSGRAM_CPU1_TO_CPU2)
+
+MSGRAM_CPU2_TO_CPU1 
+*          0    0003b000    00000088     UNINITIALIZED
+                  0003b000    00000088     ipc.obj (MSGRAM_CPU2_TO_CPU1)
+
+.TI.ramfunc 
+*          0    00086000    00000030     RUN ADDR = 00008000
+                  00086000    0000002c     f2838x_sysctrl.obj (.TI.ramfunc:InitFlash)
+                  0008602c    00000004     f2838x_usdelay.obj (.TI.ramfunc)
+
+AdcaRegsFile 
+*          0    00007400    0000007c     UNINITIALIZED
+                  00007400    0000007c     f2838x_globalvariabledefs.obj (AdcaRegsFile)
+
+AdcbRegsFile 
+*          0    00007480    0000007c     UNINITIALIZED
+                  00007480    0000007c     f2838x_globalvariabledefs.obj (AdcbRegsFile)
+
+AdccRegsFile 
+*          0    00007500    0000007c     UNINITIALIZED
+                  00007500    0000007c     f2838x_globalvariabledefs.obj (AdccRegsFile)
+
+AdcdRegsFile 
+*          0    00007580    0000007c     UNINITIALIZED
+                  00007580    0000007c     f2838x_globalvariabledefs.obj (AdcdRegsFile)
+
+AdcbResultRegsFile 
+*          0    00000b20    00000018     UNINITIALIZED
+                  00000b20    00000018     f2838x_globalvariabledefs.obj (AdcbResultRegsFile)
+
+AnalogSubsysRegsFile 
+*          0    0005d700    0000003e     UNINITIALIZED
+                  0005d700    0000003e     f2838x_globalvariabledefs.obj (AnalogSubsysRegsFile)
+
+ClkCfgRegsFile 
+*          0    0005d200    0000003a     UNINITIALIZED
+                  0005d200    0000003a     f2838x_globalvariabledefs.obj (ClkCfgRegsFile)
+
+CpuTimer0RegsFile 
+*          0    00000c00    00000008     UNINITIALIZED
+                  00000c00    00000008     f2838x_globalvariabledefs.obj (CpuTimer0RegsFile)
+
+CpuTimer1RegsFile 
+*          0    00000c08    00000008     UNINITIALIZED
+                  00000c08    00000008     f2838x_globalvariabledefs.obj (CpuTimer1RegsFile)
+
+CpuTimer2RegsFile 
+*          0    00000c10    00000008     UNINITIALIZED
+                  00000c10    00000008     f2838x_globalvariabledefs.obj (CpuTimer2RegsFile)
+
+CpuSysRegsFile 
+*          0    0005d300    0000009c     UNINITIALIZED
+                  0005d300    0000009c     f2838x_globalvariabledefs.obj (CpuSysRegsFile)
+
+Dcc0RegsFile 
+*          0    0005e700    0000002c     UNINITIALIZED
+                  0005e700    0000002c     f2838x_globalvariabledefs.obj (Dcc0RegsFile)
+
+Dcc1RegsFile 
+*          0    0005e740    0000002c     UNINITIALIZED
+                  0005e740    0000002c     f2838x_globalvariabledefs.obj (Dcc1RegsFile)
+
+Dcc2RegsFile 
+*          0    0005e780    0000002c     UNINITIALIZED
+                  0005e780    0000002c     f2838x_globalvariabledefs.obj (Dcc2RegsFile)
+
+DevCfgRegsFile 
+*          0    0005d000    000001a0     UNINITIALIZED
+                  0005d000    000001a0     f2838x_globalvariabledefs.obj (DevCfgRegsFile)
+
+EPwm1RegsFile 
+*          0    00004000    00000100     UNINITIALIZED
+                  00004000    00000100     f2838x_globalvariabledefs.obj (EPwm1RegsFile)
+
+EPwm2RegsFile 
+*          0    00004100    00000100     UNINITIALIZED
+                  00004100    00000100     f2838x_globalvariabledefs.obj (EPwm2RegsFile)
+
+EPwm3RegsFile 
+*          0    00004200    00000100     UNINITIALIZED
+                  00004200    00000100     f2838x_globalvariabledefs.obj (EPwm3RegsFile)
+
+EPwm4RegsFile 
+*          0    00004300    00000100     UNINITIALIZED
+                  00004300    00000100     f2838x_globalvariabledefs.obj (EPwm4RegsFile)
+
+EPwm5RegsFile 
+*          0    00004400    00000100     UNINITIALIZED
+                  00004400    00000100     f2838x_globalvariabledefs.obj (EPwm5RegsFile)
+
+EPwm6RegsFile 
+*          0    00004500    00000100     UNINITIALIZED
+                  00004500    00000100     f2838x_globalvariabledefs.obj (EPwm6RegsFile)
+
+EPwm7RegsFile 
+*          0    00004600    00000100     UNINITIALIZED
+                  00004600    00000100     f2838x_globalvariabledefs.obj (EPwm7RegsFile)
+
+EPwm8RegsFile 
+*          0    00004700    00000100     UNINITIALIZED
+                  00004700    00000100     f2838x_globalvariabledefs.obj (EPwm8RegsFile)
+
+EPwm9RegsFile 
+*          0    00004800    00000100     UNINITIALIZED
+                  00004800    00000100     f2838x_globalvariabledefs.obj (EPwm9RegsFile)
+
+EPwm10RegsFile 
+*          0    00004900    00000100     UNINITIALIZED
+                  00004900    00000100     f2838x_globalvariabledefs.obj (EPwm10RegsFile)
+
+EPwm11RegsFile 
+*          0    00004a00    00000100     UNINITIALIZED
+                  00004a00    00000100     f2838x_globalvariabledefs.obj (EPwm11RegsFile)
+
+EPwm12RegsFile 
+*          0    00004b00    00000100     UNINITIALIZED
+                  00004b00    00000100     f2838x_globalvariabledefs.obj (EPwm12RegsFile)
+
+Flash0CtrlRegsFile 
+*          0    0005f800    00000182     UNINITIALIZED
+                  0005f800    00000182     f2838x_globalvariabledefs.obj (Flash0CtrlRegsFile)
+
+Flash0EccRegsFile 
+*          0    0005fb00    00000028     UNINITIALIZED
+                  0005fb00    00000028     f2838x_globalvariabledefs.obj (Flash0EccRegsFile)
+
+GpioCtrlRegsFile 
+*          0    00007c00    00000180     UNINITIALIZED
+                  00007c00    00000180     f2838x_globalvariabledefs.obj (GpioCtrlRegsFile)
+
+GpioDataRegsFile 
+*          0    00007f00    00000030     UNINITIALIZED
+                  00007f00    00000030     f2838x_globalvariabledefs.obj (GpioDataRegsFile)
+
+PieCtrlRegsFile 
+*          0    00000ce0    0000001a     UNINITIALIZED
+                  00000ce0    0000001a     f2838x_globalvariabledefs.obj (PieCtrlRegsFile)
+
+WdRegsFile 
+*          0    00007000    0000002b     UNINITIALIZED
+                  00007000    0000002b     f2838x_globalvariabledefs.obj (WdRegsFile)
+
+dcsm_z1otp_link_pointer 
+*          0    00000002    00000000     
+
+dcsm_z1otp_jlm_enable 
+*          0    00000002    00000000     
+
+dcsm_z1otp_gpreg 
+*          0    00000002    00000000     
+
+dcsm_z1otp_pswd_lock 
+*          0    00000002    00000000     
+
+dcsm_z1otp_crc_lock 
+*          0    00000002    00000000     
+
+dcsm_z1otp_jtag_pswdh 
+*          0    00000002    00000000     
+
+dcsm_z1otp_cmac_key 
+*          0    00000002    00000000     
+
+dcsm_zsel_z1 
+*          0    00000002    00000000     
+
+dcsm_z2otp_link_pointer 
+*          0    00000002    00000000     
+
+dcsm_rsvd_z2 
+*          0    00000002    00000000     
+
+dcsm_z2otp_gpreg 
+*          0    00000002    00000000     
+
+dcsm_z2otp_pswd_lock 
+*          0    00000002    00000000     
+
+dcsm_z2otp_crc_lock 
+*          0    00000002    00000000     
+
+dcsm_rsvd1_z2 
+*          0    00000002    00000000     
+
+dcsm_zsel_z2 
+*          0    00000002    00000000     
+
+.text.1    0    00082000    00002000     
+                  00082000    00000376     rts2800_fpu64_eabi.lib : e_powf.c.obj (.text)
+                  00082376    0000017f     CtrPfc.obj (.text:CtrPfcGridPLL)
+                  000824f5    00000177     CtrPfc.obj (.text:CtrPfcCurrCtr)
+                  0008266c    00000101     f2838x_sysctrl.obj (.text:InitSysPll)
+                  0008276d    000000f3     CtrPfc.obj (.text:CtrPfcDcLinkVoltCtr)
+                  00082860    000000df     f2838x_sysctrl.obj (.text:InitPeripheralClocks)
+                  0008293f    000000d9     rts2800_fpu64_eabi.lib : s_ceil.c.obj (.text)
+                  00082a18    000000d1     BswAdc.obj (.text:InitAdcConfig)
+                  00082ae9    000000c0     f2838x_sysctrl.obj (.text:InitAuxPll)
+                  00082ba9    000000b2     f2838x_adc.obj (.text:AdcSetMode)
+                  00082c5b    000000b0     f2838x_sysctrl.obj (.text:VerifyXTAL)
+                  00082d0b    00000094     BswPwm.obj (.text:InitEPwm1Config)
+                  00082d9f    00000094     f2838x_sysctrl.obj (.text:IsPLLValid)
+                  00082e33    0000008f     f2838x_sysctrl.obj (.text:ComputeCntrSeedValue)
+                  00082ec2    00000088     rts2800_fpu64_eabi.lib : fs_div28.asm.obj (.text)
+                  00082f4a    00000086     Util.obj (.text:TPOZ_Control_calc)
+                  00082fd0    0000007f     FdiagChkCtr.obj (.text:FdiagChkCtr_RunGridPLLCtrState)
+                  0008304f    0000007f     interrupt.obj (.text:Interrupt_clearIFR)
+                  000830ce    00000076     BswGpio.obj (.text:InitPWMEnaFltGpioConfig)
+                  00083144    00000074     Util.obj (.text:BSF2)
+                  000831b8    0000006c     BswAdc.obj (.text:BswAdcIsrOffsetCalc)
+                  00083224    0000006b     FdiagChkIO.obj (.text:FdiagChkIO_RunCurrSnsrState)
+                  0008328f    0000006b     FdiagChkIO.obj (.text:FdiagChkIO_RunVoltSnsrState)
+                  000832fa    0000006b     FdiagChkM.obj (.text:FdiagChkMConFault)
+                  00083365    00000069     BswAdc.obj (.text:BswAdcIsrCalc)
+                  000833ce    00000069     FdiagChkM.obj (.text:FdiagChkMConInhibit)
+                  00083437    00000064     FdiagChkM.obj (.text:FdiagChkMConFatal)
+                  0008349b    00000063     FdiagChkIO.obj (.text:FdiagChkIO_RunCurrState)
+                  000834fe    00000063     BswPwm.obj (.text:InitEPwm2Config)
+                  00083561    00000063     Util.obj (.text:PI_Control_calc)
+                  000835c4    00000062     Main.obj (.text:main)
+                  00083626    00000061     f2838x_sysctrl.obj (.text:InitSysCtrl)
+                  00083687    0000005f     FdiagChkM.obj (.text:FdiagChkMConNormal)
+                  000836e6    0000005f     BswIsr.obj (.text:Timer1_Task_100us_isr)
+                  00083745    0000005c     FdiagChkIO.obj (.text:FdiagChkIO_RunVoltSwFlt)
+                  000837a1    00000059     Util.obj (.text:BPF2)
+                  000837fa    00000059     rts2800_fpu64_eabi.lib : s_scalbnf.c.obj (.text)
+                  00083853    00000058     BswIsr.obj (.text:adcb1_isr)
+                  000838ab    00000057     FdiagChkIO.obj (.text:FdiagChkIO_RunVoltState)
+                  00083902    00000055     FdiagChkS.obj (.text:FdiagChkS_RunRlyState)
+                  00083957    00000051     FdiagChkIO.obj (.text:FdiagChkIO_RunCurrSwFlt)
+                  000839a8    0000004e     interrupt.obj (.text:Interrupt_disable)
+                  000839f6    0000004d     SeqMain.obj (.text:SeqMainChkMainState)
+                  00083a43    00000044     BswGpio.obj (.text:InitGpioInOutConfig)
+                  00083a87    0000003f     ipc.obj (.text:IPC_unregisterInterrupt)
+                  00083ac6    0000003d     BswPwm.obj (.text:BswPwm_SetPwmDuty)
+                  00083b03    0000003b     CtrPfc.obj (.text:CtrPfcHalfCycleDet)
+                  00083b3e    0000003b     f2838x_cputimers.obj (.text:InitCpuTimers)
+                  00083b79    0000003a     MonAdc.obj (.text:MonAdc100us)
+                  00083bb3    00000031     rts2800_fpu64_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00083be4    0000002c     Util.obj (.text:LPF1)
+                  00083c10    0000002c     MonPwr.obj (.text:MonPwrInPwrSwCalc1ms)
+                  00083c3c    0000002c     f2838x_sysctrl.obj (.text:SysXtalOscSel)
+                  00083c68    0000002b     rts2800_fpu64_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  00083c93    00000029     MonAdc.obj (.text:MonAdcIsr)
+                  00083cbc    00000029     rts2800_fpu64_eabi.lib : exit.c.obj (.text)
+                  00083ce5    00000001     AswMain.obj (.text:AswTask10ms)
+                  00083ce6    00000027     rts2800_fpu64_eabi.lib : e_sqrtf.c.obj (.text)
+                  00083d0d    00000026     f2838x_adc.obj (.text:CalAdcINL)
+                  00083d33    00000026     FdiagChkM.obj (.text:FdiagChkMConResume)
+                  00083d59    00000023     Util.obj (.text:APF1)
+                  00083d7c    00000023     f2838x_cputimers.obj (.text:ConfigCpuTimer)
+                  00083d9f    00000021     CtrPfc.obj (.text:CtrPfcPwmTest)
+                  00083dc0    0000001f     BswPwm.obj (.text:BswPwm_ForceLowPwm)
+                  00083ddf    0000001f     f2838x_piectrl.obj (.text:InitPieCtrl)
+                  00083dfe    0000001e     f2838x_sysctrl.obj (.text:SysXtalOscSESel)
+                  00083e1c    0000001d     rts2800_fpu64_eabi.lib : memcpy.c.obj (.text)
+                  00083e39    0000001c     BswPwm.obj (.text:BswPwm_SetFreqUpDownCnt)
+                  00083e55    0000001c     FdiagChkM.obj (.text:FdiagChkMConCbAbnormal)
+                  00083e71    0000001c     MonAdc.obj (.text:MonAdcAvgRms)
+                  00083e8d    0000001b     BswPwm.obj (.text:BswPwm_SetPwmADuty)
+                  00083ea8    0000001b     BswPwm.obj (.text:BswPwm_SetPwmBDuty)
+                  00083ec3    0000001b     f2838x_sysctrl.obj (.text:PollX1Counter)
+                  00083ede    0000001b     Util.obj (.text:park_calc)
+                  00083ef9    0000001a     CtrPfc.obj (.text:CtrPfcIsrCtr)
+                  00083f13    00000019     f2838x_gpio.obj (.text:GPIO_EnableUnbondedIOPullupsFor176Pin)
+                  00083f2c    00000019     rts2800_fpu64_eabi.lib : boot28.asm.obj (.text)
+                  00083f45    00000018     f2838x_sysctrl.obj (.text:AuxXtalOscSESel)
+                  00083f5d    00000018     f2838x_sysctrl.obj (.text:AuxXtalOscSel)
+                  00083f75    00000018     f2838x_epwm.obj (.text:InitEPwm3Gpio)
+                  00083f8d    00000018     f2838x_epwm.obj (.text:InitEPwm4Gpio)
+                  00083fa5    00000018     rts2800_fpu64_eabi.lib : ll_aox28.asm.obj (.text)
+                  00083fbd    00000016     f2838x_epwm.obj (.text:InitEPwm1Gpio)
+                  00083fd3    00000016     f2838x_epwm.obj (.text:InitEPwm2Gpio)
+                  00083fe9    00000016     f2838x_epwm.obj (.text:InitEPwm5Gpio)
+                  00083fff    00000001     BswPwm.obj (.text:InitEPwm3Config)
+
+.text.2    0    00084000    00000b4d     
+                  00084000    00000015     BswPwm.obj (.text:BswPwm_DisablePfcHSPwm)
+                  00084015    00000015     FdiagChkCtr.obj (.text:FdiagChkCtr_GridPllFltHealCount)
+                  0008402a    00000015     FdiagChkS.obj (.text:FdiagChkSTask1ms)
+                  0008403f    00000015     FdiagChkS.obj (.text:FdiagChkS_SetPwmEnState)
+                  00084054    00000015     interrupt.obj (.text:Interrupt_initVectorTable)
+                  00084069    00000014     BswGpio.obj (.text:InitGpioConfig)
+                  0008407d    00000013     FdiagChkIO.obj (.text:FdiagChkIOTask1ms)
+                  00084090    00000011     f2838x_pievect.obj (.text:InitPieVectTable)
+                  000840a1    00000011     rts2800_fpu64_eabi.lib : s_copysignf.c.obj (.text)
+                  000840b2    00000010     BswPwm.obj (.text:BswPwm_EnablePwm)
+                  000840c2    0000000d     BswPwm.obj (.text:BswPwm_PfcHSPwmNegDitheringMode)
+                  000840cf    0000000d     BswPwm.obj (.text:BswPwm_PfcHSPwmPosDitheringMode)
+                  000840dc    0000000d     f2838x_sysctrl.obj (.text:DisableDog)
+                  000840e9    0000000d     f2838x_defaultisr.obj (.text:EMPTY_ISR)
+                  000840f6    0000000d     rts2800_fpu64_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  00084103    0000000c     CtrPfc.obj (.text:CtrPfcTask1ms)
+                  0008410f    0000000c     interrupt.obj (.text:Interrupt_defaultHandler)
+                  0008411b    0000000c     rts2800_fpu64_eabi.lib : args_main.c.obj (.text)
+                  00084127    0000000b     BswPwm.obj (.text:BswPwm_DisablePfcPwm)
+                  00084132    0000000b     BswPwm.obj (.text:BswPwm_EnablePfcPwm)
+                  0008413d    0000000a     f2838x_defaultisr.obj (.text:ADCA1_ISR)
+                  00084147    0000000a     f2838x_defaultisr.obj (.text:ADCA2_ISR)
+                  00084151    0000000a     f2838x_defaultisr.obj (.text:ADCA3_ISR)
+                  0008415b    0000000a     f2838x_defaultisr.obj (.text:ADCA4_ISR)
+                  00084165    0000000a     f2838x_defaultisr.obj (.text:ADCA_EVT_ISR)
+                  0008416f    0000000a     f2838x_defaultisr.obj (.text:ADCB1_ISR)
+                  00084179    0000000a     f2838x_defaultisr.obj (.text:ADCB2_ISR)
+                  00084183    0000000a     f2838x_defaultisr.obj (.text:ADCB3_ISR)
+                  0008418d    0000000a     f2838x_defaultisr.obj (.text:ADCB4_ISR)
+                  00084197    0000000a     f2838x_defaultisr.obj (.text:ADCB_EVT_ISR)
+                  000841a1    0000000a     f2838x_defaultisr.obj (.text:ADCC1_ISR)
+                  000841ab    0000000a     f2838x_defaultisr.obj (.text:ADCC2_ISR)
+                  000841b5    0000000a     f2838x_defaultisr.obj (.text:ADCC3_ISR)
+                  000841bf    0000000a     f2838x_defaultisr.obj (.text:ADCC4_ISR)
+                  000841c9    0000000a     f2838x_defaultisr.obj (.text:ADCC_EVT_ISR)
+                  000841d3    0000000a     f2838x_defaultisr.obj (.text:ADCD1_ISR)
+                  000841dd    0000000a     f2838x_defaultisr.obj (.text:ADCD2_ISR)
+                  000841e7    0000000a     f2838x_defaultisr.obj (.text:ADCD3_ISR)
+                  000841f1    0000000a     f2838x_defaultisr.obj (.text:ADCD4_ISR)
+                  000841fb    0000000a     f2838x_defaultisr.obj (.text:ADCD_EVT_ISR)
+                  00084205    0000000a     f2838x_sysctrl.obj (.text:AuxAuxClkSel)
+                  0008420f    0000000a     BswApi.obj (.text:BswApi_GetCurr)
+                  00084219    0000000a     BswApi.obj (.text:BswApi_GetCurrRaw)
+                  00084223    0000000a     BswApi.obj (.text:BswApi_GetVolt)
+                  0008422d    0000000a     BswApi.obj (.text:BswApi_GetVoltRaw)
+                  00084237    0000000a     BswGpio.obj (.text:BswGpio_PfcLSSw_NegEn)
+                  00084241    0000000a     BswGpio.obj (.text:BswGpio_PfcLSSw_PosEn)
+                  0008424b    0000000a     f2838x_defaultisr.obj (.text:CANA0_ISR)
+                  00084255    0000000a     f2838x_defaultisr.obj (.text:CANA1_ISR)
+                  0008425f    0000000a     f2838x_defaultisr.obj (.text:CANB0_ISR)
+                  00084269    0000000a     f2838x_defaultisr.obj (.text:CANB1_ISR)
+                  00084273    0000000a     f2838x_defaultisr.obj (.text:CIPC0_ISR)
+                  0008427d    0000000a     f2838x_defaultisr.obj (.text:CIPC1_ISR)
+                  00084287    0000000a     f2838x_defaultisr.obj (.text:CIPC2_ISR)
+                  00084291    0000000a     f2838x_defaultisr.obj (.text:CIPC3_ISR)
+                  0008429b    0000000a     f2838x_defaultisr.obj (.text:CLA1CRC_ISR)
+                  000842a5    0000000a     f2838x_defaultisr.obj (.text:CLA1_1_ISR)
+                  000842af    0000000a     f2838x_defaultisr.obj (.text:CLA1_2_ISR)
+                  000842b9    0000000a     f2838x_defaultisr.obj (.text:CLA1_3_ISR)
+                  000842c3    0000000a     f2838x_defaultisr.obj (.text:CLA1_4_ISR)
+                  000842cd    0000000a     f2838x_defaultisr.obj (.text:CLA1_5_ISR)
+                  000842d7    0000000a     f2838x_defaultisr.obj (.text:CLA1_6_ISR)
+                  000842e1    0000000a     f2838x_defaultisr.obj (.text:CLA1_7_ISR)
+                  000842eb    0000000a     f2838x_defaultisr.obj (.text:CLA1_8_ISR)
+                  000842f5    0000000a     f2838x_defaultisr.obj (.text:CLA_OVERFLOW_ISR)
+                  000842ff    0000000a     f2838x_defaultisr.obj (.text:CLA_UNDERFLOW_ISR)
+                  00084309    0000000a     f2838x_defaultisr.obj (.text:CLB1_ISR)
+                  00084313    0000000a     f2838x_defaultisr.obj (.text:CLB2_ISR)
+                  0008431d    0000000a     f2838x_defaultisr.obj (.text:CLB3_ISR)
+                  00084327    0000000a     f2838x_defaultisr.obj (.text:CLB4_ISR)
+                  00084331    0000000a     f2838x_defaultisr.obj (.text:CLB5_ISR)
+                  0008433b    0000000a     f2838x_defaultisr.obj (.text:CLB6_ISR)
+                  00084345    0000000a     f2838x_defaultisr.obj (.text:CLB7_ISR)
+                  0008434f    0000000a     f2838x_defaultisr.obj (.text:CLB8_ISR)
+                  00084359    0000000a     f2838x_defaultisr.obj (.text:CMTOCPUXIPC0_ISR)
+                  00084363    0000000a     f2838x_defaultisr.obj (.text:CMTOCPUXIPC1_ISR)
+                  0008436d    0000000a     f2838x_defaultisr.obj (.text:CMTOCPUXIPC2_ISR)
+                  00084377    0000000a     f2838x_defaultisr.obj (.text:CMTOCPUXIPC3_ISR)
+                  00084381    0000000a     f2838x_defaultisr.obj (.text:CMTOCPUXIPC4_ISR)
+                  0008438b    0000000a     f2838x_defaultisr.obj (.text:CMTOCPUXIPC5_ISR)
+                  00084395    0000000a     f2838x_defaultisr.obj (.text:CMTOCPUXIPC6_ISR)
+                  0008439f    0000000a     f2838x_defaultisr.obj (.text:CMTOCPUXIPC7_ISR)
+                  000843a9    0000000a     f2838x_defaultisr.obj (.text:CM_STATUS_ISR)
+                  000843b3    0000000a     f2838x_defaultisr.obj (.text:CPUCRC_ISR)
+                  000843bd    0000000a     CtrPfc.obj (.text:CtrPfcTask100us)
+                  000843c7    0000000a     f2838x_defaultisr.obj (.text:DATALOG_ISR)
+                  000843d1    0000000a     f2838x_defaultisr.obj (.text:DMA_CH1_ISR)
+                  000843db    0000000a     f2838x_defaultisr.obj (.text:DMA_CH2_ISR)
+                  000843e5    0000000a     f2838x_defaultisr.obj (.text:DMA_CH3_ISR)
+                  000843ef    0000000a     f2838x_defaultisr.obj (.text:DMA_CH4_ISR)
+                  000843f9    0000000a     f2838x_defaultisr.obj (.text:DMA_CH5_ISR)
+                  00084403    0000000a     f2838x_defaultisr.obj (.text:DMA_CH6_ISR)
+                  0008440d    0000000a     f2838x_defaultisr.obj (.text:ECAP1_ISR)
+                  00084417    0000000a     f2838x_defaultisr.obj (.text:ECAP2_ISR)
+                  00084421    0000000a     f2838x_defaultisr.obj (.text:ECAP3_ISR)
+                  0008442b    0000000a     f2838x_defaultisr.obj (.text:ECAP4_ISR)
+                  00084435    0000000a     f2838x_defaultisr.obj (.text:ECAP5_ISR)
+                  0008443f    0000000a     f2838x_defaultisr.obj (.text:ECAP6_2_ISR)
+                  00084449    0000000a     f2838x_defaultisr.obj (.text:ECAP6_ISR)
+                  00084453    0000000a     f2838x_defaultisr.obj (.text:ECAP7_2_ISR)
+                  0008445d    0000000a     f2838x_defaultisr.obj (.text:ECAP7_ISR)
+                  00084467    0000000a     f2838x_defaultisr.obj (.text:ECATRST_ISR)
+                  00084471    0000000a     f2838x_defaultisr.obj (.text:ECATSYNC0_ISR)
+                  0008447b    0000000a     f2838x_defaultisr.obj (.text:ECATSYNC1_ISR)
+                  00084485    0000000a     f2838x_defaultisr.obj (.text:ECAT_ISR)
+                  0008448f    0000000a     f2838x_defaultisr.obj (.text:EMU_ISR)
+                  00084499    0000000a     f2838x_defaultisr.obj (.text:EPWM10_ISR)
+                  000844a3    0000000a     f2838x_defaultisr.obj (.text:EPWM10_TZ_ISR)
+                  000844ad    0000000a     f2838x_defaultisr.obj (.text:EPWM11_ISR)
+                  000844b7    0000000a     f2838x_defaultisr.obj (.text:EPWM11_TZ_ISR)
+                  000844c1    0000000a     f2838x_defaultisr.obj (.text:EPWM12_ISR)
+                  000844cb    0000000a     f2838x_defaultisr.obj (.text:EPWM12_TZ_ISR)
+                  000844d5    0000000a     f2838x_defaultisr.obj (.text:EPWM13_ISR)
+                  000844df    0000000a     f2838x_defaultisr.obj (.text:EPWM13_TZ_ISR)
+                  000844e9    0000000a     f2838x_defaultisr.obj (.text:EPWM14_ISR)
+                  000844f3    0000000a     f2838x_defaultisr.obj (.text:EPWM14_TZ_ISR)
+                  000844fd    0000000a     f2838x_defaultisr.obj (.text:EPWM15_ISR)
+                  00084507    0000000a     f2838x_defaultisr.obj (.text:EPWM15_TZ_ISR)
+                  00084511    0000000a     f2838x_defaultisr.obj (.text:EPWM16_ISR)
+                  0008451b    0000000a     f2838x_defaultisr.obj (.text:EPWM16_TZ_ISR)
+                  00084525    0000000a     f2838x_defaultisr.obj (.text:EPWM1_ISR)
+                  0008452f    0000000a     f2838x_defaultisr.obj (.text:EPWM1_TZ_ISR)
+                  00084539    0000000a     f2838x_defaultisr.obj (.text:EPWM2_ISR)
+                  00084543    0000000a     f2838x_defaultisr.obj (.text:EPWM2_TZ_ISR)
+                  0008454d    0000000a     f2838x_defaultisr.obj (.text:EPWM3_ISR)
+                  00084557    0000000a     f2838x_defaultisr.obj (.text:EPWM3_TZ_ISR)
+                  00084561    0000000a     f2838x_defaultisr.obj (.text:EPWM4_ISR)
+                  0008456b    0000000a     f2838x_defaultisr.obj (.text:EPWM4_TZ_ISR)
+                  00084575    0000000a     f2838x_defaultisr.obj (.text:EPWM5_ISR)
+                  0008457f    0000000a     f2838x_defaultisr.obj (.text:EPWM5_TZ_ISR)
+                  00084589    0000000a     f2838x_defaultisr.obj (.text:EPWM6_ISR)
+                  00084593    0000000a     f2838x_defaultisr.obj (.text:EPWM6_TZ_ISR)
+                  0008459d    0000000a     f2838x_defaultisr.obj (.text:EPWM7_ISR)
+                  000845a7    0000000a     f2838x_defaultisr.obj (.text:EPWM7_TZ_ISR)
+                  000845b1    0000000a     f2838x_defaultisr.obj (.text:EPWM8_ISR)
+                  000845bb    0000000a     f2838x_defaultisr.obj (.text:EPWM8_TZ_ISR)
+                  000845c5    0000000a     f2838x_defaultisr.obj (.text:EPWM9_ISR)
+                  000845cf    0000000a     f2838x_defaultisr.obj (.text:EPWM9_TZ_ISR)
+                  000845d9    0000000a     f2838x_defaultisr.obj (.text:EQEP1_ISR)
+                  000845e3    0000000a     f2838x_defaultisr.obj (.text:EQEP2_ISR)
+                  000845ed    0000000a     f2838x_defaultisr.obj (.text:EQEP3_ISR)
+                  000845f7    0000000a     f2838x_defaultisr.obj (.text:FMC_ISR)
+                  00084601    0000000a     f2838x_defaultisr.obj (.text:FPU_OFLOW_ISR)
+                  0008460b    0000000a     f2838x_defaultisr.obj (.text:FPU_UFLOW_ISR)
+                  00084615    0000000a     f2838x_defaultisr.obj (.text:FSIRXA1_ISR)
+                  0008461f    0000000a     f2838x_defaultisr.obj (.text:FSIRXA2_ISR)
+                  00084629    0000000a     f2838x_defaultisr.obj (.text:FSIRXB1_ISR)
+                  00084633    0000000a     f2838x_defaultisr.obj (.text:FSIRXB2_ISR)
+                  0008463d    0000000a     f2838x_defaultisr.obj (.text:FSIRXC1_ISR)
+                  00084647    0000000a     f2838x_defaultisr.obj (.text:FSIRXC2_ISR)
+                  00084651    0000000a     f2838x_defaultisr.obj (.text:FSIRXD1_ISR)
+                  0008465b    0000000a     f2838x_defaultisr.obj (.text:FSIRXD2_ISR)
+                  00084665    0000000a     f2838x_defaultisr.obj (.text:FSIRXE1_ISR)
+                  0008466f    0000000a     f2838x_defaultisr.obj (.text:FSIRXE2_ISR)
+                  00084679    0000000a     f2838x_defaultisr.obj (.text:FSIRXF1_ISR)
+                  00084683    0000000a     f2838x_defaultisr.obj (.text:FSIRXF2_ISR)
+                  0008468d    0000000a     f2838x_defaultisr.obj (.text:FSIRXG1_ISR)
+                  00084697    0000000a     f2838x_defaultisr.obj (.text:FSIRXG2_ISR)
+                  000846a1    0000000a     f2838x_defaultisr.obj (.text:FSIRXH1_ISR)
+                  000846ab    0000000a     f2838x_defaultisr.obj (.text:FSIRXH2_ISR)
+                  000846b5    0000000a     f2838x_defaultisr.obj (.text:FSITXA1_ISR)
+                  000846bf    0000000a     f2838x_defaultisr.obj (.text:FSITXA2_ISR)
+                  000846c9    0000000a     f2838x_defaultisr.obj (.text:FSITXB1_ISR)
+                  000846d3    0000000a     f2838x_defaultisr.obj (.text:FSITXB2_ISR)
+                  000846dd    0000000a     FdiagChkIO.obj (.text:FdiagChkIOIsrCtr)
+                  000846e7    0000000a     f2838x_gpio.obj (.text:GPIO_EnableUnbondedIOPullups)
+                  000846f1    0000000a     f2838x_defaultisr.obj (.text:I2CA_FIFO_ISR)
+                  000846fb    0000000a     f2838x_defaultisr.obj (.text:I2CA_HIGH_ISR)
+                  00084705    0000000a     f2838x_defaultisr.obj (.text:I2CA_ISR)
+                  0008470f    0000000a     f2838x_defaultisr.obj (.text:I2CB_FIFO_ISR)
+                  00084719    0000000a     f2838x_defaultisr.obj (.text:I2CB_ISR)
+                  00084723    0000000a     f2838x_defaultisr.obj (.text:ILLEGAL_ISR)
+                  0008472d    0000000a     interrupt.obj (.text:Interrupt_illegalOperationHandler)
+                  00084737    0000000a     interrupt.obj (.text:Interrupt_nmiHandler)
+                  00084741    0000000a     f2838x_defaultisr.obj (.text:MCANSS0_ISR)
+                  0008474b    0000000a     f2838x_defaultisr.obj (.text:MCANSS1_ISR)
+                  00084755    0000000a     f2838x_defaultisr.obj (.text:MCANSS_ECC_CORR_PLS_ISR)
+                  0008475f    0000000a     f2838x_defaultisr.obj (.text:MCANSS_WAKE_AND_TS_PLS_ISR)
+                  00084769    0000000a     f2838x_defaultisr.obj (.text:MCBSPA_RX_ISR)
+                  00084773    0000000a     f2838x_defaultisr.obj (.text:MCBSPA_TX_ISR)
+                  0008477d    0000000a     f2838x_defaultisr.obj (.text:MCBSPB_RX_ISR)
+                  00084787    0000000a     f2838x_defaultisr.obj (.text:MCBSPB_TX_ISR)
+                  00084791    0000000a     f2838x_defaultisr.obj (.text:MPOST_ISR)
+                  0008479b    0000000a     MonApi.obj (.text:MonApi_GetCurr)
+                  000847a5    0000000a     MonApi.obj (.text:MonApi_GetCurrAdcResult)
+                  000847af    0000000a     MonApi.obj (.text:MonApi_GetCurrSwLpf)
+                  000847b9    0000000a     MonApi.obj (.text:MonApi_GetVolt)
+                  000847c3    0000000a     MonApi.obj (.text:MonApi_GetVoltAdcResult)
+                  000847cd    0000000a     MonApi.obj (.text:MonApi_GetVoltSwLpf)
+                  000847d7    0000000a     f2838x_defaultisr.obj (.text:NMI_ISR)
+                  000847e1    0000000a     f2838x_defaultisr.obj (.text:NOTUSED_ISR)
+                  000847eb    0000000a     f2838x_defaultisr.obj (.text:PIE_RESERVED_ISR)
+                  000847f5    0000000a     f2838x_defaultisr.obj (.text:PMBUSA_ISR)
+                  000847ff    0000000a     f2838x_defaultisr.obj (.text:RTOS_ISR)
+                  00084809    0000000a     f2838x_defaultisr.obj (.text:SCIA_RX_ISR)
+                  00084813    0000000a     f2838x_defaultisr.obj (.text:SCIA_TX_ISR)
+                  0008481d    0000000a     f2838x_defaultisr.obj (.text:SCIB_RX_ISR)
+                  00084827    0000000a     f2838x_defaultisr.obj (.text:SCIB_TX_ISR)
+                  00084831    0000000a     f2838x_defaultisr.obj (.text:SCIC_RX_ISR)
+                  0008483b    0000000a     f2838x_defaultisr.obj (.text:SCIC_TX_ISR)
+                  00084845    0000000a     f2838x_defaultisr.obj (.text:SCID_RX_ISR)
+                  0008484f    0000000a     f2838x_defaultisr.obj (.text:SCID_TX_ISR)
+                  00084859    0000000a     f2838x_defaultisr.obj (.text:SDFM1DR1_ISR)
+                  00084863    0000000a     f2838x_defaultisr.obj (.text:SDFM1DR2_ISR)
+                  0008486d    0000000a     f2838x_defaultisr.obj (.text:SDFM1DR3_ISR)
+                  00084877    0000000a     f2838x_defaultisr.obj (.text:SDFM1DR4_ISR)
+                  00084881    0000000a     f2838x_defaultisr.obj (.text:SDFM1_ISR)
+                  0008488b    0000000a     f2838x_defaultisr.obj (.text:SDFM2DR1_ISR)
+                  00084895    0000000a     f2838x_defaultisr.obj (.text:SDFM2DR2_ISR)
+                  0008489f    0000000a     f2838x_defaultisr.obj (.text:SDFM2DR3_ISR)
+                  000848a9    0000000a     f2838x_defaultisr.obj (.text:SDFM2DR4_ISR)
+                  000848b3    0000000a     f2838x_defaultisr.obj (.text:SDFM2_ISR)
+                  000848bd    0000000a     f2838x_defaultisr.obj (.text:SPIA_RX_ISR)
+                  000848c7    0000000a     f2838x_defaultisr.obj (.text:SPIA_TX_ISR)
+                  000848d1    0000000a     f2838x_defaultisr.obj (.text:SPIB_RX_ISR)
+                  000848db    0000000a     f2838x_defaultisr.obj (.text:SPIB_TX_ISR)
+                  000848e5    0000000a     f2838x_defaultisr.obj (.text:SPIC_RX_ISR)
+                  000848ef    0000000a     f2838x_defaultisr.obj (.text:SPIC_TX_ISR)
+                  000848f9    0000000a     f2838x_defaultisr.obj (.text:SPID_RX_ISR)
+                  00084903    0000000a     f2838x_defaultisr.obj (.text:SPID_TX_ISR)
+                  0008490d    0000000a     f2838x_defaultisr.obj (.text:SYS_ERR_ISR)
+                  00084917    0000000a     f2838x_sysctrl.obj (.text:SysIntOsc1Sel)
+                  00084921    0000000a     f2838x_defaultisr.obj (.text:TIMER0_ISR)
+                  0008492b    0000000a     f2838x_defaultisr.obj (.text:TIMER1_ISR)
+                  00084935    0000000a     f2838x_defaultisr.obj (.text:TIMER2_ISR)
+                  0008493f    0000000a     f2838x_defaultisr.obj (.text:USBA_ISR)
+                  00084949    0000000a     f2838x_defaultisr.obj (.text:USER10_ISR)
+                  00084953    0000000a     f2838x_defaultisr.obj (.text:USER11_ISR)
+                  0008495d    0000000a     f2838x_defaultisr.obj (.text:USER12_ISR)
+                  00084967    0000000a     f2838x_defaultisr.obj (.text:USER1_ISR)
+                  00084971    0000000a     f2838x_defaultisr.obj (.text:USER2_ISR)
+                  0008497b    0000000a     f2838x_defaultisr.obj (.text:USER3_ISR)
+                  00084985    0000000a     f2838x_defaultisr.obj (.text:USER4_ISR)
+                  0008498f    0000000a     f2838x_defaultisr.obj (.text:USER5_ISR)
+                  00084999    0000000a     f2838x_defaultisr.obj (.text:USER6_ISR)
+                  000849a3    0000000a     f2838x_defaultisr.obj (.text:USER7_ISR)
+                  000849ad    0000000a     f2838x_defaultisr.obj (.text:USER8_ISR)
+                  000849b7    0000000a     f2838x_defaultisr.obj (.text:USER9_ISR)
+                  000849c1    0000000a     f2838x_defaultisr.obj (.text:WAKE_ISR)
+                  000849cb    0000000a     f2838x_defaultisr.obj (.text:XINT1_ISR)
+                  000849d5    0000000a     f2838x_defaultisr.obj (.text:XINT2_ISR)
+                  000849df    0000000a     f2838x_defaultisr.obj (.text:XINT3_ISR)
+                  000849e9    0000000a     f2838x_defaultisr.obj (.text:XINT4_ISR)
+                  000849f3    0000000a     f2838x_defaultisr.obj (.text:XINT5_ISR)
+                  000849fd    00000009     AswMain.obj (.text:AswTask1ms)
+                  00084a06    00000009     FdiagChkM.obj (.text:FdiagChkMTask1ms)
+                  00084a0f    00000009     rts2800_fpu64_eabi.lib : _lock.c.obj (.text)
+                  00084a18    00000008     f2838x_sysctrl.obj (.text:AuxIntOsc2Sel)
+                  00084a20    00000008     BswPwm.obj (.text:BswPwm_EnablePfcHSPwm)
+                  00084a28    00000008     BswPwm.obj (.text:BswPwm_PfcHSPwmNormalMode)
+                  00084a30    00000008     BswTask.obj (.text:BswTask100ms)
+                  00084a38    00000008     BswTask.obj (.text:BswTask100us)
+                  00084a40    00000008     BswTask.obj (.text:BswTask10ms)
+                  00084a48    00000008     BswTask.obj (.text:BswTask1ms)
+                  00084a50    00000008     f2838x_sysctrl.obj (.text:SysIntOsc2Sel)
+                  00084a58    00000008     rts2800_fpu64_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
+                  00084a60    00000008     f2838x_codestartbranch.obj (.text)
+                  00084a68    00000007     AswMain.obj (.text:AswIsrCtr)
+                  00084a6f    00000007     BswGpio.obj (.text:BswGpio_PfcLSSw_DeadBand)
+                  00084a76    00000007     CtrApi.obj (.text:CtrApi_GetGriddqVolt)
+                  00084a7d    00000007     CtrApi.obj (.text:CtrApi_GetGriddqVoltLpf)
+                  00084a84    00000005     AswMain.obj (.text:AswTask100us)
+                  00084a89    00000005     BswGpio.obj (.text:BswGpio_DisableRly)
+                  00084a8e    00000005     BswGpio.obj (.text:BswGpio_EnableRly)
+                  00084a93    00000005     CtrApi.obj (.text:CtrApi_GetVgridMag)
+                  00084a98    00000005     CtrApi.obj (.text:CtrApi_GetVgridMagLpf)
+                  00084a9d    00000005     FdiagApi.obj (.text:FdiagApi_GetTempState)
+                  00084aa2    00000005     FdiagApi.obj (.text:FdiagApi_GetVoltSnsrState)
+                  00084aa7    00000005     FdiagChkFS.obj (.text:FdiagChkFSTask1ms)
+                  00084aac    00000005     FdiagChkIO.obj (.text:FdiagChkIO_GetCurrSnsrState)
+                  00084ab1    00000005     FdiagChkIO.obj (.text:FdiagChkIO_GetCurrState)
+                  00084ab6    00000005     FdiagChkIO.obj (.text:FdiagChkIO_GetVoltSnsrState)
+                  00084abb    00000005     FdiagChkIO.obj (.text:FdiagChkIO_GetVoltState)
+                  00084ac0    00000005     FdiagChkS.obj (.text:FdiagChkS_GetGateState)
+                  00084ac5    00000005     FdiagChkS.obj (.text:FdiagChkS_GetTempSnsrState)
+                  00084aca    00000005     ItrComBswtoAsw.obj (.text:ItrCom_GetTestInhibit)
+                  00084acf    00000005     MonApi.obj (.text:MonApi_AdcTask1ms)
+                  00084ad4    00000005     MonApi.obj (.text:MonApi_GetGridVoltRms)
+                  00084ad9    00000004     FdiagApi.obj (.text:FdiagApi_ChagePfcCurrCtrState)
+                  00084add    00000004     FdiagApi.obj (.text:FdiagApi_ChangeGridPllState)
+                  00084ae1    00000004     FdiagApi.obj (.text:FdiagApi_ChangePfcDcLinkVoltCtrState)
+                  00084ae5    00000004     FdiagApi.obj (.text:FdiagApi_GetGridPllCtrState)
+                  00084ae9    00000004     FdiagApi.obj (.text:FdiagApi_GetPfcCurrCtrState)
+                  00084aed    00000004     FdiagApi.obj (.text:FdiagApi_GetPfcDcLinkVoltCtrState)
+                  00084af1    00000004     FdiagChkCtr.obj (.text:FdiagChkCtr_GetDcDcCurrCtrState)
+                  00084af5    00000004     FdiagChkCtr.obj (.text:FdiagChkCtr_GetDcLinkVoltCtrState)
+                  00084af9    00000004     FdiagChkCtr.obj (.text:FdiagChkCtr_GetGridPllCtrState)
+                  00084afd    00000004     FdiagChkCtr.obj (.text:FdiagChkCtr_GetOutVoltCtrState)
+                  00084b01    00000004     FdiagChkCtr.obj (.text:FdiagChkCtr_GetPfcCurrCtrState)
+                  00084b05    00000004     FdiagChkFS.obj (.text:FdiagChkFS_GetEcuPostRunState)
+                  00084b09    00000004     FdiagChkFS.obj (.text:FdiagChkFS_GetIccuModeState)
+                  00084b0d    00000004     FdiagChkS.obj (.text:FdiagChkS_GetAuxBatVoltSnsrState)
+                  00084b11    00000004     FdiagChkS.obj (.text:FdiagChkS_GetAuxBatVoltState)
+                  00084b15    00000004     FdiagChkS.obj (.text:FdiagChkS_GetDeratingState)
+                  00084b19    00000004     FdiagChkS.obj (.text:FdiagChkS_GetIGVoltSnsrState)
+                  00084b1d    00000004     FdiagChkS.obj (.text:FdiagChkS_GetIgVoltState)
+                  00084b21    00000004     FdiagChkS.obj (.text:FdiagChkS_GetMalfuncState)
+                  00084b25    00000004     FdiagChkS.obj (.text:FdiagChkS_GetOperModeState)
+                  00084b29    00000004     FdiagChkS.obj (.text:FdiagChkS_GetRlyState)
+                  00084b2d    00000004     FdiagChkS.obj (.text:FdiagChkS_GetSmpsVoltSnsrState)
+                  00084b31    00000004     MonApi.obj (.text:MonApi_GetInhibitstate)
+                  00084b35    00000004     SeqApi.obj (.text:SeqApi_GetInternalMainState)
+                  00084b39    00000004     SeqMain.obj (.text:SeqMain_SetInternalMainState)
+                  00084b3d    00000003     ComApi.obj (.text:ComApi_GetCanOutCurr)
+                  00084b40    00000003     FdiagApi.obj (.text:FdiagApi_GetIccuModeState)
+                  00084b43    00000003     FdiagChkCtr.obj (.text:FdiagChkCtrTask100ms)
+                  00084b46    00000003     device.obj (.text:__error__)
+                  00084b49    00000002     rts2800_fpu64_eabi.lib : pre_init.c.obj (.text)
+                  00084b4b    00000001     BswPwm.obj (.text:InitEPwm4Config)
+                  00084b4c    00000001     rts2800_fpu64_eabi.lib : startup.c.obj (.text)
+
+MODULE SUMMARY
+
+       Module                          code    ro data   rw data
+       ------                          ----    -------   -------
+    .\
+       Util.obj                        544     0         0      
+       Main.obj                        98      0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          642     0         0      
+                                                                
+    .\ASW\M0_MAIN\
+       AswMain.obj                     22      0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          22      0         0      
+                                                                
+    .\ASW\M1_SEQ\
+       SeqMain.obj                     81      0         4      
+       SeqApi.obj                      4       0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          85      0         4      
+                                                                
+    .\ASW\M2_MON\
+       MonAdc.obj                      127     0         158    
+       MonApi.obj                      74      0         0      
+       MonPwr.obj                      44      0         4      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          245     0         162    
+                                                                
+    .\ASW\M3_CTR\
+       CtrPfc.obj                      1141    2         386    
+       CtrCal.obj                      0       0         42     
+       CtrApi.obj                      24      0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          1165    2         428    
+                                                                
+    .\ASW\M4_FDIAG\
+       FdiagChkIO.obj                  622     0         51     
+       FdiagChkM.obj                   482     0         11     
+       FdiagChkS.obj                   173     0         43     
+       FdiagChkCtr.obj                 171     0         20     
+       FdiagCal.obj                    0       0         120    
+       FdiagApi.obj                    37      0         0      
+       FdiagChkFS.obj                  13      0         7      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          1498    0         252    
+                                                                
+    .\ASW\M6_COM\
+       ComApi.obj                      3       0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          3       0         0      
+                                                                
+    .\BSW\
+       BswPwm.obj                      524     0         26     
+       BswAdc.obj                      422     0         56     
+       BswGpio.obj                     243     0         0      
+       BswIsr.obj                      183     0         6      
+       BswApi.obj                      40      0         0      
+       BswTask.obj                     32      0         8      
+       BswCal.obj                      0       0         20     
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          1444    0         116    
+                                                                
+    .\F2838x_common\source\
+       f2838x_defaultisr.obj           2063    0         0      
+       f2838x_sysctrl.obj              1522    0         0      
+       f2838x_pievect.obj              17      448       0      
+       f2838x_adc.obj                  216     0         0      
+       f2838x_cputimers.obj            94      0         24     
+       f2838x_epwm.obj                 114     0         0      
+       f2838x_gpio.obj                 35      0         0      
+       f2838x_piectrl.obj              31      0         0      
+       f2838x_codestartbranch.obj      10      0         0      
+       f2838x_usdelay.obj              8       0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          4110    448       24     
+                                                                
+    .\F2838x_headers\source\
+       f2838x_globalvariabledefs.obj   0       0         5815   
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          0       0         5815   
+                                                                
+    .\RTE\
+       ItrComBswtoAsw.obj              5       0         1      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          5       0         1      
+                                                                
+    .\device\
+       device.obj                      3       0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          3       0         0      
+                                                                
+    .\device\driverlib\
+       ipc.obj                         63      162       544    
+       interrupt.obj                   258     32        0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          321     194       544    
+                                                                
+    C:\ti\ccs1240\ccs\tools\compiler\ti-cgt-c2000_20.8.0.STS\lib\rts2800_fpu64_eabi.lib
+       e_powf.c.obj                    886     12        0      
+       s_ceil.c.obj                    217     0         0      
+       fs_div28.asm.obj                136     0         0      
+       s_scalbnf.c.obj                 89      0         0      
+       copy_decompress_lzss.c.obj      49      0         0      
+       exit.c.obj                      41      0         6      
+       autoinit.c.obj                  43      0         0      
+       e_sqrtf.c.obj                   39      0         0      
+       memcpy.c.obj                    29      0         0      
+       boot28.asm.obj                  25      0         0      
+       ll_aox28.asm.obj                24      0         0      
+       s_copysignf.c.obj               17      0         0      
+       _lock.c.obj                     9       0         4      
+       copy_zero_init.c.obj            13      0         0      
+       args_main.c.obj                 12      0         0      
+       copy_decompress_none.c.obj      8       0         0      
+       pre_init.c.obj                  2       0         0      
+       errno.c.obj                     0       0         1      
+       startup.c.obj                   1       0         0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          1640    12        11     
+                                                                
+       Stack:                          0       0         256    
+       Linker Generated:               0       220       0      
+    +--+-------------------------------+-------+---------+---------+
+       Grand Total:                    11183   876       7613   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 000880d0 records: 3, size/record: 4, table size: 12
+	.data: load addr=00088000, load size=000000c2 bytes, run addr=0000a800, run size=000003c4 bytes, compression=lzss
+	.bss: load addr=000880c8, load size=00000004 bytes, run addr=0000abc4, run size=00000022 bytes, compression=zero_init
+	PieVectTableFile: load addr=000880cc, load size=00000004 bytes, run addr=00000d00, run size=000001c0 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 000880c2 records: 3, size/record: 2, table size: 6
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000400      10 (00000400)     __stack
+
+00000b20      2c (00000b00)     AdcbResultRegs
+
+00000c00      30 (00000c00)     CpuTimer0Regs
+00000c08      30 (00000c00)     CpuTimer1Regs
+00000c10      30 (00000c00)     CpuTimer2Regs
+
+00000ce0      33 (00000cc0)     PieCtrlRegs
+
+00000d00      34 (00000d00)     PieVectTable
+
+00004000     100 (00004000)     EPwm1Regs
+
+00004100     104 (00004100)     EPwm2Regs
+
+00004200     108 (00004200)     EPwm3Regs
+
+00004300     10c (00004300)     EPwm4Regs
+
+00004400     110 (00004400)     EPwm5Regs
+
+00004500     114 (00004500)     EPwm6Regs
+
+00004600     118 (00004600)     EPwm7Regs
+
+00004700     11c (00004700)     EPwm8Regs
+
+00004800     120 (00004800)     EPwm9Regs
+
+00004900     124 (00004900)     EPwm10Regs
+
+00004a00     128 (00004a00)     EPwm11Regs
+
+00004b00     12c (00004b00)     EPwm12Regs
+
+00007000     1c0 (00007000)     WdRegs
+
+00007400     1d0 (00007400)     AdcaRegs
+
+00007480     1d2 (00007480)     AdcbRegs
+
+00007500     1d4 (00007500)     AdccRegs
+
+00007580     1d6 (00007580)     AdcdRegs
+
+00007c00     1f0 (00007c00)     GpioCtrlRegs
+
+00007f00     1fc (00007f00)     GpioDataRegs
+
+0000a800     2a0 (0000a800)     giPartCalcCplCnt
+0000a801     2a0 (0000a800)     giflag_PosCycle
+0000a802     2a0 (0000a800)     giflag_NegCycle
+0000a803     2a0 (0000a800)     giPos_dead_cnt
+0000a804     2a0 (0000a800)     giFlag_HSSW_Deadzone
+0000a805     2a0 (0000a800)     giFlag_LSSW_Deadzone
+0000a806     2a0 (0000a800)     giNeg_dead_cnt
+0000a807     2a0 (0000a800)     giVPfcSoftStart_Timer
+0000a808     2a0 (0000a800)     giFlag_IPfcLCtrlCpl_Delay
+0000a809     2a0 (0000a800)     giFlag_IPfcLCtrlCpl
+0000a80a     2a0 (0000a800)     giVV2LSoftStart_Timer
+0000a80b     2a0 (0000a800)     guHS_en
+0000a80c     2a0 (0000a800)     guLS_en
+0000a80d     2a0 (0000a800)     giPLL_inhibit
+0000a80e     2a0 (0000a800)     giPwmTest_inhibit
+0000a80f     2a0 (0000a800)     giIController_inhibit
+0000a810     2a0 (0000a800)     giController_inhibit
+0000a811     2a0 (0000a800)     giTest_type
+0000a812     2a0 (0000a800)     gfVGrid_BPF
+0000a814     2a0 (0000a800)     gfWgrid
+0000a816     2a0 (0000a800)     gfWgrid_LPF
+0000a818     2a0 (0000a800)     gfTheta_Grid
+0000a81a     2a0 (0000a800)     gfTheta_Grid_Comp
+0000a81c     2a0 (0000a800)     gfThetaDeg_Grid
+0000a81e     2a0 (0000a800)     gfVGrid_Mag
+0000a820     2a0 (0000a800)     gfVGrid_Mag_LPF
+0000a822     2a0 (0000a800)     gffgrid
+0000a824     2a0 (0000a800)     gffgrid_LPF
+0000a826     2a0 (0000a800)     gfVPfcDcLinkCmd
+0000a828     2a0 (0000a800)     gfVPfcDcLinkLpf
+0000a82a     2a0 (0000a800)     gfVPfcDcLinkFilter
+0000a82c     2a0 (0000a800)     gfVPfcDcLinkRef
+0000a82e     2a0 (0000a800)     gfIGridRef
+0000a830     2a0 (0000a800)     gfIPfcLRef
+0000a832     2a0 (0000a800)     gfPosDitheringDuty
+0000a834     2a0 (0000a800)     gfNegDitheringDuty
+0000a836     2a0 (0000a800)     gffV2L
+0000a838     2a0 (0000a800)     gfWV2L
+0000a83a     2a0 (0000a800)     gfTheta_V2L
+0000a83c     2a0 (0000a800)     gfThetaDeg_V2L
+0000a83e     2a0 (0000a800)     gfVV2LRef
+
+0000a840     2a1 (0000a840)     gfPV2GRef
+0000a842     2a1 (0000a840)     gfHS_duty
+0000a844     2a1 (0000a840)     gfLS_duty
+0000a846     2a1 (0000a840)     gfIin_ref_test
+0000a848     2a1 (0000a840)     gdqVgrid_dqs
+0000a84c     2a1 (0000a840)     gdqVgrid_dqe
+0000a850     2a1 (0000a840)     gdqVgrid_dqe_LPF
+0000a854     2a1 (0000a840)     gdqVV2L_dqe
+0000a858     2a1 (0000a840)     gdqVV2L_dqs
+0000a85c     2a1 (0000a840)     gfVgrid_LPF
+0000a864     2a1 (0000a840)     gf1Vgrid_ds_APF
+0000a86c     2a1 (0000a840)     gf1Vgrid_de_LPF
+0000a874     2a1 (0000a840)     gf1Vgrid_qe_LPF
+
+0000a880     2a2 (0000a880)     gf1Wgrid_LPF
+0000a888     2a2 (0000a880)     gf1VGrid_Mag_LPF
+0000a890     2a2 (0000a880)     gf1VPfcDcLinkLpf
+0000a898     2a2 (0000a880)     gf2Vgrid_qs_APF
+0000a8a4     2a2 (0000a880)     gf2Vgrid_BPF
+0000a8b0     2a2 (0000a880)     gf2VPfcDcLinkBsf
+
+0000a8c0     2a3 (0000a8c0)     gPiVgrid_angle
+0000a8de     2a3 (0000a8c0)     gPiVPfcDcLink
+
+0000a900     2a4 (0000a900)     gPiVV2Lde
+0000a91e     2a4 (0000a900)     gPiVV2Lqe
+
+0000a940     2a5 (0000a940)     gTpozVPfcDcLink
+0000a964     2a5 (0000a940)     ePWM_Regs
+0000a97e     2a5 (0000a940)     _lock
+
+0000a980     2a6 (0000a980)     giCurrSnsr_VoltHiFlt_TimerCal
+0000a981     2a6 (0000a980)     giCurrSnsr_VoltLoFlt_TimerCal
+0000a982     2a6 (0000a980)     giCurrSnsr_RationalFlt_TimerCal
+0000a983     2a6 (0000a980)     giCurr_Oc_Resume_TimeCal
+0000a984     2a6 (0000a980)     giCurr_Oc_count_MaxDTCCal
+0000a985     2a6 (0000a980)     giCurr_HwOc_HealCnt_TimerCal
+0000a986     2a6 (0000a980)     giVoltSnsr_VoltHiFlt_TimerCal
+0000a987     2a6 (0000a980)     giVoltSnsr_VoltLoFlt_TimerCal
+0000a988     2a6 (0000a980)     giVoltSnsr_RationalFlt_TimerCal
+0000a989     2a6 (0000a980)     giVolt_Ov_TimerCal
+0000a98a     2a6 (0000a980)     giVolt_Ov_count_MaxDTCCal
+0000a98b     2a6 (0000a980)     giVolt_Ov_HealCnt_TimerCal
+0000a98c     2a6 (0000a980)     giVolt_Uv_TimerCal
+0000a98d     2a6 (0000a980)     giAuxBatVoltSnsr_VoltHiFlt_TimerCal
+0000a98e     2a6 (0000a980)     giAuxBatVoltSnsr_VoltLoFlt_TimerCal
+0000a98f     2a6 (0000a980)     giAuxBatVoltSnsr_RationalFlt_TimerCal
+0000a990     2a6 (0000a980)     giAuxBatVolt_SwOv_TimerCal
+0000a991     2a6 (0000a980)     giAuxBatVolt_SwUv_TimerCal
+0000a992     2a6 (0000a980)     giSmpsVoltSnsr_VoltHiFlt_TimerCal
+0000a993     2a6 (0000a980)     giSmpsVoltSnsr_VoltLoFlt_TimerCal
+0000a994     2a6 (0000a980)     giSmpsVoltSnsr_RationalFlt_TimerCal
+0000a995     2a6 (0000a980)     giSmpsVolt_SwOv_TimerCal
+0000a996     2a6 (0000a980)     giSmpsVolt_SwUv_TimerCal
+0000a997     2a6 (0000a980)     giIgVoltSnsr_VoltHiFlt_TimerCal
+0000a998     2a6 (0000a980)     giIgVoltSnsr_VoltLowFlt_TimerCal
+0000a999     2a6 (0000a980)     giIgVoltSnsr_RationalFlt_TimerCal
+0000a99a     2a6 (0000a980)     giIgVolt_OFF_TimerCal
+0000a99b     2a6 (0000a980)     giIg_SwOv_Flt_Timer_Cal
+0000a99c     2a6 (0000a980)     giTempSnsr_VoltHiFlt_TimerCal
+0000a99d     2a6 (0000a980)     giTempSnsr_VoltLoFlt_TimerCal
+0000a99e     2a6 (0000a980)     giTempHigh_TimerCal
+0000a99f     2a6 (0000a980)     giInVoltHighInhibitCntCal
+0000a9a0     2a6 (0000a980)     giGate_Flt_TimerCal
+0000a9a1     2a6 (0000a980)     giGate_Flt_count_MaxDTCCal
+0000a9a2     2a6 (0000a980)     giGate_NotRdy_TimerCal
+0000a9a3     2a6 (0000a980)     giGate_HwScp_HealCnt_TimerCal
+0000a9a4     2a6 (0000a980)     giChMode_RlyOn_TimerCal
+0000a9a5     2a6 (0000a980)     giDisChMode_RlyOn_TimerCal
+0000a9a6     2a6 (0000a980)     giPfcLCurrCtrFltTimerCal
+0000a9a7     2a6 (0000a980)     gIDcDcOutCurrCtrFltTimerCal
+0000a9a8     2a6 (0000a980)     giGridPLL_Normal_TimerCal
+0000a9a9     2a6 (0000a980)     giGridPLL_CtrFlt_TimerCal
+0000a9aa     2a6 (0000a980)     giGridPLL_Flt_TimerCal
+0000a9ab     2a6 (0000a980)     giGridPLL_Flt_count_MaxDTCCal
+0000a9ac     2a6 (0000a980)     giGridPLL_Flt_HealCnt_TimerCal
+0000a9ad     2a6 (0000a980)     giDcLinkVoltCtrFltTimerCal
+0000a9ae     2a6 (0000a980)     giOutVoltCtrFltTimerCal
+0000a9af     2a6 (0000a980)     giV2LVoltCtrFltTimerCal
+0000a9b0     2a6 (0000a980)     gfAdcSnsrVoltHiFltCal
+0000a9b2     2a6 (0000a980)     gfAdcSnsrVoltLoFltCal
+0000a9b4     2a6 (0000a980)     gfAuxBatVoltSnsr_RationalFlt_Cal
+0000a9b6     2a6 (0000a980)     gfAuxBatVolt_VoltHiFlt_Cal
+0000a9b8     2a6 (0000a980)     gfAuxBatVolt_VoltLowFlt_Cal
+0000a9ba     2a6 (0000a980)     gfAuxBatVolt_VoltHiFltClr_Cal
+0000a9bc     2a6 (0000a980)     gfAuxBatVolt_VoltLowFltClr_Cal
+0000a9be     2a6 (0000a980)     gfSmpsVoltSnsr_RationalFlt_Cal
+
+0000a9c0     2a7 (0000a9c0)     gfSmpsVolt_VoltHiFlt_Cal
+0000a9c2     2a7 (0000a9c0)     gfSmpsVolt_VoltLowFlt_Cal
+0000a9c4     2a7 (0000a9c0)     gfSmpsVolt_VoltHiFltClr_Cal
+0000a9c6     2a7 (0000a9c0)     gfSmpsVolt_VoltLowFltClr_Cal
+0000a9c8     2a7 (0000a9c0)     gfIgVoltSnsr_RationalFlt_Cal
+0000a9ca     2a7 (0000a9c0)     gfIgVolt_ON_Cal
+0000a9cc     2a7 (0000a9c0)     gfIgVolt_OFF_Cal
+0000a9ce     2a7 (0000a9c0)     gfIgVolt_SwOv_Cal
+0000a9d0     2a7 (0000a9c0)     gfIgVolt_SwOvClr_Cal
+0000a9d2     2a7 (0000a9c0)     gfTempHighDrtOnCal
+0000a9d4     2a7 (0000a9c0)     gfTempHighOnCal
+0000a9d6     2a7 (0000a9c0)     gfTempHighDrtOffCal
+0000a9d8     2a7 (0000a9c0)     gfVGridDrtStateOnCal
+0000a9da     2a7 (0000a9c0)     gfVGridDrtStateOffCal
+0000a9dc     2a7 (0000a9c0)     gfGridVoltHighInhibitHysCal
+0000a9de     2a7 (0000a9c0)     gfVRly_ON_RatioCal
+0000a9e0     2a7 (0000a9c0)     gfPfcLCurrCtrFltCal
+0000a9e2     2a7 (0000a9c0)     gfDcDcOutCurrCtrFltCal
+0000a9e4     2a7 (0000a9c0)     gfGridPLL_Voltq_KCal
+0000a9e6     2a7 (0000a9c0)     gfGridPLL_Voltd_Cal
+0000a9e8     2a7 (0000a9c0)     gfDcLinkVoltCtrFltCal
+0000a9ea     2a7 (0000a9c0)     gfOutVoltCtrFltCal
+0000a9ec     2a7 (0000a9c0)     gfV2LVoltCtrFltCal
+0000a9ee     2a7 (0000a9c0)     gf1IiccuSwLpf
+0000a9fe     2a7 (0000a9c0)     _unlock
+
+0000aa00     2a8 (0000aa00)     giInhibitTest
+0000aa01     2a8 (0000aa00)     giAdcResultTest
+0000aa02     2a8 (0000aa00)     gfVGridAvgSwLpf
+0000aa04     2a8 (0000aa00)     gfVGridRms
+0000aa06     2a8 (0000aa00)     gfTempMax
+0000aa08     2a8 (0000aa00)     gfVauxbat
+0000aa0a     2a8 (0000aa00)     gfVauxbatHwLpf
+0000aa0c     2a8 (0000aa00)     gfVauxbatSwLpf
+0000aa0e     2a8 (0000aa00)     gfVauxbatAdcResult
+0000aa10     2a8 (0000aa00)     gfVSmps
+0000aa12     2a8 (0000aa00)     gfVSmpsHwLpf
+0000aa14     2a8 (0000aa00)     gfVSmpsSwLpf
+0000aa16     2a8 (0000aa00)     gfVSmpsAdcResult
+0000aa18     2a8 (0000aa00)     gfVig
+0000aa1a     2a8 (0000aa00)     gfVigHwLpf
+0000aa1c     2a8 (0000aa00)     gfVigSwLpf
+0000aa1e     2a8 (0000aa00)     gfVigAdcResult
+0000aa20     2a8 (0000aa00)     gfVsmps
+0000aa22     2a8 (0000aa00)     gfVsmpsHwLpf
+0000aa24     2a8 (0000aa00)     gfVsmpsSwLpf
+0000aa26     2a8 (0000aa00)     gfVsmpsAdcResult
+0000aa28     2a8 (0000aa00)     gfVDcLink_Test
+0000aa2a     2a8 (0000aa00)     gf1VGridAvgSwLpf
+0000aa32     2a8 (0000aa00)     gf1VauxbatSwLpf
+
+0000aa40     2a9 (0000aa40)     gf1VSmpsSwLpf
+0000aa48     2a9 (0000aa40)     gf1VigSwLpf
+0000aa50     2a9 (0000aa40)     gf1VsmpsSwLpf
+0000aa58     2a9 (0000aa40)     giEcuRunState
+0000aa59     2a9 (0000aa40)     giMalfuncState
+0000aa5a     2a9 (0000aa40)     giPwmoutState
+0000aa5b     2a9 (0000aa40)     giOperModeState
+0000aa5c     2a9 (0000aa40)     giDeratingState
+0000aa5d     2a9 (0000aa40)     giAuxBatVoltSnsrState
+0000aa5e     2a9 (0000aa40)     giAuxBatVoltSnsr_VoltHiFlt_Timer
+0000aa5f     2a9 (0000aa40)     giAuxBatVoltSnsr_VoltLoFlt_Timer
+0000aa60     2a9 (0000aa40)     giAuxBatVoltSnsr_RationalFlt_Timer
+0000aa61     2a9 (0000aa40)     giAuxBatVoltState
+0000aa62     2a9 (0000aa40)     giAuxBatVolt_SwOv_Timer
+0000aa63     2a9 (0000aa40)     giAuxBatVolt_SwUv_Timer
+0000aa64     2a9 (0000aa40)     giSmpsVoltSnsrState
+0000aa65     2a9 (0000aa40)     giSmpsVoltSnsr_VoltHiFlt_Timer
+0000aa66     2a9 (0000aa40)     giSmpsVoltSnsr_VoltLoFlt_Timer
+0000aa67     2a9 (0000aa40)     giSmpsVoltSnsr_RationalFlt_Timer
+0000aa68     2a9 (0000aa40)     giSmpsVoltState
+0000aa69     2a9 (0000aa40)     giSmpsVolt_SwOv_Timer
+0000aa6a     2a9 (0000aa40)     giSmpsVolt_SwUv_Timer
+0000aa6b     2a9 (0000aa40)     giIgVoltSnsrState
+0000aa6c     2a9 (0000aa40)     giIgVoltSnsr_VoltHiFlt_Timer
+0000aa6d     2a9 (0000aa40)     giIgVoltSnsr_VoltLowFlt_Timer
+0000aa6e     2a9 (0000aa40)     giIgVoltSnsr_RationalFlt_Timer
+0000aa6f     2a9 (0000aa40)     giIgVoltState
+0000aa70     2a9 (0000aa40)     giIgVolt_OFF_Timer
+0000aa71     2a9 (0000aa40)     giIg_SwOv_Flt_Timer
+0000aa72     2a9 (0000aa40)     giTempSnsrFltFlag
+0000aa73     2a9 (0000aa40)     giTempFltFlag
+0000aa74     2a9 (0000aa40)     giInVoltHighInhibitState
+0000aa75     2a9 (0000aa40)     giInVoltHighInhibitCnt
+0000aa76     2a9 (0000aa40)     giRlyState
+0000aa77     2a9 (0000aa40)     giChMode_RlyOn_Timer
+0000aa78     2a9 (0000aa40)     giDisChMode_RlyOn_Timer
+0000aa79     2a9 (0000aa40)     giIccuModeState
+0000aa7a     2a9 (0000aa40)     giVcmsState
+0000aa7b     2a9 (0000aa40)     giBmsState
+0000aa7c     2a9 (0000aa40)     giFcuState
+0000aa7d     2a9 (0000aa40)     giInterlockState
+0000aa7e     2a9 (0000aa40)     giCanHsState
+0000aa7f     2a9 (0000aa40)     giCanFdState
+
+0000aa80     2aa (0000aa80)     giVPfcSoftStart_TimerCal
+0000aa82     2aa (0000aa80)     gfVPfcDcLinkSSGainCal
+0000aa84     2aa (0000aa80)     gfGridPLLKpCal
+0000aa86     2aa (0000aa80)     gfGridPLLKiCal
+0000aa88     2aa (0000aa80)     gfGridPLLFF
+0000aa8a     2aa (0000aa80)     gfPfcDcLinkVoltPIKpCal
+0000aa8c     2aa (0000aa80)     gfPfcDcLinkVoltPIKiCal
+0000aa8e     2aa (0000aa80)     gfPfcDcLinkVoltPIKpMinCal
+0000aa90     2aa (0000aa80)     gfPfcDcLinkVoltPIKiMinCal
+0000aa92     2aa (0000aa80)     gfPfcDcLinkVoltPIOutMax
+0000aa94     2aa (0000aa80)     gfPfcDcLinkVoltPIOutMin
+0000aa96     2aa (0000aa80)     gfVPfcDcLinkRefMaxCal
+0000aa98     2aa (0000aa80)     gfVPfcDcLinkRefMinCal
+0000aa9a     2aa (0000aa80)     gfDrPfcDcLinkVoltBsf
+0000aa9c     2aa (0000aa80)     gfVPfcDcLinkCmdRateLimitCal
+0000aa9e     2aa (0000aa80)     gfPfcCurrPIKpCal
+0000aaa0     2aa (0000aa80)     gfPfcCurrPIKiCal
+0000aaa2     2aa (0000aa80)     gfPfcCurrPIKpMaxCal
+0000aaa4     2aa (0000aa80)     gfPfcCurrPIKiMaxCal
+0000aaa6     2aa (0000aa80)     gfPfcCurrPIOutMax
+0000aaa8     2aa (0000aa80)     gfPfcCurrPIOutMin
+0000aaaa     2aa (0000aa80)     gPiIPfcL
+
+0000aac8     2ab (0000aac0)     gf1AdcResulLpf
+0000aae0     2ab (0000aac0)     gf1ViccuSwLpf
+0000aaf8     2ab (0000aac0)     BswTask1msCnt
+0000aaf9     2ab (0000aac0)     BswTask10msCnt
+0000aafa     2ab (0000aac0)     BswTask100msCnt
+0000aafc     2ab (0000aac0)     CntCtrISR
+0000aafe     2ab (0000aac0)     gfCurrCal
+
+0000ab00     2ac (0000ab00)     giAdcOffsetCalCntCal
+0000ab01     2ac (0000ab00)     giDeadBandCal
+0000ab02     2ac (0000ab00)     giDeadBandSrCal
+0000ab04     2ac (0000ab00)     gfPfcCurrAdcGainCal
+0000ab06     2ac (0000ab00)     gfPfcInVoltAdcGainCal
+0000ab08     2ac (0000ab00)     gfPfcOutVoltAdcGainCal
+0000ab0a     2ac (0000ab00)     gfPfcCurrOffsetCal
+0000ab0c     2ac (0000ab00)     gfPfcInVoltOffsetCal
+0000ab0e     2ac (0000ab00)     gfPfcOutVoltOffsetCal
+0000ab10     2ac (0000ab00)     gfPwmFreqInitCal
+0000ab12     2ac (0000ab00)     gfIsrTsInitCal
+0000ab14     2ac (0000ab00)     giGridPLL_Normal_Timer
+0000ab15     2ac (0000ab00)     giGridPLL_CtrFlt_Timer
+0000ab16     2ac (0000ab00)     giGridPLL_Flt_Timer
+0000ab17     2ac (0000ab00)     giGridPLL_Flt_count
+0000ab18     2ac (0000ab00)     giGridPLL_Flt_HealCycle
+0000ab19     2ac (0000ab00)     giGridPLL_Flt_HealState
+0000ab1a     2ac (0000ab00)     giPfcLCurrCtrState
+0000ab1b     2ac (0000ab00)     gIDcDcOutCurrCtrState
+0000ab1c     2ac (0000ab00)     giPfcLCurrCtrFltTimer
+0000ab1d     2ac (0000ab00)     gIDcDcOut1CurrCtrFltTimer
+0000ab1e     2ac (0000ab00)     gIDcDcOut2CurrCtrFltTimer
+0000ab1f     2ac (0000ab00)     giGridVoltCtrState
+0000ab20     2ac (0000ab00)     giPfcDcLinkVoltCtrState
+0000ab21     2ac (0000ab00)     giV2XDcLinkVoltCtrState
+0000ab22     2ac (0000ab00)     giOutVoltCtrState
+0000ab23     2ac (0000ab00)     giV2LVoltCtrState
+0000ab24     2ac (0000ab00)     giGridVoltCtrFltTimer
+0000ab25     2ac (0000ab00)     giDcLinkVoltCtrFltTimer
+0000ab26     2ac (0000ab00)     giOutVoltCtrFltTimer
+0000ab27     2ac (0000ab00)     giV2LVoltCtrFltTimer
+0000ab28     2ac (0000ab00)     giCbAbnormalSubState
+0000ab29     2ac (0000ab00)     giInhibitSubState
+0000ab2a     2ac (0000ab00)     giFatalSubState
+0000ab2b     2ac (0000ab00)     giFaultSubState
+0000ab2c     2ac (0000ab00)     giResumeSubState
+0000ab2d     2ac (0000ab00)     giNormalSubState
+0000ab2e     2ac (0000ab00)     giHwIsrPinState
+0000ab2f     2ac (0000ab00)     gIiccuRedayState
+0000ab30     2ac (0000ab00)     giIccuControllableState
+0000ab31     2ac (0000ab00)     giIccuReadyState
+0000ab32     2ac (0000ab00)     giIccuControllable
+0000ab33     2ac (0000ab00)     giInhibit
+0000ab34     2ac (0000ab00)     gfAdcResult
+0000ab3a     2ac (0000ab00)     gfAdcResultLpf
+
+0000ab40     2ad (0000ab40)     gfAdcResultOffset
+0000ab46     2ad (0000ab40)     gfVIccu
+0000ab4c     2ad (0000ab40)     gfVIccuAdcResult
+0000ab52     2ad (0000ab40)     gfVIccuSwLpf
+0000ab58     2ad (0000ab40)     gfVolt_VoltHiFlt_Cal
+0000ab5e     2ad (0000ab40)     __TI_enable_exit_profile_output
+0000ab60     2ad (0000ab40)     __TI_cleanup_ptr
+0000ab62     2ad (0000ab40)     __TI_dtors_ptr
+0000ab64     2ad (0000ab40)     giVoltSnsrFltFlag
+0000ab65     2ad (0000ab40)     giVoltFltFlag
+0000ab66     2ad (0000ab40)     giCurrSnsrFltFlag
+0000ab67     2ad (0000ab40)     giCurrFltFlag
+0000ab68     2ad (0000ab40)     gfIccuInPwr
+0000ab6a     2ad (0000ab40)     gfIccuOutPwr
+0000ab6c     2ad (0000ab40)     INTERNAL_MAIN_STATE
+0000ab6d     2ad (0000ab40)     giInternalMainState
+0000ab6e     2ad (0000ab40)     INTERNAL_SUB_STATE
+0000ab6f     2ad (0000ab40)     giInternalSubState
+0000ab70     2ad (0000ab40)     gfIIccu
+0000ab74     2ad (0000ab40)     gfIIccuAdcResult
+0000ab78     2ad (0000ab40)     gfIIccuSwLpf
+0000ab7c     2ad (0000ab40)     gfIccuCurr_CurrHiFlt_Cal
+
+0000ab80     2ae (0000ab80)     gfVoltCal
+0000ab84     2ae (0000ab80)     gfVoltRaw
+0000ab88     2ae (0000ab80)     giTempSnsrState
+0000ab8b     2ae (0000ab80)     giTempState
+0000ab8e     2ae (0000ab80)     giVoltSnsrState
+0000ab91     2ae (0000ab80)     giVoltSnsr_RationalFlt_Timer
+0000ab94     2ae (0000ab80)     giVoltSnsr_VoltHiFlt_Timer
+0000ab97     2ae (0000ab80)     giVoltSnsr_VoltLoFlt_Timer
+0000ab9a     2ae (0000ab80)     giVoltState
+0000ab9d     2ae (0000ab80)     giVolt_Ov_HealCycle
+0000aba0     2ae (0000ab80)     giVolt_Ov_HealState
+0000aba3     2ae (0000ab80)     giVolt_Ov_Timer
+0000aba6     2ae (0000ab80)     giVolt_Ov_count
+0000aba9     2ae (0000ab80)     errno
+0000abaa     2ae (0000ab80)     gfCurrRaw
+0000abac     2ae (0000ab80)     giCurrSnsrState
+0000abae     2ae (0000ab80)     giCurrSnsr_RationalFlt_Timer
+0000abb0     2ae (0000ab80)     giCurrSnsr_VoltHiFlt_Timer
+0000abb2     2ae (0000ab80)     giCurrSnsr_VoltLoFlt_Timer
+0000abb4     2ae (0000ab80)     giCurrState
+0000abb6     2ae (0000ab80)     giCurr_Oc_Do_TripReset
+0000abb8     2ae (0000ab80)     giCurr_Oc_HealCycle
+0000abba     2ae (0000ab80)     giCurr_Oc_HealState
+0000abbc     2ae (0000ab80)     giCurr_Oc_Resume_Timer
+0000abbe     2ae (0000ab80)     giCurr_Oc_count
+
+0000abc0     2af (0000abc0)     giGatePwmEnFlag
+0000abc2     2af (0000abc0)     giGateState
+0000abc4     2af (0000abc0)     CpuTimer0
+0000abcc     2af (0000abc0)     CpuTimer1
+0000abd4     2af (0000abc0)     CpuTimer2
+0000abdc     2af (0000abc0)     CntTask100us
+0000abde     2af (0000abc0)     CntTask1ms
+0000abe0     2af (0000abc0)     CntTask10ms
+0000abe2     2af (0000abc0)     CntTask100ms
+0000abe4     2af (0000abc0)     giAdcOffsetCalCnt
+0000abe5     2af (0000abc0)     giAdcoffsetCplFlag
+
+00038000     e00 (00038000)     IPC_CPU_To_CM_GetBuffer
+
+00039000     e40 (00039000)     IPC_CPU_To_CM_PutBuffer
+
+0003a000     e80 (0003a000)     IPC_CPU1_To_CPU2_PutBuffer
+
+0003b000     ec0 (0003b000)     IPC_CPU1_To_CPU2_GetBuffer
+
+0005d000    1740 (0005d000)     DevCfgRegs
+
+0005d200    1748 (0005d200)     ClkCfgRegs
+
+0005d300    174c (0005d300)     CpuSysRegs
+
+0005d700    175c (0005d700)     AnalogSubsysRegs
+
+0005e700    179c (0005e700)     Dcc0Regs
+
+0005e740    179d (0005e740)     Dcc1Regs
+
+0005e780    179e (0005e780)     Dcc2Regs
+
+0005f800    17e0 (0005f800)     Flash0CtrlRegs
+
+0005fb00    17ec (0005fb00)     Flash0EccRegs
+
+00090000    2400 (00090000)     PieVectTableInit
+
+000901c0    2407 (000901c0)     IPC_Instance
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                                 
+----  -------   ----                                 
+0     0008413d  ADCA1_ISR                            
+0     00084147  ADCA2_ISR                            
+0     00084151  ADCA3_ISR                            
+0     0008415b  ADCA4_ISR                            
+0     00084165  ADCA_EVT_ISR                         
+0     0008416f  ADCB1_ISR                            
+0     00084179  ADCB2_ISR                            
+0     00084183  ADCB3_ISR                            
+0     0008418d  ADCB4_ISR                            
+0     00084197  ADCB_EVT_ISR                         
+0     000841a1  ADCC1_ISR                            
+0     000841ab  ADCC2_ISR                            
+0     000841b5  ADCC3_ISR                            
+0     000841bf  ADCC4_ISR                            
+0     000841c9  ADCC_EVT_ISR                         
+0     000841d3  ADCD1_ISR                            
+0     000841dd  ADCD2_ISR                            
+0     000841e7  ADCD3_ISR                            
+0     000841f1  ADCD4_ISR                            
+0     000841fb  ADCD_EVT_ISR                         
+0     00083d59  APF1                                 
+0     00082ba9  AdcSetMode                           
+0     00007400  AdcaRegs                             
+0     00007480  AdcbRegs                             
+0     00000b20  AdcbResultRegs                       
+0     00007500  AdccRegs                             
+0     00007580  AdcdRegs                             
+0     0005d700  AnalogSubsysRegs                     
+0     00084a68  AswApi_AswIsrCtr                     
+0     00084b43  AswApi_AswTask100ms                  
+0     00084a84  AswApi_AswTask100us                  
+0     00083ce5  AswApi_AswTask10ms                   
+0     000849fd  AswApi_AswTask1ms                    
+0     00084a68  AswIsrCtr                            
+0     00084b43  AswTask100ms                         
+0     00084a84  AswTask100us                         
+0     00083ce5  AswTask10ms                          
+0     000849fd  AswTask1ms                           
+0     00084205  AuxAuxClkSel                         
+0     00084a18  AuxIntOsc2Sel                        
+0     00083f45  AuxXtalOscSESel                      
+0     00083f5d  AuxXtalOscSel                        
+0     000837a1  BPF2                                 
+0     00083144  BSF2                                 
+0     00083365  BswAdcIsrCalc                        
+0     000831b8  BswAdcIsrOffsetCalc                  
+0     00084000  BswApi_DisablePfcHSPwm               
+0     00084127  BswApi_DisablePfcPwm                 
+0     00084a89  BswApi_DisablePfcRly                 
+0     00084a20  BswApi_EnablePfcHSPwm                
+0     00084132  BswApi_EnablePfcPwm                  
+0     00084a8e  BswApi_EnablePfcRly                  
+0     0008420f  BswApi_GetCurr                       
+0     00084219  BswApi_GetCurrRaw                    
+0     00084223  BswApi_GetVolt                       
+0     0008422d  BswApi_GetVoltRaw                    
+0     000840c2  BswApi_PfcHSPwmNegDitheringMode      
+0     00084a28  BswApi_PfcHSPwmNormalMode            
+0     000840cf  BswApi_PfcHSPwmPosDitheringMode      
+0     00084a6f  BswApi_PfcLSSw_DeadBand              
+0     00084237  BswApi_PfcLSSw_NegEn                 
+0     00084241  BswApi_PfcLSSw_PosEn                 
+0     00083e8d  BswApi_SetPwmADuty                   
+0     00083ea8  BswApi_SetPwmBDuty                   
+0     00083ac6  BswApi_SetPwmDuty                    
+0     00084a89  BswGpio_DisableRly                   
+0     00084a8e  BswGpio_EnableRly                    
+0     00084a6f  BswGpio_PfcLSSw_DeadBand             
+0     00084237  BswGpio_PfcLSSw_NegEn                
+0     00084241  BswGpio_PfcLSSw_PosEn                
+0     00084000  BswPwm_DisablePfcHSPwm               
+0     00084127  BswPwm_DisablePfcPwm                 
+0     00084a20  BswPwm_EnablePfcHSPwm                
+0     00084132  BswPwm_EnablePfcPwm                  
+0     000840b2  BswPwm_EnablePwm                     
+0     00083dc0  BswPwm_ForceLowPwm                   
+0     000840c2  BswPwm_PfcHSPwmNegDitheringMode      
+0     00084a28  BswPwm_PfcHSPwmNormalMode            
+0     000840cf  BswPwm_PfcHSPwmPosDitheringMode      
+0     00083e39  BswPwm_SetFreqUpDownCnt              
+0     00083e8d  BswPwm_SetPwmADuty                   
+0     00083ea8  BswPwm_SetPwmBDuty                   
+0     00083ac6  BswPwm_SetPwmDuty                    
+0     00084a30  BswTask100ms                         
+0     0000aafa  BswTask100msCnt                      
+0     00084a38  BswTask100us                         
+0     00084a40  BswTask10ms                          
+0     0000aaf9  BswTask10msCnt                       
+0     00084a48  BswTask1ms                           
+0     0000aaf8  BswTask1msCnt                        
+0     00083cbc  C$$EXIT                              
+0     0008424b  CANA0_ISR                            
+0     00084255  CANA1_ISR                            
+0     0008425f  CANB0_ISR                            
+0     00084269  CANB1_ISR                            
+0     00084273  CIPC0_ISR                            
+0     0008427d  CIPC1_ISR                            
+0     00084287  CIPC2_ISR                            
+0     00084291  CIPC3_ISR                            
+0     0008429b  CLA1CRC_ISR                          
+0     000842a5  CLA1_1_ISR                           
+0     000842af  CLA1_2_ISR                           
+0     000842b9  CLA1_3_ISR                           
+0     000842c3  CLA1_4_ISR                           
+0     000842cd  CLA1_5_ISR                           
+0     000842d7  CLA1_6_ISR                           
+0     000842e1  CLA1_7_ISR                           
+0     000842eb  CLA1_8_ISR                           
+0     000842f5  CLA_OVERFLOW_ISR                     
+0     000842ff  CLA_UNDERFLOW_ISR                    
+0     00084309  CLB1_ISR                             
+0     00084313  CLB2_ISR                             
+0     0008431d  CLB3_ISR                             
+0     00084327  CLB4_ISR                             
+0     00084331  CLB5_ISR                             
+0     0008433b  CLB6_ISR                             
+0     00084345  CLB7_ISR                             
+0     0008434f  CLB8_ISR                             
+0     00084359  CMTOCPUXIPC0_ISR                     
+0     00084363  CMTOCPUXIPC1_ISR                     
+0     0008436d  CMTOCPUXIPC2_ISR                     
+0     00084377  CMTOCPUXIPC3_ISR                     
+0     00084381  CMTOCPUXIPC4_ISR                     
+0     0008438b  CMTOCPUXIPC5_ISR                     
+0     00084395  CMTOCPUXIPC6_ISR                     
+0     0008439f  CMTOCPUXIPC7_ISR                     
+0     000843a9  CM_STATUS_ISR                        
+0     000843b3  CPUCRC_ISR                           
+0     00083d0d  CalAdcINL                            
+0     0005d200  ClkCfgRegs                           
+0     0000aafc  CntCtrISR                            
+0     0000abe2  CntTask100ms                         
+0     0000abdc  CntTask100us                         
+0     0000abe0  CntTask10ms                          
+0     0000abde  CntTask1ms                           
+0     00084b3d  ComApi_GetCanOutCurr                 
+0     00082e33  ComputeCntrSeedValue                 
+0     00083d7c  ConfigCpuTimer                       
+0     0005d300  CpuSysRegs                           
+0     0000abc4  CpuTimer0                            
+0     00000c00  CpuTimer0Regs                        
+0     0000abcc  CpuTimer1                            
+0     00000c08  CpuTimer1Regs                        
+0     0000abd4  CpuTimer2                            
+0     00000c10  CpuTimer2Regs                        
+0     00083ef9  CtrApi_CtrMIsrCtr                    
+0     000843bd  CtrApi_CtrMTask100us                 
+0     00084103  CtrApi_CtrMTask1ms                   
+0     00084a76  CtrApi_GetGriddqVolt                 
+0     00084a7d  CtrApi_GetGriddqVoltLpf              
+0     00084a93  CtrApi_GetVgridMag                   
+0     00084a98  CtrApi_GetVgridMagLpf                
+0     00083ef9  CtrCtrMIsrCtr                        
+0     000843bd  CtrCtrMTask100us                     
+0     00084103  CtrCtrMTask1ms                       
+0     000824f5  CtrPfcCurrCtr                        
+0     0008276d  CtrPfcDcLinkVoltCtr                  
+0     00082376  CtrPfcGridPLL                        
+0     00083b03  CtrPfcHalfCycleDet                   
+0     00083ef9  CtrPfcIsrCtr                         
+0     00083d9f  CtrPfcPwmTest                        
+0     000843bd  CtrPfcTask100us                      
+0     00084103  CtrPfcTask1ms                        
+0     000843c7  DATALOG_ISR                          
+0     000843d1  DMA_CH1_ISR                          
+0     000843db  DMA_CH2_ISR                          
+0     000843e5  DMA_CH3_ISR                          
+0     000843ef  DMA_CH4_ISR                          
+0     000843f9  DMA_CH5_ISR                          
+0     00084403  DMA_CH6_ISR                          
+0     0005e700  Dcc0Regs                             
+0     0005e740  Dcc1Regs                             
+0     0005e780  Dcc2Regs                             
+0     0005d000  DevCfgRegs                           
+0     000840dc  DisableDog                           
+0     0008440d  ECAP1_ISR                            
+0     00084417  ECAP2_ISR                            
+0     00084421  ECAP3_ISR                            
+0     0008442b  ECAP4_ISR                            
+0     00084435  ECAP5_ISR                            
+0     0008443f  ECAP6_2_ISR                          
+0     00084449  ECAP6_ISR                            
+0     00084453  ECAP7_2_ISR                          
+0     0008445d  ECAP7_ISR                            
+0     00084467  ECATRST_ISR                          
+0     00084471  ECATSYNC0_ISR                        
+0     0008447b  ECATSYNC1_ISR                        
+0     00084485  ECAT_ISR                             
+0     000840e9  EMPTY_ISR                            
+0     0008448f  EMU_ISR                              
+0     00084499  EPWM10_ISR                           
+0     000844a3  EPWM10_TZ_ISR                        
+0     000844ad  EPWM11_ISR                           
+0     000844b7  EPWM11_TZ_ISR                        
+0     000844c1  EPWM12_ISR                           
+0     000844cb  EPWM12_TZ_ISR                        
+0     000844d5  EPWM13_ISR                           
+0     000844df  EPWM13_TZ_ISR                        
+0     000844e9  EPWM14_ISR                           
+0     000844f3  EPWM14_TZ_ISR                        
+0     000844fd  EPWM15_ISR                           
+0     00084507  EPWM15_TZ_ISR                        
+0     00084511  EPWM16_ISR                           
+0     0008451b  EPWM16_TZ_ISR                        
+0     00084525  EPWM1_ISR                            
+0     0008452f  EPWM1_TZ_ISR                         
+0     00084539  EPWM2_ISR                            
+0     00084543  EPWM2_TZ_ISR                         
+0     0008454d  EPWM3_ISR                            
+0     00084557  EPWM3_TZ_ISR                         
+0     00084561  EPWM4_ISR                            
+0     0008456b  EPWM4_TZ_ISR                         
+0     00084575  EPWM5_ISR                            
+0     0008457f  EPWM5_TZ_ISR                         
+0     00084589  EPWM6_ISR                            
+0     00084593  EPWM6_TZ_ISR                         
+0     0008459d  EPWM7_ISR                            
+0     000845a7  EPWM7_TZ_ISR                         
+0     000845b1  EPWM8_ISR                            
+0     000845bb  EPWM8_TZ_ISR                         
+0     000845c5  EPWM9_ISR                            
+0     000845cf  EPWM9_TZ_ISR                         
+0     00004900  EPwm10Regs                           
+0     00004a00  EPwm11Regs                           
+0     00004b00  EPwm12Regs                           
+0     00004000  EPwm1Regs                            
+0     00004100  EPwm2Regs                            
+0     00004200  EPwm3Regs                            
+0     00004300  EPwm4Regs                            
+0     00004400  EPwm5Regs                            
+0     00004500  EPwm6Regs                            
+0     00004600  EPwm7Regs                            
+0     00004700  EPwm8Regs                            
+0     00004800  EPwm9Regs                            
+0     000845d9  EQEP1_ISR                            
+0     000845e3  EQEP2_ISR                            
+0     000845ed  EQEP3_ISR                            
+0     0000802c  F28x_usDelay                         
+0     000845f7  FMC_ISR                              
+0     00084601  FPU_OFLOW_ISR                        
+0     0008460b  FPU_UFLOW_ISR                        
+0     00084615  FSIRXA1_ISR                          
+0     0008461f  FSIRXA2_ISR                          
+0     00084629  FSIRXB1_ISR                          
+0     00084633  FSIRXB2_ISR                          
+0     0008463d  FSIRXC1_ISR                          
+0     00084647  FSIRXC2_ISR                          
+0     00084651  FSIRXD1_ISR                          
+0     0008465b  FSIRXD2_ISR                          
+0     00084665  FSIRXE1_ISR                          
+0     0008466f  FSIRXE2_ISR                          
+0     00084679  FSIRXF1_ISR                          
+0     00084683  FSIRXF2_ISR                          
+0     0008468d  FSIRXG1_ISR                          
+0     00084697  FSIRXG2_ISR                          
+0     000846a1  FSIRXH1_ISR                          
+0     000846ab  FSIRXH2_ISR                          
+0     000846b5  FSITXA1_ISR                          
+0     000846bf  FSITXA2_ISR                          
+0     000846c9  FSITXB1_ISR                          
+0     000846d3  FSITXB2_ISR                          
+0     00084ad9  FdiagApi_ChagePfcCurrCtrState        
+0     00084add  FdiagApi_ChangeGridPllState          
+0     00084ae1  FdiagApi_ChangePfcDcLinkVoltCtrState 
+0     000846dd  FdiagApi_ChkMIsrCtr                  
+0     00084b43  FdiagApi_ChkMTask100ms               
+0     00084a06  FdiagApi_ChkMTask1ms                 
+0     00083e55  FdiagApi_GetChkConCbAbnormal         
+0     00083437  FdiagApi_GetChkConFatal              
+0     000832fa  FdiagApi_GetChkConFault              
+0     000833ce  FdiagApi_GetChkConInhibit            
+0     00083687  FdiagApi_GetChkConNormal             
+0     00083d33  FdiagApi_GetChkConResume             
+0     00084b15  FdiagApi_GetDeratingState            
+0     00084ae5  FdiagApi_GetGridPllCtrState          
+0     00084b40  FdiagApi_GetIccuModeState            
+0     00084ae9  FdiagApi_GetPfcCurrCtrState          
+0     00084aed  FdiagApi_GetPfcDcLinkVoltCtrState    
+0     00084b29  FdiagApi_GetRlyState                 
+0     00084a9d  FdiagApi_GetTempState                
+0     00084aa2  FdiagApi_GetVoltSnsrState            
+0     00084b43  FdiagChkCtrTask100ms                 
+0     00082fd0  FdiagChkCtrTask1ms                   
+0     00084af1  FdiagChkCtr_GetDcDcCurrCtrState      
+0     00084af5  FdiagChkCtr_GetDcLinkVoltCtrState    
+0     00084af9  FdiagChkCtr_GetGridPllCtrState       
+0     00084afd  FdiagChkCtr_GetOutVoltCtrState       
+0     00084b01  FdiagChkCtr_GetPfcCurrCtrState       
+0     00084015  FdiagChkCtr_GridPllFltHealCount      
+0     00082fd0  FdiagChkCtr_RunGridPLLCtrState       
+0     00084aa7  FdiagChkFSTask1ms                    
+0     00084b05  FdiagChkFS_GetEcuPostRunState        
+0     00084b09  FdiagChkFS_GetIccuModeState          
+0     000846dd  FdiagChkIOIsrCtr                     
+0     0008407d  FdiagChkIOTask1ms                    
+0     00084aac  FdiagChkIO_GetCurrSnsrState          
+0     00084ab1  FdiagChkIO_GetCurrState              
+0     00084ab6  FdiagChkIO_GetVoltSnsrState          
+0     00084abb  FdiagChkIO_GetVoltState              
+0     00083224  FdiagChkIO_RunCurrSnsrState          
+0     0008349b  FdiagChkIO_RunCurrState              
+0     00083957  FdiagChkIO_RunCurrSwFlt              
+0     0008328f  FdiagChkIO_RunVoltSnsrState          
+0     000838ab  FdiagChkIO_RunVoltState              
+0     00083745  FdiagChkIO_RunVoltSwFlt              
+0     00083e55  FdiagChkMConCbAbnormal               
+0     00083437  FdiagChkMConFatal                    
+0     000832fa  FdiagChkMConFault                    
+0     000833ce  FdiagChkMConInhibit                  
+0     00083687  FdiagChkMConNormal                   
+0     00083d33  FdiagChkMConResume                   
+0     000846dd  FdiagChkMIsrCtr                      
+0     00084b43  FdiagChkMTask100ms                   
+0     00084a06  FdiagChkMTask1ms                     
+0     0008402a  FdiagChkSTask1ms                     
+0     00084b0d  FdiagChkS_GetAuxBatVoltSnsrState     
+0     00084b11  FdiagChkS_GetAuxBatVoltState         
+0     00084b15  FdiagChkS_GetDeratingState           
+0     00084ac0  FdiagChkS_GetGateState               
+0     00084b19  FdiagChkS_GetIGVoltSnsrState         
+0     00084b1d  FdiagChkS_GetIgVoltState             
+0     00084b21  FdiagChkS_GetMalfuncState            
+0     00084b25  FdiagChkS_GetOperModeState           
+0     00084b29  FdiagChkS_GetRlyState                
+0     00084b2d  FdiagChkS_GetSmpsVoltSnsrState       
+0     00084ac5  FdiagChkS_GetTempSnsrState           
+0     00083902  FdiagChkS_RunRlyState                
+0     0008403f  FdiagChkS_SetPwmEnState              
+0     0005f800  Flash0CtrlRegs                       
+0     0005fb00  Flash0EccRegs                        
+0     000846e7  GPIO_EnableUnbondedIOPullups         
+0     00083f13  GPIO_EnableUnbondedIOPullupsFor176Pin
+0     00007c00  GpioCtrlRegs                         
+0     00007f00  GpioDataRegs                         
+0     000846f1  I2CA_FIFO_ISR                        
+0     000846fb  I2CA_HIGH_ISR                        
+0     00084705  I2CA_ISR                             
+0     0008470f  I2CB_FIFO_ISR                        
+0     00084719  I2CB_ISR                             
+0     00084723  ILLEGAL_ISR                          
+0     0000ab6c  INTERNAL_MAIN_STATE                  
+0     0000ab6e  INTERNAL_SUB_STATE                   
+0     0003b000  IPC_CPU1_To_CPU2_GetBuffer           
+0     0003a000  IPC_CPU1_To_CPU2_PutBuffer           
+0     00038000  IPC_CPU_To_CM_GetBuffer              
+0     00039000  IPC_CPU_To_CM_PutBuffer              
+0     000901c0  IPC_Instance                         
+0     00083a87  IPC_unregisterInterrupt              
+0     00082a18  InitAdcConfig                        
+0     00082ae9  InitAuxPll                           
+0     00083b3e  InitCpuTimers                        
+0     00082d0b  InitEPwm1Config                      
+0     00083fbd  InitEPwm1Gpio                        
+0     000834fe  InitEPwm2Config                      
+0     00083fd3  InitEPwm2Gpio                        
+0     00083fff  InitEPwm3Config                      
+0     00083f75  InitEPwm3Gpio                        
+0     00084b4b  InitEPwm4Config                      
+0     00083f8d  InitEPwm4Gpio                        
+0     00083fe9  InitEPwm5Gpio                        
+0     00008000  InitFlash                            
+0     00084069  InitGpioConfig                       
+0     00083a43  InitGpioInOutConfig                  
+0     000830ce  InitPWMEnaFltGpioConfig              
+0     00082860  InitPeripheralClocks                 
+0     00083ddf  InitPieCtrl                          
+0     00084090  InitPieVectTable                     
+0     00083626  InitSysCtrl                          
+0     0008266c  InitSysPll                           
+0     0008410f  Interrupt_defaultHandler             
+0     000839a8  Interrupt_disable                    
+0     0008472d  Interrupt_illegalOperationHandler    
+0     00084054  Interrupt_initVectorTable            
+0     00084737  Interrupt_nmiHandler                 
+0     00082d9f  IsPLLValid                           
+0     00084a68  ItrCom_AswIsrCtr                     
+0     00084b43  ItrCom_AswTask100ms                  
+0     00084a84  ItrCom_AswTask100us                  
+0     00083ce5  ItrCom_AswTask10ms                   
+0     000849fd  ItrCom_AswTask1ms                    
+0     00084000  ItrCom_DisablePfcHSPWM               
+0     00084127  ItrCom_DisablePfcPWM                 
+0     00084a89  ItrCom_DisablePfcRly                 
+0     00084a20  ItrCom_EnablePfcHSPWM                
+0     00084132  ItrCom_EnablePfcPWM                  
+0     00084a8e  ItrCom_EnablePfcRly                  
+0     0008420f  ItrCom_GetCurr                       
+0     00084219  ItrCom_GetCurrRaw                    
+0     00084aca  ItrCom_GetTestInhibit                
+0     00084223  ItrCom_GetVolt                       
+0     0008422d  ItrCom_GetVoltRaw                    
+0     000840c2  ItrCom_PfcHSPwmNegDitheringMode      
+0     00084a28  ItrCom_PfcHSPwmNormalMode            
+0     000840cf  ItrCom_PfcHSPwmPosDitheringMode      
+0     00084a6f  ItrCom_PfcLSSw_DeadBand              
+0     00084237  ItrCom_PfcLSSw_NegEn                 
+0     00084241  ItrCom_PfcLSSw_PosEn                 
+0     00083e8d  ItrCom_SetPfcPwmADuty                
+0     00083ea8  ItrCom_SetPfcPwmBDuty                
+0     00083ac6  ItrCom_SetPfcPwmduty                 
+0     00083be4  LPF1                                 
+0     00084741  MCANSS0_ISR                          
+0     0008474b  MCANSS1_ISR                          
+0     00084755  MCANSS_ECC_CORR_PLS_ISR              
+0     0008475f  MCANSS_WAKE_AND_TS_PLS_ISR           
+0     00084769  MCBSPA_RX_ISR                        
+0     00084773  MCBSPA_TX_ISR                        
+0     0008477d  MCBSPB_RX_ISR                        
+0     00084787  MCBSPB_TX_ISR                        
+0     00084791  MPOST_ISR                            
+0     00084a68  MainApi_AswIsrCtr                    
+0     00084b43  MainApi_AswTask100ms                 
+0     00084a84  MainApi_AswTask100us                 
+0     00083ce5  MainApi_AswTask10ms                  
+0     000849fd  MainApi_AswTask1ms                   
+0     00083b79  MonAdc100us                          
+0     00083e71  MonAdcAvgRms                         
+0     00083c93  MonAdcIsr                            
+0     00083c93  MonAdcIsrCtr                         
+0     00083b79  MonAdcTask100us                      
+0     00083e71  MonAdcTask1ms                        
+0     00083c93  MonApi_AdcIsrCtr                     
+0     00083b79  MonApi_AdcTask100us                  
+0     00084acf  MonApi_AdcTask1ms                    
+0     0008479b  MonApi_GetCurr                       
+0     000847a5  MonApi_GetCurrAdcResult              
+0     000847af  MonApi_GetCurrSwLpf                  
+0     00084ad4  MonApi_GetGridVoltRms                
+0     00084b31  MonApi_GetInhibitstate               
+0     000847b9  MonApi_GetVolt                       
+0     000847c3  MonApi_GetVoltAdcResult              
+0     000847cd  MonApi_GetVoltSwLpf                  
+0     00083c10  MonPwrInPwrSwCalc1ms                 
+0     00083c10  MonPwrTask1ms                        
+0     000847d7  NMI_ISR                              
+0     000847e1  NOTUSED_ISR                          
+0     000847eb  PIE_RESERVED_ISR                     
+0     00083561  PI_Control_calc                      
+0     000847f5  PMBUSA_ISR                           
+0     00000ce0  PieCtrlRegs                          
+0     00000d00  PieVectTable                         
+0     00090000  PieVectTableInit                     
+0     000847ff  RTOS_ISR                             
+0     00086030  RamfuncsLoadEnd                      
+abs   00000030  RamfuncsLoadSize                     
+0     00086000  RamfuncsLoadStart                    
+0     00008030  RamfuncsRunEnd                       
+abs   00000030  RamfuncsRunSize                      
+0     00008000  RamfuncsRunStart                     
+0     00084809  SCIA_RX_ISR                          
+0     00084813  SCIA_TX_ISR                          
+0     0008481d  SCIB_RX_ISR                          
+0     00084827  SCIB_TX_ISR                          
+0     00084831  SCIC_RX_ISR                          
+0     0008483b  SCIC_TX_ISR                          
+0     00084845  SCID_RX_ISR                          
+0     0008484f  SCID_TX_ISR                          
+0     00084859  SDFM1DR1_ISR                         
+0     00084863  SDFM1DR2_ISR                         
+0     0008486d  SDFM1DR3_ISR                         
+0     00084877  SDFM1DR4_ISR                         
+0     00084881  SDFM1_ISR                            
+0     0008488b  SDFM2DR1_ISR                         
+0     00084895  SDFM2DR2_ISR                         
+0     0008489f  SDFM2DR3_ISR                         
+0     000848a9  SDFM2DR4_ISR                         
+0     000848b3  SDFM2_ISR                            
+0     000848bd  SPIA_RX_ISR                          
+0     000848c7  SPIA_TX_ISR                          
+0     000848d1  SPIB_RX_ISR                          
+0     000848db  SPIB_TX_ISR                          
+0     000848e5  SPIC_RX_ISR                          
+0     000848ef  SPIC_TX_ISR                          
+0     000848f9  SPID_RX_ISR                          
+0     00084903  SPID_TX_ISR                          
+0     0008490d  SYS_ERR_ISR                          
+0     00084b35  SeqApi_GetInternalMainState          
+0     000839f6  SeqApi_RunSeqMainTask1ms             
+0     00084b39  SeqApi_SetInternalMainState          
+0     000839f6  SeqMainChkMainState                  
+0     000839f6  SeqMainTask1ms                       
+0     00084b39  SeqMain_SetInternalMainState         
+0     00084917  SysIntOsc1Sel                        
+0     00084a50  SysIntOsc2Sel                        
+0     00083dfe  SysXtalOscSESel                      
+0     00083c3c  SysXtalOscSel                        
+0     00084921  TIMER0_ISR                           
+0     0008492b  TIMER1_ISR                           
+0     00084935  TIMER2_ISR                           
+0     00082f4a  TPOZ_Control_calc                    
+0     000836e6  Timer1_Task_100us_isr                
+0     0008493f  USBA_ISR                             
+0     00084949  USER10_ISR                           
+0     00084953  USER11_ISR                           
+0     0008495d  USER12_ISR                           
+0     00084967  USER1_ISR                            
+0     00084971  USER2_ISR                            
+0     0008497b  USER3_ISR                            
+0     00084985  USER4_ISR                            
+0     0008498f  USER5_ISR                            
+0     00084999  USER6_ISR                            
+0     000849a3  USER7_ISR                            
+0     000849ad  USER8_ISR                            
+0     000849b7  USER9_ISR                            
+0     00082c5b  VerifyXTAL                           
+0     000849c1  WAKE_ISR                             
+0     00007000  WdRegs                               
+0     000849cb  XINT1_ISR                            
+0     000849d5  XINT2_ISR                            
+0     000849df  XINT3_ISR                            
+0     000849e9  XINT4_ISR                            
+0     000849f3  XINT5_ISR                            
+0     000880d0  __TI_CINIT_Base                      
+0     000880dc  __TI_CINIT_Limit                     
+0     000880dc  __TI_CINIT_Warm                      
+0     000880c2  __TI_Handler_Table_Base              
+0     000880c8  __TI_Handler_Table_Limit             
+0     00000500  __TI_STACK_END                       
+abs   00000100  __TI_STACK_SIZE                      
+0     00083c68  __TI_auto_init_nobinit_nopinit       
+0     0000ab60  __TI_cleanup_ptr                     
+0     00083bb3  __TI_decompress_lzss                 
+0     00084a58  __TI_decompress_none                 
+0     0000ab62  __TI_dtors_ptr                       
+0     0000ab5e  __TI_enable_exit_profile_output      
+abs   ffffffff  __TI_pprof_out_hndl                  
+abs   ffffffff  __TI_prof_data_size                  
+abs   ffffffff  __TI_prof_data_start                 
+0     000840f6  __TI_zero_init_nomemset              
+0     00083fa5  __c28xabi_andll                      
+0     00082ec2  __c28xabi_divf                       
+0     00083fad  __c28xabi_orll                       
+0     00083fb5  __c28xabi_xorll                      
+n/a   UNDEFED   __c_args__                           
+0     00084b46  __error__                            
+0     00000400  __stack                              
+0     0008411b  _args_main                           
+0     00083f2c  _c_int00                             
+0     0000a97e  _lock                                
+0     00084a17  _nop                                 
+0     00084a13  _register_lock                       
+0     00084a0f  _register_unlock                     
+0     00084b4c  _system_post_cinit                   
+0     00084b49  _system_pre_init                     
+0     0000a9fe  _unlock                              
+0     00083cbc  abort                                
+0     00083853  adcb1_isr                            
+0     0008293f  ceil                                 
+0     0008293f  ceill                                
+0     00080000  code_start                           
+0     000840a1  copysignf                            
+0     0000a964  ePWM_Regs                            
+0     0000aba9  errno                                
+0     00083cbe  exit                                 
+0     0000ab1d  gIDcDcOut1CurrCtrFltTimer            
+0     0000ab1e  gIDcDcOut2CurrCtrFltTimer            
+0     0000a9a7  gIDcDcOutCurrCtrFltTimerCal          
+0     0000ab1b  gIDcDcOutCurrCtrState                
+0     0000ab2f  gIiccuRedayState                     
+0     0000aaaa  gPiIPfcL                             
+0     0000a8de  gPiVPfcDcLink                        
+0     0000a900  gPiVV2Lde                            
+0     0000a91e  gPiVV2Lqe                            
+0     0000a8c0  gPiVgrid_angle                       
+0     0000a940  gTpozVPfcDcLink                      
+0     0000a854  gdqVV2L_dqe                          
+0     0000a858  gdqVV2L_dqs                          
+0     0000a84c  gdqVgrid_dqe                         
+0     0000a850  gdqVgrid_dqe_LPF                     
+0     0000a848  gdqVgrid_dqs                         
+0     0000aac8  gf1AdcResulLpf                       
+0     0000a9ee  gf1IiccuSwLpf                        
+0     0000aa2a  gf1VGridAvgSwLpf                     
+0     0000a888  gf1VGrid_Mag_LPF                     
+0     0000a890  gf1VPfcDcLinkLpf                     
+0     0000aa40  gf1VSmpsSwLpf                        
+0     0000aa32  gf1VauxbatSwLpf                      
+0     0000a86c  gf1Vgrid_de_LPF                      
+0     0000a864  gf1Vgrid_ds_APF                      
+0     0000a874  gf1Vgrid_qe_LPF                      
+0     0000aae0  gf1ViccuSwLpf                        
+0     0000aa48  gf1VigSwLpf                          
+0     0000aa50  gf1VsmpsSwLpf                        
+0     0000a880  gf1Wgrid_LPF                         
+0     0000a8b0  gf2VPfcDcLinkBsf                     
+0     0000a8a4  gf2Vgrid_BPF                         
+0     0000a898  gf2Vgrid_qs_APF                      
+0     0000ab34  gfAdcResult                          
+0     0000ab3a  gfAdcResultLpf                       
+0     0000ab40  gfAdcResultOffset                    
+0     0000a9b0  gfAdcSnsrVoltHiFltCal                
+0     0000a9b2  gfAdcSnsrVoltLoFltCal                
+0     0000a9b4  gfAuxBatVoltSnsr_RationalFlt_Cal     
+0     0000a9ba  gfAuxBatVolt_VoltHiFltClr_Cal        
+0     0000a9b6  gfAuxBatVolt_VoltHiFlt_Cal           
+0     0000a9bc  gfAuxBatVolt_VoltLowFltClr_Cal       
+0     0000a9b8  gfAuxBatVolt_VoltLowFlt_Cal          
+0     0000aafe  gfCurrCal                            
+0     0000abaa  gfCurrRaw                            
+0     0000a9e2  gfDcDcOutCurrCtrFltCal               
+0     0000a9e8  gfDcLinkVoltCtrFltCal                
+0     0000aa9a  gfDrPfcDcLinkVoltBsf                 
+0     0000aa88  gfGridPLLFF                          
+0     0000aa86  gfGridPLLKiCal                       
+0     0000aa84  gfGridPLLKpCal                       
+0     0000a9e6  gfGridPLL_Voltd_Cal                  
+0     0000a9e4  gfGridPLL_Voltq_KCal                 
+0     0000a9dc  gfGridVoltHighInhibitHysCal          
+0     0000a842  gfHS_duty                            
+0     0000a82e  gfIGridRef                           
+0     0000ab70  gfIIccu                              
+0     0000ab74  gfIIccuAdcResult                     
+0     0000ab78  gfIIccuSwLpf                         
+0     0000a830  gfIPfcLRef                           
+0     0000ab7c  gfIccuCurr_CurrHiFlt_Cal             
+0     0000ab68  gfIccuInPwr                          
+0     0000ab6a  gfIccuOutPwr                         
+0     0000a9c8  gfIgVoltSnsr_RationalFlt_Cal         
+0     0000a9cc  gfIgVolt_OFF_Cal                     
+0     0000a9ca  gfIgVolt_ON_Cal                      
+0     0000a9d0  gfIgVolt_SwOvClr_Cal                 
+0     0000a9ce  gfIgVolt_SwOv_Cal                    
+0     0000a846  gfIin_ref_test                       
+0     0000ab12  gfIsrTsInitCal                       
+0     0000a844  gfLS_duty                            
+0     0000a834  gfNegDitheringDuty                   
+0     0000a9ea  gfOutVoltCtrFltCal                   
+0     0000a840  gfPV2GRef                            
+0     0000ab04  gfPfcCurrAdcGainCal                  
+0     0000ab0a  gfPfcCurrOffsetCal                   
+0     0000aaa0  gfPfcCurrPIKiCal                     
+0     0000aaa4  gfPfcCurrPIKiMaxCal                  
+0     0000aa9e  gfPfcCurrPIKpCal                     
+0     0000aaa2  gfPfcCurrPIKpMaxCal                  
+0     0000aaa6  gfPfcCurrPIOutMax                    
+0     0000aaa8  gfPfcCurrPIOutMin                    
+0     0000aa8c  gfPfcDcLinkVoltPIKiCal               
+0     0000aa90  gfPfcDcLinkVoltPIKiMinCal            
+0     0000aa8a  gfPfcDcLinkVoltPIKpCal               
+0     0000aa8e  gfPfcDcLinkVoltPIKpMinCal            
+0     0000aa92  gfPfcDcLinkVoltPIOutMax              
+0     0000aa94  gfPfcDcLinkVoltPIOutMin              
+0     0000ab06  gfPfcInVoltAdcGainCal                
+0     0000ab0c  gfPfcInVoltOffsetCal                 
+0     0000a9e0  gfPfcLCurrCtrFltCal                  
+0     0000ab08  gfPfcOutVoltAdcGainCal               
+0     0000ab0e  gfPfcOutVoltOffsetCal                
+0     0000a832  gfPosDitheringDuty                   
+0     0000ab10  gfPwmFreqInitCal                     
+0     0000a9be  gfSmpsVoltSnsr_RationalFlt_Cal       
+0     0000a9c4  gfSmpsVolt_VoltHiFltClr_Cal          
+0     0000a9c0  gfSmpsVolt_VoltHiFlt_Cal             
+0     0000a9c6  gfSmpsVolt_VoltLowFltClr_Cal         
+0     0000a9c2  gfSmpsVolt_VoltLowFlt_Cal            
+0     0000a9d6  gfTempHighDrtOffCal                  
+0     0000a9d2  gfTempHighDrtOnCal                   
+0     0000a9d4  gfTempHighOnCal                      
+0     0000aa06  gfTempMax                            
+0     0000a81c  gfThetaDeg_Grid                      
+0     0000a83c  gfThetaDeg_V2L                       
+0     0000a818  gfTheta_Grid                         
+0     0000a81a  gfTheta_Grid_Comp                    
+0     0000a83a  gfTheta_V2L                          
+0     0000a9ec  gfV2LVoltCtrFltCal                   
+0     0000aa28  gfVDcLink_Test                       
+0     0000aa02  gfVGridAvgSwLpf                      
+0     0000a9da  gfVGridDrtStateOffCal                
+0     0000a9d8  gfVGridDrtStateOnCal                 
+0     0000aa04  gfVGridRms                           
+0     0000a812  gfVGrid_BPF                          
+0     0000a81e  gfVGrid_Mag                          
+0     0000a820  gfVGrid_Mag_LPF                      
+0     0000ab46  gfVIccu                              
+0     0000ab4c  gfVIccuAdcResult                     
+0     0000ab52  gfVIccuSwLpf                         
+0     0000a826  gfVPfcDcLinkCmd                      
+0     0000aa9c  gfVPfcDcLinkCmdRateLimitCal          
+0     0000a82a  gfVPfcDcLinkFilter                   
+0     0000a828  gfVPfcDcLinkLpf                      
+0     0000a82c  gfVPfcDcLinkRef                      
+0     0000aa96  gfVPfcDcLinkRefMaxCal                
+0     0000aa98  gfVPfcDcLinkRefMinCal                
+0     0000aa82  gfVPfcDcLinkSSGainCal                
+0     0000a9de  gfVRly_ON_RatioCal                   
+0     0000aa10  gfVSmps                              
+0     0000aa16  gfVSmpsAdcResult                     
+0     0000aa12  gfVSmpsHwLpf                         
+0     0000aa14  gfVSmpsSwLpf                         
+0     0000a83e  gfVV2LRef                            
+0     0000aa08  gfVauxbat                            
+0     0000aa0e  gfVauxbatAdcResult                   
+0     0000aa0a  gfVauxbatHwLpf                       
+0     0000aa0c  gfVauxbatSwLpf                       
+0     0000a85c  gfVgrid_LPF                          
+0     0000aa18  gfVig                                
+0     0000aa1e  gfVigAdcResult                       
+0     0000aa1a  gfVigHwLpf                           
+0     0000aa1c  gfVigSwLpf                           
+0     0000ab80  gfVoltCal                            
+0     0000ab84  gfVoltRaw                            
+0     0000ab58  gfVolt_VoltHiFlt_Cal                 
+0     0000aa20  gfVsmps                              
+0     0000aa26  gfVsmpsAdcResult                     
+0     0000aa22  gfVsmpsHwLpf                         
+0     0000aa24  gfVsmpsSwLpf                         
+0     0000a838  gfWV2L                               
+0     0000a814  gfWgrid                              
+0     0000a816  gfWgrid_LPF                          
+0     0000a836  gffV2L                               
+0     0000a822  gffgrid                              
+0     0000a824  gffgrid_LPF                          
+0     0000abe4  giAdcOffsetCalCnt                    
+0     0000ab00  giAdcOffsetCalCntCal                 
+0     0000aa01  giAdcResultTest                      
+0     0000abe5  giAdcoffsetCplFlag                   
+0     0000aa5d  giAuxBatVoltSnsrState                
+0     0000aa60  giAuxBatVoltSnsr_RationalFlt_Timer   
+0     0000a98f  giAuxBatVoltSnsr_RationalFlt_TimerCal
+0     0000aa5e  giAuxBatVoltSnsr_VoltHiFlt_Timer     
+0     0000a98d  giAuxBatVoltSnsr_VoltHiFlt_TimerCal  
+0     0000aa5f  giAuxBatVoltSnsr_VoltLoFlt_Timer     
+0     0000a98e  giAuxBatVoltSnsr_VoltLoFlt_TimerCal  
+0     0000aa61  giAuxBatVoltState                    
+0     0000aa62  giAuxBatVolt_SwOv_Timer              
+0     0000a990  giAuxBatVolt_SwOv_TimerCal           
+0     0000aa63  giAuxBatVolt_SwUv_Timer              
+0     0000a991  giAuxBatVolt_SwUv_TimerCal           
+0     0000aa7b  giBmsState                           
+0     0000aa7f  giCanFdState                         
+0     0000aa7e  giCanHsState                         
+0     0000ab28  giCbAbnormalSubState                 
+0     0000aa77  giChMode_RlyOn_Timer                 
+0     0000a9a4  giChMode_RlyOn_TimerCal              
+0     0000a810  giController_inhibit                 
+0     0000ab67  giCurrFltFlag                        
+0     0000ab66  giCurrSnsrFltFlag                    
+0     0000abac  giCurrSnsrState                      
+0     0000abae  giCurrSnsr_RationalFlt_Timer         
+0     0000a982  giCurrSnsr_RationalFlt_TimerCal      
+0     0000abb0  giCurrSnsr_VoltHiFlt_Timer           
+0     0000a980  giCurrSnsr_VoltHiFlt_TimerCal        
+0     0000abb2  giCurrSnsr_VoltLoFlt_Timer           
+0     0000a981  giCurrSnsr_VoltLoFlt_TimerCal        
+0     0000abb4  giCurrState                          
+0     0000a985  giCurr_HwOc_HealCnt_TimerCal         
+0     0000abb6  giCurr_Oc_Do_TripReset               
+0     0000abb8  giCurr_Oc_HealCycle                  
+0     0000abba  giCurr_Oc_HealState                  
+0     0000a983  giCurr_Oc_Resume_TimeCal             
+0     0000abbc  giCurr_Oc_Resume_Timer               
+0     0000abbe  giCurr_Oc_count                      
+0     0000a984  giCurr_Oc_count_MaxDTCCal            
+0     0000ab25  giDcLinkVoltCtrFltTimer              
+0     0000a9ad  giDcLinkVoltCtrFltTimerCal           
+0     0000ab01  giDeadBandCal                        
+0     0000ab02  giDeadBandSrCal                      
+0     0000aa5c  giDeratingState                      
+0     0000aa78  giDisChMode_RlyOn_Timer              
+0     0000a9a5  giDisChMode_RlyOn_TimerCal           
+0     0000aa58  giEcuRunState                        
+0     0000ab2a  giFatalSubState                      
+0     0000ab2b  giFaultSubState                      
+0     0000aa7c  giFcuState                           
+0     0000a804  giFlag_HSSW_Deadzone                 
+0     0000a809  giFlag_IPfcLCtrlCpl                  
+0     0000a808  giFlag_IPfcLCtrlCpl_Delay            
+0     0000a805  giFlag_LSSW_Deadzone                 
+0     0000abc0  giGatePwmEnFlag                      
+0     0000abc2  giGateState                          
+0     0000a9a0  giGate_Flt_TimerCal                  
+0     0000a9a1  giGate_Flt_count_MaxDTCCal           
+0     0000a9a3  giGate_HwScp_HealCnt_TimerCal        
+0     0000a9a2  giGate_NotRdy_TimerCal               
+0     0000ab15  giGridPLL_CtrFlt_Timer               
+0     0000a9a9  giGridPLL_CtrFlt_TimerCal            
+0     0000a9ac  giGridPLL_Flt_HealCnt_TimerCal       
+0     0000ab18  giGridPLL_Flt_HealCycle              
+0     0000ab19  giGridPLL_Flt_HealState              
+0     0000ab16  giGridPLL_Flt_Timer                  
+0     0000a9aa  giGridPLL_Flt_TimerCal               
+0     0000ab17  giGridPLL_Flt_count                  
+0     0000a9ab  giGridPLL_Flt_count_MaxDTCCal        
+0     0000ab14  giGridPLL_Normal_Timer               
+0     0000a9a8  giGridPLL_Normal_TimerCal            
+0     0000ab24  giGridVoltCtrFltTimer                
+0     0000ab1f  giGridVoltCtrState                   
+0     0000ab2e  giHwIsrPinState                      
+0     0000a80f  giIController_inhibit                
+0     0000ab32  giIccuControllable                   
+0     0000ab30  giIccuControllableState              
+0     0000aa79  giIccuModeState                      
+0     0000ab31  giIccuReadyState                     
+0     0000aa6b  giIgVoltSnsrState                    
+0     0000aa6e  giIgVoltSnsr_RationalFlt_Timer       
+0     0000a999  giIgVoltSnsr_RationalFlt_TimerCal    
+0     0000aa6c  giIgVoltSnsr_VoltHiFlt_Timer         
+0     0000a997  giIgVoltSnsr_VoltHiFlt_TimerCal      
+0     0000aa6d  giIgVoltSnsr_VoltLowFlt_Timer        
+0     0000a998  giIgVoltSnsr_VoltLowFlt_TimerCal     
+0     0000aa6f  giIgVoltState                        
+0     0000aa70  giIgVolt_OFF_Timer                   
+0     0000a99a  giIgVolt_OFF_TimerCal                
+0     0000aa71  giIg_SwOv_Flt_Timer                  
+0     0000a99b  giIg_SwOv_Flt_Timer_Cal              
+0     0000aa75  giInVoltHighInhibitCnt               
+0     0000a99f  giInVoltHighInhibitCntCal            
+0     0000aa74  giInVoltHighInhibitState             
+0     0000ab33  giInhibit                            
+0     0000ab29  giInhibitSubState                    
+0     0000aa00  giInhibitTest                        
+0     0000aa7d  giInterlockState                     
+0     0000ab6d  giInternalMainState                  
+0     0000ab6f  giInternalSubState                   
+0     0000aa59  giMalfuncState                       
+0     0000a806  giNeg_dead_cnt                       
+0     0000ab2d  giNormalSubState                     
+0     0000aa5b  giOperModeState                      
+0     0000ab26  giOutVoltCtrFltTimer                 
+0     0000a9ae  giOutVoltCtrFltTimerCal              
+0     0000ab22  giOutVoltCtrState                    
+0     0000a80d  giPLL_inhibit                        
+0     0000a800  giPartCalcCplCnt                     
+0     0000ab20  giPfcDcLinkVoltCtrState              
+0     0000ab1c  giPfcLCurrCtrFltTimer                
+0     0000a9a6  giPfcLCurrCtrFltTimerCal             
+0     0000ab1a  giPfcLCurrCtrState                   
+0     0000a803  giPos_dead_cnt                       
+0     0000a80e  giPwmTest_inhibit                    
+0     0000aa5a  giPwmoutState                        
+0     0000ab2c  giResumeSubState                     
+0     0000aa76  giRlyState                           
+0     0000aa64  giSmpsVoltSnsrState                  
+0     0000aa67  giSmpsVoltSnsr_RationalFlt_Timer     
+0     0000a994  giSmpsVoltSnsr_RationalFlt_TimerCal  
+0     0000aa65  giSmpsVoltSnsr_VoltHiFlt_Timer       
+0     0000a992  giSmpsVoltSnsr_VoltHiFlt_TimerCal    
+0     0000aa66  giSmpsVoltSnsr_VoltLoFlt_Timer       
+0     0000a993  giSmpsVoltSnsr_VoltLoFlt_TimerCal    
+0     0000aa68  giSmpsVoltState                      
+0     0000aa69  giSmpsVolt_SwOv_Timer                
+0     0000a995  giSmpsVolt_SwOv_TimerCal             
+0     0000aa6a  giSmpsVolt_SwUv_Timer                
+0     0000a996  giSmpsVolt_SwUv_TimerCal             
+0     0000aa73  giTempFltFlag                        
+0     0000a99e  giTempHigh_TimerCal                  
+0     0000aa72  giTempSnsrFltFlag                    
+0     0000ab88  giTempSnsrState                      
+0     0000a99c  giTempSnsr_VoltHiFlt_TimerCal        
+0     0000a99d  giTempSnsr_VoltLoFlt_TimerCal        
+0     0000ab8b  giTempState                          
+0     0000a811  giTest_type                          
+0     0000ab27  giV2LVoltCtrFltTimer                 
+0     0000a9af  giV2LVoltCtrFltTimerCal              
+0     0000ab23  giV2LVoltCtrState                    
+0     0000ab21  giV2XDcLinkVoltCtrState              
+0     0000a807  giVPfcSoftStart_Timer                
+0     0000aa80  giVPfcSoftStart_TimerCal             
+0     0000a80a  giVV2LSoftStart_Timer                
+0     0000aa7a  giVcmsState                          
+0     0000ab65  giVoltFltFlag                        
+0     0000ab64  giVoltSnsrFltFlag                    
+0     0000ab8e  giVoltSnsrState                      
+0     0000ab91  giVoltSnsr_RationalFlt_Timer         
+0     0000a988  giVoltSnsr_RationalFlt_TimerCal      
+0     0000ab94  giVoltSnsr_VoltHiFlt_Timer           
+0     0000a986  giVoltSnsr_VoltHiFlt_TimerCal        
+0     0000ab97  giVoltSnsr_VoltLoFlt_Timer           
+0     0000a987  giVoltSnsr_VoltLoFlt_TimerCal        
+0     0000ab9a  giVoltState                          
+0     0000a98b  giVolt_Ov_HealCnt_TimerCal           
+0     0000ab9d  giVolt_Ov_HealCycle                  
+0     0000aba0  giVolt_Ov_HealState                  
+0     0000aba3  giVolt_Ov_Timer                      
+0     0000a989  giVolt_Ov_TimerCal                   
+0     0000aba6  giVolt_Ov_count                      
+0     0000a98a  giVolt_Ov_count_MaxDTCCal            
+0     0000a98c  giVolt_Uv_TimerCal                   
+0     0000a802  giflag_NegCycle                      
+0     0000a801  giflag_PosCycle                      
+0     0000a80b  guHS_en                              
+0     0000a80c  guLS_en                              
+0     000837fa  ldexpf                               
+0     000835c4  main                                 
+0     00083e1c  memcpy                               
+0     00083ede  park_calc                            
+0     00082000  powf                                 
+0     000837fa  scalbnf                              
+0     00083ce6  sqrtf                                
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                                 
+----  -------   ----                                 
+0     00000400  __stack                              
+0     00000500  __TI_STACK_END                       
+0     00000b20  AdcbResultRegs                       
+0     00000c00  CpuTimer0Regs                        
+0     00000c08  CpuTimer1Regs                        
+0     00000c10  CpuTimer2Regs                        
+0     00000ce0  PieCtrlRegs                          
+0     00000d00  PieVectTable                         
+0     00004000  EPwm1Regs                            
+0     00004100  EPwm2Regs                            
+0     00004200  EPwm3Regs                            
+0     00004300  EPwm4Regs                            
+0     00004400  EPwm5Regs                            
+0     00004500  EPwm6Regs                            
+0     00004600  EPwm7Regs                            
+0     00004700  EPwm8Regs                            
+0     00004800  EPwm9Regs                            
+0     00004900  EPwm10Regs                           
+0     00004a00  EPwm11Regs                           
+0     00004b00  EPwm12Regs                           
+0     00007000  WdRegs                               
+0     00007400  AdcaRegs                             
+0     00007480  AdcbRegs                             
+0     00007500  AdccRegs                             
+0     00007580  AdcdRegs                             
+0     00007c00  GpioCtrlRegs                         
+0     00007f00  GpioDataRegs                         
+0     00008000  InitFlash                            
+0     00008000  RamfuncsRunStart                     
+0     0000802c  F28x_usDelay                         
+0     00008030  RamfuncsRunEnd                       
+0     0000a800  giPartCalcCplCnt                     
+0     0000a801  giflag_PosCycle                      
+0     0000a802  giflag_NegCycle                      
+0     0000a803  giPos_dead_cnt                       
+0     0000a804  giFlag_HSSW_Deadzone                 
+0     0000a805  giFlag_LSSW_Deadzone                 
+0     0000a806  giNeg_dead_cnt                       
+0     0000a807  giVPfcSoftStart_Timer                
+0     0000a808  giFlag_IPfcLCtrlCpl_Delay            
+0     0000a809  giFlag_IPfcLCtrlCpl                  
+0     0000a80a  giVV2LSoftStart_Timer                
+0     0000a80b  guHS_en                              
+0     0000a80c  guLS_en                              
+0     0000a80d  giPLL_inhibit                        
+0     0000a80e  giPwmTest_inhibit                    
+0     0000a80f  giIController_inhibit                
+0     0000a810  giController_inhibit                 
+0     0000a811  giTest_type                          
+0     0000a812  gfVGrid_BPF                          
+0     0000a814  gfWgrid                              
+0     0000a816  gfWgrid_LPF                          
+0     0000a818  gfTheta_Grid                         
+0     0000a81a  gfTheta_Grid_Comp                    
+0     0000a81c  gfThetaDeg_Grid                      
+0     0000a81e  gfVGrid_Mag                          
+0     0000a820  gfVGrid_Mag_LPF                      
+0     0000a822  gffgrid                              
+0     0000a824  gffgrid_LPF                          
+0     0000a826  gfVPfcDcLinkCmd                      
+0     0000a828  gfVPfcDcLinkLpf                      
+0     0000a82a  gfVPfcDcLinkFilter                   
+0     0000a82c  gfVPfcDcLinkRef                      
+0     0000a82e  gfIGridRef                           
+0     0000a830  gfIPfcLRef                           
+0     0000a832  gfPosDitheringDuty                   
+0     0000a834  gfNegDitheringDuty                   
+0     0000a836  gffV2L                               
+0     0000a838  gfWV2L                               
+0     0000a83a  gfTheta_V2L                          
+0     0000a83c  gfThetaDeg_V2L                       
+0     0000a83e  gfVV2LRef                            
+0     0000a840  gfPV2GRef                            
+0     0000a842  gfHS_duty                            
+0     0000a844  gfLS_duty                            
+0     0000a846  gfIin_ref_test                       
+0     0000a848  gdqVgrid_dqs                         
+0     0000a84c  gdqVgrid_dqe                         
+0     0000a850  gdqVgrid_dqe_LPF                     
+0     0000a854  gdqVV2L_dqe                          
+0     0000a858  gdqVV2L_dqs                          
+0     0000a85c  gfVgrid_LPF                          
+0     0000a864  gf1Vgrid_ds_APF                      
+0     0000a86c  gf1Vgrid_de_LPF                      
+0     0000a874  gf1Vgrid_qe_LPF                      
+0     0000a880  gf1Wgrid_LPF                         
+0     0000a888  gf1VGrid_Mag_LPF                     
+0     0000a890  gf1VPfcDcLinkLpf                     
+0     0000a898  gf2Vgrid_qs_APF                      
+0     0000a8a4  gf2Vgrid_BPF                         
+0     0000a8b0  gf2VPfcDcLinkBsf                     
+0     0000a8c0  gPiVgrid_angle                       
+0     0000a8de  gPiVPfcDcLink                        
+0     0000a900  gPiVV2Lde                            
+0     0000a91e  gPiVV2Lqe                            
+0     0000a940  gTpozVPfcDcLink                      
+0     0000a964  ePWM_Regs                            
+0     0000a97e  _lock                                
+0     0000a980  giCurrSnsr_VoltHiFlt_TimerCal        
+0     0000a981  giCurrSnsr_VoltLoFlt_TimerCal        
+0     0000a982  giCurrSnsr_RationalFlt_TimerCal      
+0     0000a983  giCurr_Oc_Resume_TimeCal             
+0     0000a984  giCurr_Oc_count_MaxDTCCal            
+0     0000a985  giCurr_HwOc_HealCnt_TimerCal         
+0     0000a986  giVoltSnsr_VoltHiFlt_TimerCal        
+0     0000a987  giVoltSnsr_VoltLoFlt_TimerCal        
+0     0000a988  giVoltSnsr_RationalFlt_TimerCal      
+0     0000a989  giVolt_Ov_TimerCal                   
+0     0000a98a  giVolt_Ov_count_MaxDTCCal            
+0     0000a98b  giVolt_Ov_HealCnt_TimerCal           
+0     0000a98c  giVolt_Uv_TimerCal                   
+0     0000a98d  giAuxBatVoltSnsr_VoltHiFlt_TimerCal  
+0     0000a98e  giAuxBatVoltSnsr_VoltLoFlt_TimerCal  
+0     0000a98f  giAuxBatVoltSnsr_RationalFlt_TimerCal
+0     0000a990  giAuxBatVolt_SwOv_TimerCal           
+0     0000a991  giAuxBatVolt_SwUv_TimerCal           
+0     0000a992  giSmpsVoltSnsr_VoltHiFlt_TimerCal    
+0     0000a993  giSmpsVoltSnsr_VoltLoFlt_TimerCal    
+0     0000a994  giSmpsVoltSnsr_RationalFlt_TimerCal  
+0     0000a995  giSmpsVolt_SwOv_TimerCal             
+0     0000a996  giSmpsVolt_SwUv_TimerCal             
+0     0000a997  giIgVoltSnsr_VoltHiFlt_TimerCal      
+0     0000a998  giIgVoltSnsr_VoltLowFlt_TimerCal     
+0     0000a999  giIgVoltSnsr_RationalFlt_TimerCal    
+0     0000a99a  giIgVolt_OFF_TimerCal                
+0     0000a99b  giIg_SwOv_Flt_Timer_Cal              
+0     0000a99c  giTempSnsr_VoltHiFlt_TimerCal        
+0     0000a99d  giTempSnsr_VoltLoFlt_TimerCal        
+0     0000a99e  giTempHigh_TimerCal                  
+0     0000a99f  giInVoltHighInhibitCntCal            
+0     0000a9a0  giGate_Flt_TimerCal                  
+0     0000a9a1  giGate_Flt_count_MaxDTCCal           
+0     0000a9a2  giGate_NotRdy_TimerCal               
+0     0000a9a3  giGate_HwScp_HealCnt_TimerCal        
+0     0000a9a4  giChMode_RlyOn_TimerCal              
+0     0000a9a5  giDisChMode_RlyOn_TimerCal           
+0     0000a9a6  giPfcLCurrCtrFltTimerCal             
+0     0000a9a7  gIDcDcOutCurrCtrFltTimerCal          
+0     0000a9a8  giGridPLL_Normal_TimerCal            
+0     0000a9a9  giGridPLL_CtrFlt_TimerCal            
+0     0000a9aa  giGridPLL_Flt_TimerCal               
+0     0000a9ab  giGridPLL_Flt_count_MaxDTCCal        
+0     0000a9ac  giGridPLL_Flt_HealCnt_TimerCal       
+0     0000a9ad  giDcLinkVoltCtrFltTimerCal           
+0     0000a9ae  giOutVoltCtrFltTimerCal              
+0     0000a9af  giV2LVoltCtrFltTimerCal              
+0     0000a9b0  gfAdcSnsrVoltHiFltCal                
+0     0000a9b2  gfAdcSnsrVoltLoFltCal                
+0     0000a9b4  gfAuxBatVoltSnsr_RationalFlt_Cal     
+0     0000a9b6  gfAuxBatVolt_VoltHiFlt_Cal           
+0     0000a9b8  gfAuxBatVolt_VoltLowFlt_Cal          
+0     0000a9ba  gfAuxBatVolt_VoltHiFltClr_Cal        
+0     0000a9bc  gfAuxBatVolt_VoltLowFltClr_Cal       
+0     0000a9be  gfSmpsVoltSnsr_RationalFlt_Cal       
+0     0000a9c0  gfSmpsVolt_VoltHiFlt_Cal             
+0     0000a9c2  gfSmpsVolt_VoltLowFlt_Cal            
+0     0000a9c4  gfSmpsVolt_VoltHiFltClr_Cal          
+0     0000a9c6  gfSmpsVolt_VoltLowFltClr_Cal         
+0     0000a9c8  gfIgVoltSnsr_RationalFlt_Cal         
+0     0000a9ca  gfIgVolt_ON_Cal                      
+0     0000a9cc  gfIgVolt_OFF_Cal                     
+0     0000a9ce  gfIgVolt_SwOv_Cal                    
+0     0000a9d0  gfIgVolt_SwOvClr_Cal                 
+0     0000a9d2  gfTempHighDrtOnCal                   
+0     0000a9d4  gfTempHighOnCal                      
+0     0000a9d6  gfTempHighDrtOffCal                  
+0     0000a9d8  gfVGridDrtStateOnCal                 
+0     0000a9da  gfVGridDrtStateOffCal                
+0     0000a9dc  gfGridVoltHighInhibitHysCal          
+0     0000a9de  gfVRly_ON_RatioCal                   
+0     0000a9e0  gfPfcLCurrCtrFltCal                  
+0     0000a9e2  gfDcDcOutCurrCtrFltCal               
+0     0000a9e4  gfGridPLL_Voltq_KCal                 
+0     0000a9e6  gfGridPLL_Voltd_Cal                  
+0     0000a9e8  gfDcLinkVoltCtrFltCal                
+0     0000a9ea  gfOutVoltCtrFltCal                   
+0     0000a9ec  gfV2LVoltCtrFltCal                   
+0     0000a9ee  gf1IiccuSwLpf                        
+0     0000a9fe  _unlock                              
+0     0000aa00  giInhibitTest                        
+0     0000aa01  giAdcResultTest                      
+0     0000aa02  gfVGridAvgSwLpf                      
+0     0000aa04  gfVGridRms                           
+0     0000aa06  gfTempMax                            
+0     0000aa08  gfVauxbat                            
+0     0000aa0a  gfVauxbatHwLpf                       
+0     0000aa0c  gfVauxbatSwLpf                       
+0     0000aa0e  gfVauxbatAdcResult                   
+0     0000aa10  gfVSmps                              
+0     0000aa12  gfVSmpsHwLpf                         
+0     0000aa14  gfVSmpsSwLpf                         
+0     0000aa16  gfVSmpsAdcResult                     
+0     0000aa18  gfVig                                
+0     0000aa1a  gfVigHwLpf                           
+0     0000aa1c  gfVigSwLpf                           
+0     0000aa1e  gfVigAdcResult                       
+0     0000aa20  gfVsmps                              
+0     0000aa22  gfVsmpsHwLpf                         
+0     0000aa24  gfVsmpsSwLpf                         
+0     0000aa26  gfVsmpsAdcResult                     
+0     0000aa28  gfVDcLink_Test                       
+0     0000aa2a  gf1VGridAvgSwLpf                     
+0     0000aa32  gf1VauxbatSwLpf                      
+0     0000aa40  gf1VSmpsSwLpf                        
+0     0000aa48  gf1VigSwLpf                          
+0     0000aa50  gf1VsmpsSwLpf                        
+0     0000aa58  giEcuRunState                        
+0     0000aa59  giMalfuncState                       
+0     0000aa5a  giPwmoutState                        
+0     0000aa5b  giOperModeState                      
+0     0000aa5c  giDeratingState                      
+0     0000aa5d  giAuxBatVoltSnsrState                
+0     0000aa5e  giAuxBatVoltSnsr_VoltHiFlt_Timer     
+0     0000aa5f  giAuxBatVoltSnsr_VoltLoFlt_Timer     
+0     0000aa60  giAuxBatVoltSnsr_RationalFlt_Timer   
+0     0000aa61  giAuxBatVoltState                    
+0     0000aa62  giAuxBatVolt_SwOv_Timer              
+0     0000aa63  giAuxBatVolt_SwUv_Timer              
+0     0000aa64  giSmpsVoltSnsrState                  
+0     0000aa65  giSmpsVoltSnsr_VoltHiFlt_Timer       
+0     0000aa66  giSmpsVoltSnsr_VoltLoFlt_Timer       
+0     0000aa67  giSmpsVoltSnsr_RationalFlt_Timer     
+0     0000aa68  giSmpsVoltState                      
+0     0000aa69  giSmpsVolt_SwOv_Timer                
+0     0000aa6a  giSmpsVolt_SwUv_Timer                
+0     0000aa6b  giIgVoltSnsrState                    
+0     0000aa6c  giIgVoltSnsr_VoltHiFlt_Timer         
+0     0000aa6d  giIgVoltSnsr_VoltLowFlt_Timer        
+0     0000aa6e  giIgVoltSnsr_RationalFlt_Timer       
+0     0000aa6f  giIgVoltState                        
+0     0000aa70  giIgVolt_OFF_Timer                   
+0     0000aa71  giIg_SwOv_Flt_Timer                  
+0     0000aa72  giTempSnsrFltFlag                    
+0     0000aa73  giTempFltFlag                        
+0     0000aa74  giInVoltHighInhibitState             
+0     0000aa75  giInVoltHighInhibitCnt               
+0     0000aa76  giRlyState                           
+0     0000aa77  giChMode_RlyOn_Timer                 
+0     0000aa78  giDisChMode_RlyOn_Timer              
+0     0000aa79  giIccuModeState                      
+0     0000aa7a  giVcmsState                          
+0     0000aa7b  giBmsState                           
+0     0000aa7c  giFcuState                           
+0     0000aa7d  giInterlockState                     
+0     0000aa7e  giCanHsState                         
+0     0000aa7f  giCanFdState                         
+0     0000aa80  giVPfcSoftStart_TimerCal             
+0     0000aa82  gfVPfcDcLinkSSGainCal                
+0     0000aa84  gfGridPLLKpCal                       
+0     0000aa86  gfGridPLLKiCal                       
+0     0000aa88  gfGridPLLFF                          
+0     0000aa8a  gfPfcDcLinkVoltPIKpCal               
+0     0000aa8c  gfPfcDcLinkVoltPIKiCal               
+0     0000aa8e  gfPfcDcLinkVoltPIKpMinCal            
+0     0000aa90  gfPfcDcLinkVoltPIKiMinCal            
+0     0000aa92  gfPfcDcLinkVoltPIOutMax              
+0     0000aa94  gfPfcDcLinkVoltPIOutMin              
+0     0000aa96  gfVPfcDcLinkRefMaxCal                
+0     0000aa98  gfVPfcDcLinkRefMinCal                
+0     0000aa9a  gfDrPfcDcLinkVoltBsf                 
+0     0000aa9c  gfVPfcDcLinkCmdRateLimitCal          
+0     0000aa9e  gfPfcCurrPIKpCal                     
+0     0000aaa0  gfPfcCurrPIKiCal                     
+0     0000aaa2  gfPfcCurrPIKpMaxCal                  
+0     0000aaa4  gfPfcCurrPIKiMaxCal                  
+0     0000aaa6  gfPfcCurrPIOutMax                    
+0     0000aaa8  gfPfcCurrPIOutMin                    
+0     0000aaaa  gPiIPfcL                             
+0     0000aac8  gf1AdcResulLpf                       
+0     0000aae0  gf1ViccuSwLpf                        
+0     0000aaf8  BswTask1msCnt                        
+0     0000aaf9  BswTask10msCnt                       
+0     0000aafa  BswTask100msCnt                      
+0     0000aafc  CntCtrISR                            
+0     0000aafe  gfCurrCal                            
+0     0000ab00  giAdcOffsetCalCntCal                 
+0     0000ab01  giDeadBandCal                        
+0     0000ab02  giDeadBandSrCal                      
+0     0000ab04  gfPfcCurrAdcGainCal                  
+0     0000ab06  gfPfcInVoltAdcGainCal                
+0     0000ab08  gfPfcOutVoltAdcGainCal               
+0     0000ab0a  gfPfcCurrOffsetCal                   
+0     0000ab0c  gfPfcInVoltOffsetCal                 
+0     0000ab0e  gfPfcOutVoltOffsetCal                
+0     0000ab10  gfPwmFreqInitCal                     
+0     0000ab12  gfIsrTsInitCal                       
+0     0000ab14  giGridPLL_Normal_Timer               
+0     0000ab15  giGridPLL_CtrFlt_Timer               
+0     0000ab16  giGridPLL_Flt_Timer                  
+0     0000ab17  giGridPLL_Flt_count                  
+0     0000ab18  giGridPLL_Flt_HealCycle              
+0     0000ab19  giGridPLL_Flt_HealState              
+0     0000ab1a  giPfcLCurrCtrState                   
+0     0000ab1b  gIDcDcOutCurrCtrState                
+0     0000ab1c  giPfcLCurrCtrFltTimer                
+0     0000ab1d  gIDcDcOut1CurrCtrFltTimer            
+0     0000ab1e  gIDcDcOut2CurrCtrFltTimer            
+0     0000ab1f  giGridVoltCtrState                   
+0     0000ab20  giPfcDcLinkVoltCtrState              
+0     0000ab21  giV2XDcLinkVoltCtrState              
+0     0000ab22  giOutVoltCtrState                    
+0     0000ab23  giV2LVoltCtrState                    
+0     0000ab24  giGridVoltCtrFltTimer                
+0     0000ab25  giDcLinkVoltCtrFltTimer              
+0     0000ab26  giOutVoltCtrFltTimer                 
+0     0000ab27  giV2LVoltCtrFltTimer                 
+0     0000ab28  giCbAbnormalSubState                 
+0     0000ab29  giInhibitSubState                    
+0     0000ab2a  giFatalSubState                      
+0     0000ab2b  giFaultSubState                      
+0     0000ab2c  giResumeSubState                     
+0     0000ab2d  giNormalSubState                     
+0     0000ab2e  giHwIsrPinState                      
+0     0000ab2f  gIiccuRedayState                     
+0     0000ab30  giIccuControllableState              
+0     0000ab31  giIccuReadyState                     
+0     0000ab32  giIccuControllable                   
+0     0000ab33  giInhibit                            
+0     0000ab34  gfAdcResult                          
+0     0000ab3a  gfAdcResultLpf                       
+0     0000ab40  gfAdcResultOffset                    
+0     0000ab46  gfVIccu                              
+0     0000ab4c  gfVIccuAdcResult                     
+0     0000ab52  gfVIccuSwLpf                         
+0     0000ab58  gfVolt_VoltHiFlt_Cal                 
+0     0000ab5e  __TI_enable_exit_profile_output      
+0     0000ab60  __TI_cleanup_ptr                     
+0     0000ab62  __TI_dtors_ptr                       
+0     0000ab64  giVoltSnsrFltFlag                    
+0     0000ab65  giVoltFltFlag                        
+0     0000ab66  giCurrSnsrFltFlag                    
+0     0000ab67  giCurrFltFlag                        
+0     0000ab68  gfIccuInPwr                          
+0     0000ab6a  gfIccuOutPwr                         
+0     0000ab6c  INTERNAL_MAIN_STATE                  
+0     0000ab6d  giInternalMainState                  
+0     0000ab6e  INTERNAL_SUB_STATE                   
+0     0000ab6f  giInternalSubState                   
+0     0000ab70  gfIIccu                              
+0     0000ab74  gfIIccuAdcResult                     
+0     0000ab78  gfIIccuSwLpf                         
+0     0000ab7c  gfIccuCurr_CurrHiFlt_Cal             
+0     0000ab80  gfVoltCal                            
+0     0000ab84  gfVoltRaw                            
+0     0000ab88  giTempSnsrState                      
+0     0000ab8b  giTempState                          
+0     0000ab8e  giVoltSnsrState                      
+0     0000ab91  giVoltSnsr_RationalFlt_Timer         
+0     0000ab94  giVoltSnsr_VoltHiFlt_Timer           
+0     0000ab97  giVoltSnsr_VoltLoFlt_Timer           
+0     0000ab9a  giVoltState                          
+0     0000ab9d  giVolt_Ov_HealCycle                  
+0     0000aba0  giVolt_Ov_HealState                  
+0     0000aba3  giVolt_Ov_Timer                      
+0     0000aba6  giVolt_Ov_count                      
+0     0000aba9  errno                                
+0     0000abaa  gfCurrRaw                            
+0     0000abac  giCurrSnsrState                      
+0     0000abae  giCurrSnsr_RationalFlt_Timer         
+0     0000abb0  giCurrSnsr_VoltHiFlt_Timer           
+0     0000abb2  giCurrSnsr_VoltLoFlt_Timer           
+0     0000abb4  giCurrState                          
+0     0000abb6  giCurr_Oc_Do_TripReset               
+0     0000abb8  giCurr_Oc_HealCycle                  
+0     0000abba  giCurr_Oc_HealState                  
+0     0000abbc  giCurr_Oc_Resume_Timer               
+0     0000abbe  giCurr_Oc_count                      
+0     0000abc0  giGatePwmEnFlag                      
+0     0000abc2  giGateState                          
+0     0000abc4  CpuTimer0                            
+0     0000abcc  CpuTimer1                            
+0     0000abd4  CpuTimer2                            
+0     0000abdc  CntTask100us                         
+0     0000abde  CntTask1ms                           
+0     0000abe0  CntTask10ms                          
+0     0000abe2  CntTask100ms                         
+0     0000abe4  giAdcOffsetCalCnt                    
+0     0000abe5  giAdcoffsetCplFlag                   
+0     00038000  IPC_CPU_To_CM_GetBuffer              
+0     00039000  IPC_CPU_To_CM_PutBuffer              
+0     0003a000  IPC_CPU1_To_CPU2_PutBuffer           
+0     0003b000  IPC_CPU1_To_CPU2_GetBuffer           
+0     0005d000  DevCfgRegs                           
+0     0005d200  ClkCfgRegs                           
+0     0005d300  CpuSysRegs                           
+0     0005d700  AnalogSubsysRegs                     
+0     0005e700  Dcc0Regs                             
+0     0005e740  Dcc1Regs                             
+0     0005e780  Dcc2Regs                             
+0     0005f800  Flash0CtrlRegs                       
+0     0005fb00  Flash0EccRegs                        
+0     00080000  code_start                           
+0     00082000  powf                                 
+0     00082376  CtrPfcGridPLL                        
+0     000824f5  CtrPfcCurrCtr                        
+0     0008266c  InitSysPll                           
+0     0008276d  CtrPfcDcLinkVoltCtr                  
+0     00082860  InitPeripheralClocks                 
+0     0008293f  ceil                                 
+0     0008293f  ceill                                
+0     00082a18  InitAdcConfig                        
+0     00082ae9  InitAuxPll                           
+0     00082ba9  AdcSetMode                           
+0     00082c5b  VerifyXTAL                           
+0     00082d0b  InitEPwm1Config                      
+0     00082d9f  IsPLLValid                           
+0     00082e33  ComputeCntrSeedValue                 
+0     00082ec2  __c28xabi_divf                       
+0     00082f4a  TPOZ_Control_calc                    
+0     00082fd0  FdiagChkCtrTask1ms                   
+0     00082fd0  FdiagChkCtr_RunGridPLLCtrState       
+0     000830ce  InitPWMEnaFltGpioConfig              
+0     00083144  BSF2                                 
+0     000831b8  BswAdcIsrOffsetCalc                  
+0     00083224  FdiagChkIO_RunCurrSnsrState          
+0     0008328f  FdiagChkIO_RunVoltSnsrState          
+0     000832fa  FdiagApi_GetChkConFault              
+0     000832fa  FdiagChkMConFault                    
+0     00083365  BswAdcIsrCalc                        
+0     000833ce  FdiagApi_GetChkConInhibit            
+0     000833ce  FdiagChkMConInhibit                  
+0     00083437  FdiagApi_GetChkConFatal              
+0     00083437  FdiagChkMConFatal                    
+0     0008349b  FdiagChkIO_RunCurrState              
+0     000834fe  InitEPwm2Config                      
+0     00083561  PI_Control_calc                      
+0     000835c4  main                                 
+0     00083626  InitSysCtrl                          
+0     00083687  FdiagApi_GetChkConNormal             
+0     00083687  FdiagChkMConNormal                   
+0     000836e6  Timer1_Task_100us_isr                
+0     00083745  FdiagChkIO_RunVoltSwFlt              
+0     000837a1  BPF2                                 
+0     000837fa  ldexpf                               
+0     000837fa  scalbnf                              
+0     00083853  adcb1_isr                            
+0     000838ab  FdiagChkIO_RunVoltState              
+0     00083902  FdiagChkS_RunRlyState                
+0     00083957  FdiagChkIO_RunCurrSwFlt              
+0     000839a8  Interrupt_disable                    
+0     000839f6  SeqApi_RunSeqMainTask1ms             
+0     000839f6  SeqMainChkMainState                  
+0     000839f6  SeqMainTask1ms                       
+0     00083a43  InitGpioInOutConfig                  
+0     00083a87  IPC_unregisterInterrupt              
+0     00083ac6  BswApi_SetPwmDuty                    
+0     00083ac6  BswPwm_SetPwmDuty                    
+0     00083ac6  ItrCom_SetPfcPwmduty                 
+0     00083b03  CtrPfcHalfCycleDet                   
+0     00083b3e  InitCpuTimers                        
+0     00083b79  MonAdc100us                          
+0     00083b79  MonAdcTask100us                      
+0     00083b79  MonApi_AdcTask100us                  
+0     00083bb3  __TI_decompress_lzss                 
+0     00083be4  LPF1                                 
+0     00083c10  MonPwrInPwrSwCalc1ms                 
+0     00083c10  MonPwrTask1ms                        
+0     00083c3c  SysXtalOscSel                        
+0     00083c68  __TI_auto_init_nobinit_nopinit       
+0     00083c93  MonAdcIsr                            
+0     00083c93  MonAdcIsrCtr                         
+0     00083c93  MonApi_AdcIsrCtr                     
+0     00083cbc  C$$EXIT                              
+0     00083cbc  abort                                
+0     00083cbe  exit                                 
+0     00083ce5  AswApi_AswTask10ms                   
+0     00083ce5  AswTask10ms                          
+0     00083ce5  ItrCom_AswTask10ms                   
+0     00083ce5  MainApi_AswTask10ms                  
+0     00083ce6  sqrtf                                
+0     00083d0d  CalAdcINL                            
+0     00083d33  FdiagApi_GetChkConResume             
+0     00083d33  FdiagChkMConResume                   
+0     00083d59  APF1                                 
+0     00083d7c  ConfigCpuTimer                       
+0     00083d9f  CtrPfcPwmTest                        
+0     00083dc0  BswPwm_ForceLowPwm                   
+0     00083ddf  InitPieCtrl                          
+0     00083dfe  SysXtalOscSESel                      
+0     00083e1c  memcpy                               
+0     00083e39  BswPwm_SetFreqUpDownCnt              
+0     00083e55  FdiagApi_GetChkConCbAbnormal         
+0     00083e55  FdiagChkMConCbAbnormal               
+0     00083e71  MonAdcAvgRms                         
+0     00083e71  MonAdcTask1ms                        
+0     00083e8d  BswApi_SetPwmADuty                   
+0     00083e8d  BswPwm_SetPwmADuty                   
+0     00083e8d  ItrCom_SetPfcPwmADuty                
+0     00083ea8  BswApi_SetPwmBDuty                   
+0     00083ea8  BswPwm_SetPwmBDuty                   
+0     00083ea8  ItrCom_SetPfcPwmBDuty                
+0     00083ede  park_calc                            
+0     00083ef9  CtrApi_CtrMIsrCtr                    
+0     00083ef9  CtrCtrMIsrCtr                        
+0     00083ef9  CtrPfcIsrCtr                         
+0     00083f13  GPIO_EnableUnbondedIOPullupsFor176Pin
+0     00083f2c  _c_int00                             
+0     00083f45  AuxXtalOscSESel                      
+0     00083f5d  AuxXtalOscSel                        
+0     00083f75  InitEPwm3Gpio                        
+0     00083f8d  InitEPwm4Gpio                        
+0     00083fa5  __c28xabi_andll                      
+0     00083fad  __c28xabi_orll                       
+0     00083fb5  __c28xabi_xorll                      
+0     00083fbd  InitEPwm1Gpio                        
+0     00083fd3  InitEPwm2Gpio                        
+0     00083fe9  InitEPwm5Gpio                        
+0     00083fff  InitEPwm3Config                      
+0     00084000  BswApi_DisablePfcHSPwm               
+0     00084000  BswPwm_DisablePfcHSPwm               
+0     00084000  ItrCom_DisablePfcHSPWM               
+0     00084015  FdiagChkCtr_GridPllFltHealCount      
+0     0008402a  FdiagChkSTask1ms                     
+0     0008403f  FdiagChkS_SetPwmEnState              
+0     00084054  Interrupt_initVectorTable            
+0     00084069  InitGpioConfig                       
+0     0008407d  FdiagChkIOTask1ms                    
+0     00084090  InitPieVectTable                     
+0     000840a1  copysignf                            
+0     000840b2  BswPwm_EnablePwm                     
+0     000840c2  BswApi_PfcHSPwmNegDitheringMode      
+0     000840c2  BswPwm_PfcHSPwmNegDitheringMode      
+0     000840c2  ItrCom_PfcHSPwmNegDitheringMode      
+0     000840cf  BswApi_PfcHSPwmPosDitheringMode      
+0     000840cf  BswPwm_PfcHSPwmPosDitheringMode      
+0     000840cf  ItrCom_PfcHSPwmPosDitheringMode      
+0     000840dc  DisableDog                           
+0     000840e9  EMPTY_ISR                            
+0     000840f6  __TI_zero_init_nomemset              
+0     00084103  CtrApi_CtrMTask1ms                   
+0     00084103  CtrCtrMTask1ms                       
+0     00084103  CtrPfcTask1ms                        
+0     0008410f  Interrupt_defaultHandler             
+0     0008411b  _args_main                           
+0     00084127  BswApi_DisablePfcPwm                 
+0     00084127  BswPwm_DisablePfcPwm                 
+0     00084127  ItrCom_DisablePfcPWM                 
+0     00084132  BswApi_EnablePfcPwm                  
+0     00084132  BswPwm_EnablePfcPwm                  
+0     00084132  ItrCom_EnablePfcPWM                  
+0     0008413d  ADCA1_ISR                            
+0     00084147  ADCA2_ISR                            
+0     00084151  ADCA3_ISR                            
+0     0008415b  ADCA4_ISR                            
+0     00084165  ADCA_EVT_ISR                         
+0     0008416f  ADCB1_ISR                            
+0     00084179  ADCB2_ISR                            
+0     00084183  ADCB3_ISR                            
+0     0008418d  ADCB4_ISR                            
+0     00084197  ADCB_EVT_ISR                         
+0     000841a1  ADCC1_ISR                            
+0     000841ab  ADCC2_ISR                            
+0     000841b5  ADCC3_ISR                            
+0     000841bf  ADCC4_ISR                            
+0     000841c9  ADCC_EVT_ISR                         
+0     000841d3  ADCD1_ISR                            
+0     000841dd  ADCD2_ISR                            
+0     000841e7  ADCD3_ISR                            
+0     000841f1  ADCD4_ISR                            
+0     000841fb  ADCD_EVT_ISR                         
+0     00084205  AuxAuxClkSel                         
+0     0008420f  BswApi_GetCurr                       
+0     0008420f  ItrCom_GetCurr                       
+0     00084219  BswApi_GetCurrRaw                    
+0     00084219  ItrCom_GetCurrRaw                    
+0     00084223  BswApi_GetVolt                       
+0     00084223  ItrCom_GetVolt                       
+0     0008422d  BswApi_GetVoltRaw                    
+0     0008422d  ItrCom_GetVoltRaw                    
+0     00084237  BswApi_PfcLSSw_NegEn                 
+0     00084237  BswGpio_PfcLSSw_NegEn                
+0     00084237  ItrCom_PfcLSSw_NegEn                 
+0     00084241  BswApi_PfcLSSw_PosEn                 
+0     00084241  BswGpio_PfcLSSw_PosEn                
+0     00084241  ItrCom_PfcLSSw_PosEn                 
+0     0008424b  CANA0_ISR                            
+0     00084255  CANA1_ISR                            
+0     0008425f  CANB0_ISR                            
+0     00084269  CANB1_ISR                            
+0     00084273  CIPC0_ISR                            
+0     0008427d  CIPC1_ISR                            
+0     00084287  CIPC2_ISR                            
+0     00084291  CIPC3_ISR                            
+0     0008429b  CLA1CRC_ISR                          
+0     000842a5  CLA1_1_ISR                           
+0     000842af  CLA1_2_ISR                           
+0     000842b9  CLA1_3_ISR                           
+0     000842c3  CLA1_4_ISR                           
+0     000842cd  CLA1_5_ISR                           
+0     000842d7  CLA1_6_ISR                           
+0     000842e1  CLA1_7_ISR                           
+0     000842eb  CLA1_8_ISR                           
+0     000842f5  CLA_OVERFLOW_ISR                     
+0     000842ff  CLA_UNDERFLOW_ISR                    
+0     00084309  CLB1_ISR                             
+0     00084313  CLB2_ISR                             
+0     0008431d  CLB3_ISR                             
+0     00084327  CLB4_ISR                             
+0     00084331  CLB5_ISR                             
+0     0008433b  CLB6_ISR                             
+0     00084345  CLB7_ISR                             
+0     0008434f  CLB8_ISR                             
+0     00084359  CMTOCPUXIPC0_ISR                     
+0     00084363  CMTOCPUXIPC1_ISR                     
+0     0008436d  CMTOCPUXIPC2_ISR                     
+0     00084377  CMTOCPUXIPC3_ISR                     
+0     00084381  CMTOCPUXIPC4_ISR                     
+0     0008438b  CMTOCPUXIPC5_ISR                     
+0     00084395  CMTOCPUXIPC6_ISR                     
+0     0008439f  CMTOCPUXIPC7_ISR                     
+0     000843a9  CM_STATUS_ISR                        
+0     000843b3  CPUCRC_ISR                           
+0     000843bd  CtrApi_CtrMTask100us                 
+0     000843bd  CtrCtrMTask100us                     
+0     000843bd  CtrPfcTask100us                      
+0     000843c7  DATALOG_ISR                          
+0     000843d1  DMA_CH1_ISR                          
+0     000843db  DMA_CH2_ISR                          
+0     000843e5  DMA_CH3_ISR                          
+0     000843ef  DMA_CH4_ISR                          
+0     000843f9  DMA_CH5_ISR                          
+0     00084403  DMA_CH6_ISR                          
+0     0008440d  ECAP1_ISR                            
+0     00084417  ECAP2_ISR                            
+0     00084421  ECAP3_ISR                            
+0     0008442b  ECAP4_ISR                            
+0     00084435  ECAP5_ISR                            
+0     0008443f  ECAP6_2_ISR                          
+0     00084449  ECAP6_ISR                            
+0     00084453  ECAP7_2_ISR                          
+0     0008445d  ECAP7_ISR                            
+0     00084467  ECATRST_ISR                          
+0     00084471  ECATSYNC0_ISR                        
+0     0008447b  ECATSYNC1_ISR                        
+0     00084485  ECAT_ISR                             
+0     0008448f  EMU_ISR                              
+0     00084499  EPWM10_ISR                           
+0     000844a3  EPWM10_TZ_ISR                        
+0     000844ad  EPWM11_ISR                           
+0     000844b7  EPWM11_TZ_ISR                        
+0     000844c1  EPWM12_ISR                           
+0     000844cb  EPWM12_TZ_ISR                        
+0     000844d5  EPWM13_ISR                           
+0     000844df  EPWM13_TZ_ISR                        
+0     000844e9  EPWM14_ISR                           
+0     000844f3  EPWM14_TZ_ISR                        
+0     000844fd  EPWM15_ISR                           
+0     00084507  EPWM15_TZ_ISR                        
+0     00084511  EPWM16_ISR                           
+0     0008451b  EPWM16_TZ_ISR                        
+0     00084525  EPWM1_ISR                            
+0     0008452f  EPWM1_TZ_ISR                         
+0     00084539  EPWM2_ISR                            
+0     00084543  EPWM2_TZ_ISR                         
+0     0008454d  EPWM3_ISR                            
+0     00084557  EPWM3_TZ_ISR                         
+0     00084561  EPWM4_ISR                            
+0     0008456b  EPWM4_TZ_ISR                         
+0     00084575  EPWM5_ISR                            
+0     0008457f  EPWM5_TZ_ISR                         
+0     00084589  EPWM6_ISR                            
+0     00084593  EPWM6_TZ_ISR                         
+0     0008459d  EPWM7_ISR                            
+0     000845a7  EPWM7_TZ_ISR                         
+0     000845b1  EPWM8_ISR                            
+0     000845bb  EPWM8_TZ_ISR                         
+0     000845c5  EPWM9_ISR                            
+0     000845cf  EPWM9_TZ_ISR                         
+0     000845d9  EQEP1_ISR                            
+0     000845e3  EQEP2_ISR                            
+0     000845ed  EQEP3_ISR                            
+0     000845f7  FMC_ISR                              
+0     00084601  FPU_OFLOW_ISR                        
+0     0008460b  FPU_UFLOW_ISR                        
+0     00084615  FSIRXA1_ISR                          
+0     0008461f  FSIRXA2_ISR                          
+0     00084629  FSIRXB1_ISR                          
+0     00084633  FSIRXB2_ISR                          
+0     0008463d  FSIRXC1_ISR                          
+0     00084647  FSIRXC2_ISR                          
+0     00084651  FSIRXD1_ISR                          
+0     0008465b  FSIRXD2_ISR                          
+0     00084665  FSIRXE1_ISR                          
+0     0008466f  FSIRXE2_ISR                          
+0     00084679  FSIRXF1_ISR                          
+0     00084683  FSIRXF2_ISR                          
+0     0008468d  FSIRXG1_ISR                          
+0     00084697  FSIRXG2_ISR                          
+0     000846a1  FSIRXH1_ISR                          
+0     000846ab  FSIRXH2_ISR                          
+0     000846b5  FSITXA1_ISR                          
+0     000846bf  FSITXA2_ISR                          
+0     000846c9  FSITXB1_ISR                          
+0     000846d3  FSITXB2_ISR                          
+0     000846dd  FdiagApi_ChkMIsrCtr                  
+0     000846dd  FdiagChkIOIsrCtr                     
+0     000846dd  FdiagChkMIsrCtr                      
+0     000846e7  GPIO_EnableUnbondedIOPullups         
+0     000846f1  I2CA_FIFO_ISR                        
+0     000846fb  I2CA_HIGH_ISR                        
+0     00084705  I2CA_ISR                             
+0     0008470f  I2CB_FIFO_ISR                        
+0     00084719  I2CB_ISR                             
+0     00084723  ILLEGAL_ISR                          
+0     0008472d  Interrupt_illegalOperationHandler    
+0     00084737  Interrupt_nmiHandler                 
+0     00084741  MCANSS0_ISR                          
+0     0008474b  MCANSS1_ISR                          
+0     00084755  MCANSS_ECC_CORR_PLS_ISR              
+0     0008475f  MCANSS_WAKE_AND_TS_PLS_ISR           
+0     00084769  MCBSPA_RX_ISR                        
+0     00084773  MCBSPA_TX_ISR                        
+0     0008477d  MCBSPB_RX_ISR                        
+0     00084787  MCBSPB_TX_ISR                        
+0     00084791  MPOST_ISR                            
+0     0008479b  MonApi_GetCurr                       
+0     000847a5  MonApi_GetCurrAdcResult              
+0     000847af  MonApi_GetCurrSwLpf                  
+0     000847b9  MonApi_GetVolt                       
+0     000847c3  MonApi_GetVoltAdcResult              
+0     000847cd  MonApi_GetVoltSwLpf                  
+0     000847d7  NMI_ISR                              
+0     000847e1  NOTUSED_ISR                          
+0     000847eb  PIE_RESERVED_ISR                     
+0     000847f5  PMBUSA_ISR                           
+0     000847ff  RTOS_ISR                             
+0     00084809  SCIA_RX_ISR                          
+0     00084813  SCIA_TX_ISR                          
+0     0008481d  SCIB_RX_ISR                          
+0     00084827  SCIB_TX_ISR                          
+0     00084831  SCIC_RX_ISR                          
+0     0008483b  SCIC_TX_ISR                          
+0     00084845  SCID_RX_ISR                          
+0     0008484f  SCID_TX_ISR                          
+0     00084859  SDFM1DR1_ISR                         
+0     00084863  SDFM1DR2_ISR                         
+0     0008486d  SDFM1DR3_ISR                         
+0     00084877  SDFM1DR4_ISR                         
+0     00084881  SDFM1_ISR                            
+0     0008488b  SDFM2DR1_ISR                         
+0     00084895  SDFM2DR2_ISR                         
+0     0008489f  SDFM2DR3_ISR                         
+0     000848a9  SDFM2DR4_ISR                         
+0     000848b3  SDFM2_ISR                            
+0     000848bd  SPIA_RX_ISR                          
+0     000848c7  SPIA_TX_ISR                          
+0     000848d1  SPIB_RX_ISR                          
+0     000848db  SPIB_TX_ISR                          
+0     000848e5  SPIC_RX_ISR                          
+0     000848ef  SPIC_TX_ISR                          
+0     000848f9  SPID_RX_ISR                          
+0     00084903  SPID_TX_ISR                          
+0     0008490d  SYS_ERR_ISR                          
+0     00084917  SysIntOsc1Sel                        
+0     00084921  TIMER0_ISR                           
+0     0008492b  TIMER1_ISR                           
+0     00084935  TIMER2_ISR                           
+0     0008493f  USBA_ISR                             
+0     00084949  USER10_ISR                           
+0     00084953  USER11_ISR                           
+0     0008495d  USER12_ISR                           
+0     00084967  USER1_ISR                            
+0     00084971  USER2_ISR                            
+0     0008497b  USER3_ISR                            
+0     00084985  USER4_ISR                            
+0     0008498f  USER5_ISR                            
+0     00084999  USER6_ISR                            
+0     000849a3  USER7_ISR                            
+0     000849ad  USER8_ISR                            
+0     000849b7  USER9_ISR                            
+0     000849c1  WAKE_ISR                             
+0     000849cb  XINT1_ISR                            
+0     000849d5  XINT2_ISR                            
+0     000849df  XINT3_ISR                            
+0     000849e9  XINT4_ISR                            
+0     000849f3  XINT5_ISR                            
+0     000849fd  AswApi_AswTask1ms                    
+0     000849fd  AswTask1ms                           
+0     000849fd  ItrCom_AswTask1ms                    
+0     000849fd  MainApi_AswTask1ms                   
+0     00084a06  FdiagApi_ChkMTask1ms                 
+0     00084a06  FdiagChkMTask1ms                     
+0     00084a0f  _register_unlock                     
+0     00084a13  _register_lock                       
+0     00084a17  _nop                                 
+0     00084a18  AuxIntOsc2Sel                        
+0     00084a20  BswApi_EnablePfcHSPwm                
+0     00084a20  BswPwm_EnablePfcHSPwm                
+0     00084a20  ItrCom_EnablePfcHSPWM                
+0     00084a28  BswApi_PfcHSPwmNormalMode            
+0     00084a28  BswPwm_PfcHSPwmNormalMode            
+0     00084a28  ItrCom_PfcHSPwmNormalMode            
+0     00084a30  BswTask100ms                         
+0     00084a38  BswTask100us                         
+0     00084a40  BswTask10ms                          
+0     00084a48  BswTask1ms                           
+0     00084a50  SysIntOsc2Sel                        
+0     00084a58  __TI_decompress_none                 
+0     00084a68  AswApi_AswIsrCtr                     
+0     00084a68  AswIsrCtr                            
+0     00084a68  ItrCom_AswIsrCtr                     
+0     00084a68  MainApi_AswIsrCtr                    
+0     00084a6f  BswApi_PfcLSSw_DeadBand              
+0     00084a6f  BswGpio_PfcLSSw_DeadBand             
+0     00084a6f  ItrCom_PfcLSSw_DeadBand              
+0     00084a76  CtrApi_GetGriddqVolt                 
+0     00084a7d  CtrApi_GetGriddqVoltLpf              
+0     00084a84  AswApi_AswTask100us                  
+0     00084a84  AswTask100us                         
+0     00084a84  ItrCom_AswTask100us                  
+0     00084a84  MainApi_AswTask100us                 
+0     00084a89  BswApi_DisablePfcRly                 
+0     00084a89  BswGpio_DisableRly                   
+0     00084a89  ItrCom_DisablePfcRly                 
+0     00084a8e  BswApi_EnablePfcRly                  
+0     00084a8e  BswGpio_EnableRly                    
+0     00084a8e  ItrCom_EnablePfcRly                  
+0     00084a93  CtrApi_GetVgridMag                   
+0     00084a98  CtrApi_GetVgridMagLpf                
+0     00084a9d  FdiagApi_GetTempState                
+0     00084aa2  FdiagApi_GetVoltSnsrState            
+0     00084aa7  FdiagChkFSTask1ms                    
+0     00084aac  FdiagChkIO_GetCurrSnsrState          
+0     00084ab1  FdiagChkIO_GetCurrState              
+0     00084ab6  FdiagChkIO_GetVoltSnsrState          
+0     00084abb  FdiagChkIO_GetVoltState              
+0     00084ac0  FdiagChkS_GetGateState               
+0     00084ac5  FdiagChkS_GetTempSnsrState           
+0     00084aca  ItrCom_GetTestInhibit                
+0     00084acf  MonApi_AdcTask1ms                    
+0     00084ad4  MonApi_GetGridVoltRms                
+0     00084ad9  FdiagApi_ChagePfcCurrCtrState        
+0     00084add  FdiagApi_ChangeGridPllState          
+0     00084ae1  FdiagApi_ChangePfcDcLinkVoltCtrState 
+0     00084ae5  FdiagApi_GetGridPllCtrState          
+0     00084ae9  FdiagApi_GetPfcCurrCtrState          
+0     00084aed  FdiagApi_GetPfcDcLinkVoltCtrState    
+0     00084af1  FdiagChkCtr_GetDcDcCurrCtrState      
+0     00084af5  FdiagChkCtr_GetDcLinkVoltCtrState    
+0     00084af9  FdiagChkCtr_GetGridPllCtrState       
+0     00084afd  FdiagChkCtr_GetOutVoltCtrState       
+0     00084b01  FdiagChkCtr_GetPfcCurrCtrState       
+0     00084b05  FdiagChkFS_GetEcuPostRunState        
+0     00084b09  FdiagChkFS_GetIccuModeState          
+0     00084b0d  FdiagChkS_GetAuxBatVoltSnsrState     
+0     00084b11  FdiagChkS_GetAuxBatVoltState         
+0     00084b15  FdiagApi_GetDeratingState            
+0     00084b15  FdiagChkS_GetDeratingState           
+0     00084b19  FdiagChkS_GetIGVoltSnsrState         
+0     00084b1d  FdiagChkS_GetIgVoltState             
+0     00084b21  FdiagChkS_GetMalfuncState            
+0     00084b25  FdiagChkS_GetOperModeState           
+0     00084b29  FdiagApi_GetRlyState                 
+0     00084b29  FdiagChkS_GetRlyState                
+0     00084b2d  FdiagChkS_GetSmpsVoltSnsrState       
+0     00084b31  MonApi_GetInhibitstate               
+0     00084b35  SeqApi_GetInternalMainState          
+0     00084b39  SeqApi_SetInternalMainState          
+0     00084b39  SeqMain_SetInternalMainState         
+0     00084b3d  ComApi_GetCanOutCurr                 
+0     00084b40  FdiagApi_GetIccuModeState            
+0     00084b43  AswApi_AswTask100ms                  
+0     00084b43  AswTask100ms                         
+0     00084b43  FdiagApi_ChkMTask100ms               
+0     00084b43  FdiagChkCtrTask100ms                 
+0     00084b43  FdiagChkMTask100ms                   
+0     00084b43  ItrCom_AswTask100ms                  
+0     00084b43  MainApi_AswTask100ms                 
+0     00084b46  __error__                            
+0     00084b49  _system_pre_init                     
+0     00084b4b  InitEPwm4Config                      
+0     00084b4c  _system_post_cinit                   
+0     00086000  RamfuncsLoadStart                    
+0     00086030  RamfuncsLoadEnd                      
+0     000880c2  __TI_Handler_Table_Base              
+0     000880c8  __TI_Handler_Table_Limit             
+0     000880d0  __TI_CINIT_Base                      
+0     000880dc  __TI_CINIT_Limit                     
+0     000880dc  __TI_CINIT_Warm                      
+0     00090000  PieVectTableInit                     
+0     000901c0  IPC_Instance                         
+abs   00000030  RamfuncsLoadSize                     
+abs   00000030  RamfuncsRunSize                      
+abs   00000100  __TI_STACK_SIZE                      
+abs   ffffffff  __TI_pprof_out_hndl                  
+abs   ffffffff  __TI_prof_data_size                  
+abs   ffffffff  __TI_prof_data_start                 
+n/a   UNDEFED   __c_args__                           
+
+[888 symbols]
