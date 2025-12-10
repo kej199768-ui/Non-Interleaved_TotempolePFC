@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS
+CG_TOOL_ROOT := C:/ti/ccs1240/ccs/tools/compiler
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -264,7 +264,7 @@ all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 250304_TTP.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu64 --idiv_support=idiv0 --tmu_support=tmu0 --vcu_support=vcrc -O3 --opt_for_speed=2 --fp_mode=relaxed --advice:performance=all --define=DEBUG --define=CPU1 --define=_FLASH --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"250304_TTP.map" --stack_size=0x100 --warn_sections -i"C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/lib" -i"C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="250304_TTP_linkInfo.xml" --entry_point=code_start --rom_model -o "250304_TTP.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1240/ccs/tools/compiler/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu64 --idiv_support=idiv0 --tmu_support=tmu0 --vcu_support=vcrc -O3 --opt_for_speed=2 --fp_mode=relaxed --advice:performance=all --define=DEBUG --define=CPU1 --define=_FLASH --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"250304_TTP.map" --stack_size=0x100 --warn_sections -i"C:/ti/ccs1240/ccs/tools/compiler/lib" -i"C:/ti/ccs1240/ccs/tools/compiler/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="250304_TTP_linkInfo.xml" --entry_point=code_start --rom_model -o "250304_TTP.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 

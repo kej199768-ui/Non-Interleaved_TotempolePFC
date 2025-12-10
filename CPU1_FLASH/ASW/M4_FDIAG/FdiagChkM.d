@@ -9,18 +9,18 @@ ASW/M4_FDIAG/FdiagChkM.obj: ../ASW/AswDiagState.h
 ASW/M4_FDIAG/FdiagChkM.obj: ../RTE/ItrComBswtoAsw.h
 ASW/M4_FDIAG/FdiagChkM.obj: ../RTE/RteCommon.h
 ASW/M4_FDIAG/FdiagChkM.obj: ../Common.h
-ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/stdbool.h
-ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/_ti_config.h
-ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/linkage.h
-ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/stdio.h
-ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/stdarg.h
-ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/sys/_types.h
-ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/sys/cdefs.h
-ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/machine/_types.h
+ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/include/stdbool.h
+ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/include/_ti_config.h
+ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/include/linkage.h
+ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/include/stdio.h
+ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/include/stdarg.h
+ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/include/sys/_types.h
+ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/include/sys/cdefs.h
+ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/include/machine/_types.h
 ASW/M4_FDIAG/FdiagChkM.obj: ../Util.h
-ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/math.h
-ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/_defs.h
-ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/machine/_limits.h
+ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/include/math.h
+ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/include/_defs.h
+ASW/M4_FDIAG/FdiagChkM.obj: C:/ti/ccs1240/ccs/tools/compiler/include/machine/_limits.h
 ASW/M4_FDIAG/FdiagChkM.obj: ../ASW/M4_FDIAG/FdiagChkIO.h
 ASW/M4_FDIAG/FdiagChkM.obj: ../ASW/M4_FDIAG/FdiagChkS.h
 ASW/M4_FDIAG/FdiagChkM.obj: ../ASW/M4_FDIAG/FdiagChkCtr.h
@@ -47,29 +47,29 @@ ASW/M4_FDIAG/FdiagChkM.obj: ../ASW/M3_CTR/CtrApi.h
 
 ../Common.h:
 
-C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/stdbool.h:
+C:/ti/ccs1240/ccs/tools/compiler/include/stdbool.h:
 
-C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/_ti_config.h:
+C:/ti/ccs1240/ccs/tools/compiler/include/_ti_config.h:
 
-C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/linkage.h:
+C:/ti/ccs1240/ccs/tools/compiler/include/linkage.h:
 
-C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/stdio.h:
+C:/ti/ccs1240/ccs/tools/compiler/include/stdio.h:
 
-C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/stdarg.h:
+C:/ti/ccs1240/ccs/tools/compiler/include/stdarg.h:
 
-C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/sys/_types.h:
+C:/ti/ccs1240/ccs/tools/compiler/include/sys/_types.h:
 
-C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/sys/cdefs.h:
+C:/ti/ccs1240/ccs/tools/compiler/include/sys/cdefs.h:
 
-C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/machine/_types.h:
+C:/ti/ccs1240/ccs/tools/compiler/include/machine/_types.h:
 
 ../Util.h:
 
-C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/math.h:
+C:/ti/ccs1240/ccs/tools/compiler/include/math.h:
 
-C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/_defs.h:
+C:/ti/ccs1240/ccs/tools/compiler/include/_defs.h:
 
-C:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_20.8.0.STS/include/machine/_limits.h:
+C:/ti/ccs1240/ccs/tools/compiler/include/machine/_limits.h:
 
 ../ASW/M4_FDIAG/FdiagChkIO.h:
 
