@@ -300,11 +300,11 @@ void CtrPfcHalfCycleDet(void)
     if (giTest_type == 0)
     {
         //------------------------------DeadBand start ÁöÁ¡, HSSW Disable----------------------------
-        if ((gfThetaDeg_Grid >= -176.0f) && (gfThetaDeg_Grid < -5.0f))
+        if ((gfThetaDeg_Grid >= -175.0f) && (gfThetaDeg_Grid < -6.0f))
         {
             giflag_PosCycle = TRUE;
             giflag_NegCycle = FALSE;
-            if (gfThetaDeg_Grid <= -173.0f)
+            if (gfThetaDeg_Grid <= -172.0f)
             {
                 giFlag_HSSW_Deadzone = FALSE;
                 giFlag_LSSW_Deadzone = TRUE;
@@ -315,11 +315,11 @@ void CtrPfcHalfCycleDet(void)
                 giFlag_LSSW_Deadzone = FALSE;
             }
         }
-        else if ((gfThetaDeg_Grid >= 4.0f) && (gfThetaDeg_Grid < 175.0f))
+        else if ((gfThetaDeg_Grid >= 5.0f) && (gfThetaDeg_Grid < 174.0f))
         {
             giflag_PosCycle = FALSE;
             giflag_NegCycle = TRUE;
-            if (gfThetaDeg_Grid <= 7.f)
+            if (gfThetaDeg_Grid <= 8.f)
             {
                 giFlag_HSSW_Deadzone = FALSE;
                 giFlag_LSSW_Deadzone = TRUE;
