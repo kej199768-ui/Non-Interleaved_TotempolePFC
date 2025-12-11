@@ -173,6 +173,25 @@ void InitGpioInOutConfig()
 
     //===========================================================================
     
+    //===========================================================================
+    //GPIO43, Relay signal
+    //===========================================================================
+    GpioCtrlRegs.GPBPUD.bit.GPIO43  = 0;    // Enable pullup
+    GpioCtrlRegs.GPBMUX1.bit.GPIO43 = 0;    // GPIO
+    GpioCtrlRegs.GPBDIR.bit.GPIO43  = 1;    // Output
+    GpioDataRegs.GPBCLEAR.bit.GPIO43  = 1;    // GPIO43 clear
+
+    //===========================================================================
+
+    //===========================================================================
+    //GPIO44, Relay signal
+    //===========================================================================
+    GpioCtrlRegs.GPBPUD.bit.GPIO44  = 0;    // Enable pullup
+    GpioCtrlRegs.GPBMUX1.bit.GPIO44 = 0;    // GPIO
+    GpioCtrlRegs.GPBDIR.bit.GPIO44  = 1;    // Output
+    GpioDataRegs.GPBCLEAR.bit.GPIO44  = 1;    // GPIO44 clear
+
+    //===========================================================================
     EDIS;
 }
 

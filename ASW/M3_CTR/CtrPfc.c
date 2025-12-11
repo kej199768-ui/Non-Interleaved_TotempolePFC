@@ -345,6 +345,23 @@ void CtrPfcHalfCycleDet(void)
         giFlag_LSSW_Deadzone = FALSE;
         giFlag_HSSW_Deadzone = FALSE;
     }
+
+    if (giFlag_HSSW_Deadzone == TRUE)
+    {
+        GpioDataRegs.GPBSET.bit.GPIO43 = 1;
+    }
+    else
+    {
+        GpioDataRegs.GPBCLEAR.bit.GPIO43 = 1;
+    }
+    if (giFlag_LSSW_Deadzone == TRUE)
+    {
+        GpioDataRegs.GPBSET.bit.GPIO44 = 1;
+    }
+    else
+    {
+        GpioDataRegs.GPBCLEAR.bit.GPIO44 = 1;
+    }
 }
 
 
