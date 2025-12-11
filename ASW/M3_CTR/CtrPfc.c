@@ -616,8 +616,8 @@ void CtrPfcCurrCtr()
 		{
 			if (giFlag_LSSW_Deadzone == TRUE)
 			{
-//				ItrCom_PfcHSPwmPosDitheringMode();
-//				ItrCom_EnablePfcHSPWM();
+				ItrCom_PfcHSPwmPosDitheringMode();
+				ItrCom_EnablePfcHSPWM();
 				ItrCom_PfcLSSw_DeadBand();
 				giFlag_IPfcLCtrlCpl = FALSE;
 			}
@@ -653,8 +653,8 @@ void CtrPfcCurrCtr()
 		{
 			if (giFlag_LSSW_Deadzone == TRUE)
 			{
-//                ItrCom_PfcHSPwmNegDitheringMode();
-//                ItrCom_EnablePfcHSPWM();
+                ItrCom_PfcHSPwmNegDitheringMode();
+                ItrCom_EnablePfcHSPWM();
                 ItrCom_PfcLSSw_DeadBand();
                 giFlag_IPfcLCtrlCpl = FALSE;
 			}
