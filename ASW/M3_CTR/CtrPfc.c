@@ -304,7 +304,7 @@ void CtrPfcHalfCycleDet(void)
         {
             giflag_PosCycle = TRUE;
             giflag_NegCycle = FALSE;
-            if (gfThetaDeg_Grid <= -172.0f)
+            if (gfThetaDeg_Grid <= -170.0f)
             {
                 giFlag_HSSW_Deadzone = FALSE;
                 giFlag_LSSW_Deadzone = TRUE;
@@ -319,7 +319,7 @@ void CtrPfcHalfCycleDet(void)
         {
             giflag_PosCycle = FALSE;
             giflag_NegCycle = TRUE;
-            if (gfThetaDeg_Grid <= 8.f)
+            if (gfThetaDeg_Grid <= 10.f)
             {
                 giFlag_HSSW_Deadzone = FALSE;
                 giFlag_LSSW_Deadzone = TRUE;
@@ -616,8 +616,8 @@ void CtrPfcCurrCtr()
 		{
 			if (giFlag_LSSW_Deadzone == TRUE)
 			{
-				ItrCom_PfcHSPwmPosDitheringMode();
-				ItrCom_EnablePfcHSPWM();
+//				ItrCom_PfcHSPwmPosDitheringMode();
+//				ItrCom_EnablePfcHSPWM();
 				ItrCom_PfcLSSw_DeadBand();
 				giFlag_IPfcLCtrlCpl = FALSE;
 			}
@@ -653,8 +653,8 @@ void CtrPfcCurrCtr()
 		{
 			if (giFlag_LSSW_Deadzone == TRUE)
 			{
-                ItrCom_PfcHSPwmNegDitheringMode();
-                ItrCom_EnablePfcHSPWM();
+//                ItrCom_PfcHSPwmNegDitheringMode();
+//                ItrCom_EnablePfcHSPWM();
                 ItrCom_PfcLSSw_DeadBand();
                 giFlag_IPfcLCtrlCpl = FALSE;
 			}
