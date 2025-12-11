@@ -73,4 +73,9 @@ float ItrCom_GetTestInhibit();
 void ItrCom_EnablePfcRly();
 void ItrCom_DisablePfcRly();
 
+void ItrCom_Gpio43_En();
+void ItrCom_Gpio43_Dis();
+void ItrCom_Gpio44_En();
+void ItrCom_Gpio44_Dis();
+
 #endif /* RTE_ITRCOM_H_ */

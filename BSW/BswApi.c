@@ -66,6 +66,11 @@ void BswApi_PfcHSPwmPosDitheringMode()                      { BswPwm_PfcHSPwmPos
 void BswApi_PfcHSPwmNegDitheringMode()                      { BswPwm_PfcHSPwmNegDitheringMode(); }
 void BswApi_PfcHSPwmNormalMode()                            { BswPwm_PfcHSPwmNormalMode(); }
 
+void BswApi_Gpio43_En()                                     { BswGpio_Gpio43_En(); }
+void BswApi_Gpio43_Dis()                                    { BswGpio_Gpio43_Dis(); }
+void BswApi_Gpio44_En()                                     { BswGpio_Gpio44_En(); }
+void BswApi_Gpio44_Dis()                                    { BswGpio_Gpio44_Dis(); }
+
 Uint8 BswApi_GetPwmEvtNum(Uint8 ch)                         { return BswPwm_GetPwmEvtNum(ch); }
 
 //void BswApi_SetPwmPhase(Uint8 ch, float NomalizedPhase)     {BswPwm_SetPwmPhase(ch, NomalizedPhase);}

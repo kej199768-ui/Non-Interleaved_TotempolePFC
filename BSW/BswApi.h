@@ -64,6 +64,11 @@ void BswApi_PfcHSPwmPosDitheringMode();
 void BswApi_PfcHSPwmNegDitheringMode();
 void BswApi_PfcHSPwmNormalMode();
 
+void BswApi_Gpio43_En();
+void BswApi_Gpio43_Dis();
+void BswApi_Gpio44_En();
+void BswApi_Gpio44_Dis();
+
 //float BswApi_GetTempVolt(Uint8 SnsrNum);
 //float BswApi_GetTempVoltRaw(Uint8 SnsrNum);
 //

@@ -220,6 +220,14 @@ void BswGpio_PfcLSSw_DeadBand()
     GpioDataRegs.GPBCLEAR.bit.GPIO39 = 1;
 }
 
+void BswGpio_Gpio43_En()
+{    GpioDataRegs.GPBSET.bit.GPIO43 = 1;    }
+void BswGpio_Gpio43_Dis()
+{    GpioDataRegs.GPBCLEAR.bit.GPIO43 = 1;    }
+void BswGpio_Gpio44_En()
+{    GpioDataRegs.GPBSET.bit.GPIO44 = 1;    }
+void BswGpio_Gpio44_Dis()
+{    GpioDataRegs.GPBCLEAR.bit.GPIO44 = 1;    }
 
 
 #if 0

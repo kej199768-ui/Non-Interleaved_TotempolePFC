@@ -99,3 +99,8 @@ void ItrCom_DisablePfcRly()                             { BswApi_DisablePfcRly()
 void ItrCom_PfcLSSw_PosEn()                             { BswApi_PfcLSSw_PosEn(); }
 void ItrCom_PfcLSSw_NegEn()                             { BswApi_PfcLSSw_NegEn(); }
 void ItrCom_PfcLSSw_DeadBand()                          { BswApi_PfcLSSw_DeadBand(); }
+
+void ItrCom_Gpio43_En()                                 { BswApi_Gpio43_En(); }
+void ItrCom_Gpio43_Dis()                                { BswApi_Gpio43_Dis(); }
+void ItrCom_Gpio44_En()                                 { BswApi_Gpio44_En(); }
+void ItrCom_Gpio44_Dis()                                { BswApi_Gpio44_Dis(); }
